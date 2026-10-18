@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matchify — SE Project Fiki</title>
+  <meta name="description" content="Fiki of Matchify, a Software Engineering project at POLITEHNICA Bucharest (ACS): a proposed recruitment and career-development platform for Computer Science and Engineering roles." />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234f46e5'/%3E%3Cpath d='M18 44V20l14 14 14-14v24' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (browser build, no build step needed — same setup as Lab 01) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Space Grotesk", "Inter", sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    }
+  </style>
+
+  <!-- Our own styles: tokens, cards, demo, roadmap -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="font-sans antialiased">
+  <a href="#overview" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:shadow">Skip to content</a>
+
+  <!-- =====================================================================
+       NAVIGATION
+       To add a section for a new milestone: add a <section id="..."> below
+       and a link here (desktop list + mobile list).
+  ====================================================================== -->
+  <header class="sticky top-0 z-40 border-b border-black/5 bg-[#fbfaf7]/85 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3" aria-label="Sections">
+      <a href="#top" class="flex items-center gap-2 font-display text-lg font-bold">
+        <span class="grid h-8 w-8 place-items-center rounded-lg bg-[var(--brand)] text-white" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18V6l7 7 7-7v12"/></svg>
+        </span>
+        Matchify <span class="hidden font-mono text-[0.65rem] font-medium text-slate-500 sm:inline">/ fiki</span>
+      </a>
+
+      <ul class="hidden items-center gap-1 text-sm text-slate-600 xl:flex" data-nav>
+        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#overview">Overview</a></li>
+        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#team">Team</a></li>
+        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#problem">Problem</a></li>
+        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#solution">Solution</a></li>
+        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#how">How it works</a></li>
+        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#segments">Segments</a></li>
+        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#competition">Competition</a></li>
+        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#advantage">Advantage</a></li>
+        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#metrics">Metrics</a></li>
+        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#costs">Costs</a></li>
+        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#revenue">Revenue</a></li>
+        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#roadmap">Roadmap</a></li>
+      </ul>
+
+      <button id="menu-button" type="button" class="rounded-lg border border-black/10 bg-white px-3 py-1.5 text-sm font-medium xl:hidden" aria-expanded="false" aria-controls="mobile-menu">
+        Sections
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="border-t border-black/5 bg-[#fbfaf7] xl:hidden" hidden>
+      <ul class="mx-auto grid max-w-6xl grid-cols-2 gap-1 px-4 py-3 text-sm sm:grid-cols-3" data-nav>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#overview">Overview</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#team">Team &amp; roles</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#problem">Problem</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#solution">Solution</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#how">How it works</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#segments">Customer segments</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#competition">Competition</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#advantage">Advantage</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#metrics">Key metrics</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#costs">Cost structure</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#revenue">Revenue streams</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#roadmap">Roadmap</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- =====================================================================
+         HERO — project title (M1 requirement 1)
+    ====================================================================== -->
+    <section class="hero-bg relative overflow-hidden" aria-labelledby="project-title">
+      <div class="grid-lines pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-6xl px-4 pb-16 pt-16 sm:pt-24">
+
+        <h1 id="project-title" class="font-display text-5xl font-bold tracking-tight sm:text-7xl">
+          <span class="text-gradient">Matchify</span>
+        </h1>
+        <p class="mt-5 max-w-3xl text-lg leading-relaxed text-slate-700 sm:text-xl">
+          A proposed recruitment and career-development platform built only for
+          <strong class="text-slate-900">Computer Science and Engineering</strong> roles.
+          It combines swipe-based job discovery, explainable skill matching, lighter recruiter
+          workflows and interview preparation that adapts once a candidate enters a real hiring process.
+        </p>
+
+        <aside class="mt-8 max-w-3xl rounded-2xl border border-black/10 bg-white/70 p-4 text-sm leading-relaxed text-slate-600 backdrop-blur" aria-label="About this page">
+          <strong class="text-slate-900">This is our project Fiki, not a product landing page.</strong>
+          It documents the idea, decisions and progress of a university project and will grow with every milestone.
+          Matchify does not exist as a working product yet: there are no users, partners, measured results or revenue,
+          and everything described below is a proposal we still have to validate.
+        </aside>
+
+        <!-- M1 requirement index — helps evaluators find each item quickly -->
+        <div class="mt-10 card p-5 sm:p-6" data-reveal>
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <h2 class="font-display text-lg font-bold">M1 requirements on this page</h2>
+          </div>
+          <ol class="mt-4 grid gap-2 text-sm sm:grid-cols-2 lg:grid-cols-5">
+            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#project-title"><span class="pill pill-ok">1</span>Project title</a></li>
+            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#team"><span class="pill pill-ok">2</span>Team &amp; roles</a></li>
+            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#problem"><span class="pill pill-ok">3</span>Problem</a></li>
+            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#solution"><span class="pill pill-ok">4</span>Solution &amp; value</a></li>
+            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#segments"><span class="pill pill-ok">5</span>Customer segments</a></li>
+            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#competition"><span class="pill pill-ok">6</span>Competition</a></li>
+            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#advantage"><span class="pill pill-ok">7</span>Our advantage</a></li>
+            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#metrics"><span class="pill pill-ok">8</span>Key metrics</a></li>
+            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#costs"><span class="pill pill-ok">9</span>Cost structure</a></li>
+            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#revenue"><span class="pill pill-ok">10</span>Revenue streams</a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         OVERVIEW
+    ====================================================================== -->
+    <section id="overview" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="overview-title">
+      <p class="eyebrow">01 — Project overview</p>
+      <h2 id="overview-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">One platform from first swipe to first interview</h2>
+      <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
+        Technical hiring is usually split across several disconnected places: a job board to find roles,
+        an applicant tracking system on the company side, and separate sites for interview practice.
+        Matchify proposes to connect these steps for a single, well-defined market (CS/CE jobs), so that
+        candidates and recruiters work from the same, explicit picture of skills.
+      </p>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        <article class="card card-hover p-6" data-reveal>
+          <div class="grid h-11 w-11 place-items-center rounded-xl bg-indigo-50 text-[var(--brand)]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold">Discover</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Candidates build a profile from their CV and review technical roles one card at a time, with a short reason attached to every suggestion.</p>
+        </article>
+        <article class="card card-hover p-6" data-reveal>
+          <div class="grid h-11 w-11 place-items-center rounded-xl bg-rose-50 text-[var(--match)]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/></svg>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold">Match</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Recruiters define requirements up front. Both sides see an explainable compatibility estimate, and a match forms only when interest is mutual.</p>
+        </article>
+        <article class="card card-hover p-6" data-reveal>
+          <div class="grid h-11 w-11 place-items-center rounded-xl bg-emerald-50 text-[var(--ok)]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+          </div>
+          <h3 class="mt-4 font-display text-lg font-bold">Prepare &amp; grow</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Entering a hiring process unlocks role-specific preparation. Between applications, private progress tracking points to the next skill worth learning.</p>
+        </article>
+      </div>
+
+      <div class="mt-8 rounded-2xl border border-dashed border-slate-300 p-5 text-sm text-slate-600" data-reveal>
+        <p class="font-semibold text-slate-900">What Matchify is deliberately <em>not</em></p>
+        <ul class="mt-3 grid gap-2 sm:grid-cols-2">
+          <li>✕ A general job board for every industry</li>
+          <li>✕ A public leaderboard that ranks candidates against each other</li>
+          <li>✕ A source of confidential or leaked interview questions</li>
+          <li>✕ An automated system that makes hiring decisions without people</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         TEAM — M1 requirement 2 (photos, emails, roles)
+         Roles below are PROPOSED. Edit the <li> items inside each card and
+         the matrix table to match what the team agrees on.
+         Photos live in assets/img/team/ (square, 480×480).
+    ====================================================================== -->
+    <section id="team" class="border-y border-black/5 bg-white" aria-labelledby="team-title">
+      <div class="mx-auto max-w-6xl px-4 py-20">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="eyebrow">02 — Team &amp; responsibilities</p>
+            <h2 id="team-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">The team</h2>
+          </div>
+          <span class="pill pill-proposed">Roles are a proposal, to be confirmed by the team</span>
+        </div>
+        <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
+          Four students at the Faculty of Automatic Control and Computers (ACS), POLITEHNICA Bucharest.
+          The role split below is a <strong>working proposal</strong> that spreads product, engineering and research work evenly.
+          It describes who will own what during the project, not anyone's prior experience.
+        </p>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Member 1 -->
+          <article class="card card-hover flex flex-col p-6" data-reveal>
+            <div class="avatar avatar-1" >
+              <img src="assets/img/team/victor-mandescu.jpg" alt="Victor-Ioan Mandescu" width="480" height="480" loading="lazy" />
+            </div>
+            <h3 class="mt-5 font-display text-lg font-bold leading-tight">Mandescu Victor-Ioan</h3>
+            <a class="mt-1 break-all text-sm text-[var(--brand)] hover:underline" href="mailto:victor.mandescu@stud.acs.upb.ro">victor.mandescu@stud.acs.upb.ro</a>
+            <ul class="mt-4 flex flex-wrap gap-1.5 text-xs">
+              <li class="pill pill-brand">Project Manager / Product Owner</li>
+              <li class="pill pill-neutral">Backend Development</li>
+              <li class="pill pill-neutral">Database &amp; Infrastructure</li>
+            </ul>
+            <p class="mt-4 text-sm leading-relaxed text-slate-600">Owns the backlog and milestone planning, and the service and data architecture behind profiles, jobs and matches.</p>
+          </article>
+
+          <!-- Member 2 -->
+          <article class="card card-hover flex flex-col p-6" data-reveal>
+            <div class="avatar avatar-2" >
+              <img src="assets/img/team/radu-popescu.jpg" alt="Radu Cristian Popescu" width="480" height="480" loading="lazy" />
+            </div>
+            <h3 class="mt-5 font-display text-lg font-bold leading-tight">Popescu Radu Cristian</h3>
+            <a class="mt-1 break-all text-sm text-[var(--brand)] hover:underline" href="mailto:radu.popescu0910@stud.acs.upb.ro">radu.popescu0910@stud.acs.upb.ro</a>
+            <ul class="mt-4 flex flex-wrap gap-1.5 text-xs">
+              <li class="pill pill-brand">UI/UX Design</li>
+              <li class="pill pill-neutral">Frontend Development</li>
+            </ul>
+            <p class="mt-4 text-sm leading-relaxed text-slate-600">Leads mockups, user flows and the candidate and recruiter interfaces, including the swipe and pipeline views.</p>
+          </article>
+
+          <!-- Member 3 -->
+          <article class="card card-hover flex flex-col p-6" data-reveal>
+            <div class="avatar avatar-3" >
+              <img src="assets/img/team/cosmin-zamfir.jpg" alt="Cosmin Marian Zamfir" width="480" height="480" loading="lazy" style="object-position: 70% 55%" />
+            </div>
+            <h3 class="mt-5 font-display text-lg font-bold leading-tight">Zamfir Cosmin Marian</h3>
+            <a class="mt-1 break-all text-sm text-[var(--brand)] hover:underline" href="mailto:cosmin.zamfir@stud.acs.upb.ro">cosmin.zamfir@stud.acs.upb.ro</a>
+            <ul class="mt-4 flex flex-wrap gap-1.5 text-xs">
+              <li class="pill pill-brand">AI &amp; Matching Systems</li>
+              <li class="pill pill-neutral">Backend Development</li>
+            </ul>
+            <p class="mt-4 text-sm leading-relaxed text-slate-600">Owns CV skill extraction, the explainable matching model and the adaptive question engine for preparation.</p>
+          </article>
+
+          <!-- Member 4 -->
+          <article class="card card-hover flex flex-col p-6" data-reveal>
+            <div class="avatar avatar-4" >
+              <img src="assets/img/team/bogdan-ticu.jpg" alt="Bogdan Valeriu Ticu" width="480" height="480" loading="lazy" />
+            </div>
+            <h3 class="mt-5 font-display text-lg font-bold leading-tight">Ticu Bogdan Valeriu</h3>
+            <a class="mt-1 break-all text-sm text-[var(--brand)] hover:underline" href="mailto:bogdan_valeriu.ticu@stud.acs.upb.ro">bogdan_valeriu.ticu@stud.acs.upb.ro</a>
+            <ul class="mt-4 flex flex-wrap gap-1.5 text-xs">
+              <li class="pill pill-brand">Research &amp; Market Analysis</li>
+              <li class="pill pill-neutral">QA &amp; Testing</li>
+              <li class="pill pill-neutral">Frontend Development</li>
+            </ul>
+            <p class="mt-4 text-sm leading-relaxed text-slate-600">Leads customer discovery and competitor research, and owns test plans and quality checks before each release.</p>
+          </article>
+        </div>
+
+        <!-- Responsibility matrix -->
+        <div class="mt-12" data-reveal>
+          <h3 class="font-display text-xl font-bold">Responsibility matrix <span class="ml-2 align-middle pill pill-proposed">Proposed</span></h3>
+          <p class="mt-2 text-sm text-slate-600"><span class="mark mark-yes">●</span> owner &nbsp;·&nbsp; <span class="mark mark-part">○</span> contributor. Every area has exactly one owner, and nobody owns more than three areas.</p>
+          <div class="table-wrap mt-4 card">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th scope="col">Area</th>
+                  <th scope="col" class="center">Victor</th>
+                  <th scope="col" class="center">Radu</th>
+                  <th scope="col" class="center">Cosmin</th>
+                  <th scope="col" class="center">Bogdan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row" class="font-medium">Project Manager / Product Owner</th><td class="center mark mark-yes">●</td><td class="center mark mark-part">○</td><td class="center"></td><td class="center mark mark-part">○</td></tr>
+                <tr><th scope="row" class="font-medium">UI/UX Design</th><td class="center"></td><td class="center mark mark-yes">●</td><td class="center"></td><td class="center mark mark-part">○</td></tr>
+                <tr><th scope="row" class="font-medium">Frontend Development</th><td class="center"></td><td class="center mark mark-yes">●</td><td class="center"></td><td class="center mark mark-part">○</td></tr>
+                <tr><th scope="row" class="font-medium">Backend Development</th><td class="center mark mark-yes">●</td><td class="center"></td><td class="center mark mark-part">○</td><td class="center"></td></tr>
+                <tr><th scope="row" class="font-medium">AI &amp; Matching Systems</th><td class="center mark mark-part">○</td><td class="center"></td><td class="center mark mark-yes">●</td><td class="center"></td></tr>
+                <tr><th scope="row" class="font-medium">Database &amp; Infrastructure</th><td class="center mark mark-yes">●</td><td class="center"></td><td class="center mark mark-part">○</td><td class="center"></td></tr>
+                <tr><th scope="row" class="font-medium">Research &amp; Market Analysis</th><td class="center"></td><td class="center mark mark-part">○</td><td class="center"></td><td class="center mark mark-yes">●</td></tr>
+                <tr><th scope="row" class="font-medium">QA &amp; Testing</th><td class="center"></td><td class="center"></td><td class="center mark mark-part">○</td><td class="center mark mark-yes">●</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PROBLEM — M1 requirement 3
+    ====================================================================== -->
+    <section id="problem" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="problem-title">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="eyebrow">03 — Problem</p>
+          <h2 id="problem-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Technical hiring wastes effort on both sides</h2>
+        </div>
+      </div>
+      <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
+        These are the problems we believe exist, seen from our perspective as students approaching the tech job market.
+        We present them as <strong>hypotheses</strong>: our M2 customer-discovery interviews with candidates and
+        recruiters will confirm, reshape or reject each one.
+      </p>
+
+      <div class="mt-10 grid gap-8 lg:grid-cols-2">
+        <div data-reveal>
+          <h3 class="flex items-center gap-2 font-display text-xl font-bold"><span class="h-2.5 w-2.5 rounded-full bg-[var(--brand)]"></span>For candidates</h3>
+          <ol class="mt-5 space-y-4">
+            <li class="card p-5">
+              <p class="font-semibold">Applications disappear into a black hole</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Applying is easy, so candidates send many applications through general job boards and often never hear back. Silence tells them nothing about what to change.</p>
+            </li>
+            <li class="card p-5">
+              <p class="font-semibold">Titles hide very different jobs</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-slate-600">"Software Engineer" can mean embedded C, cloud infrastructure or ML research. Generic filters do not separate CS/CE specializations well, so candidates spend time on postings that were never a fit.</p>
+            </li>
+            <li class="card p-5">
+              <p class="font-semibold">No actionable career guidance</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Students especially do not know which skill would most improve their chances for the roles they want, or how far they are from those roles today.</p>
+            </li>
+            <li class="card p-5">
+              <p class="font-semibold">Preparation is disconnected from the actual process</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Interview practice is usually generic and separate from the role a candidate is actually being considered for, even though that role's requirements are known.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div data-reveal>
+          <h3 class="flex items-center gap-2 font-display text-xl font-bold"><span class="h-2.5 w-2.5 rounded-full bg-[var(--match)]"></span>For recruiters &amp; companies</h3>
+          <ol class="mt-5 space-y-4">
+            <li class="card p-5">
+              <p class="font-semibold">Screening overload</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Popular technical postings attract many applications that only loosely match the requirements. Reading them one by one is slow and repetitive.</p>
+            </li>
+            <li class="card p-5">
+              <p class="font-semibold">Keyword screening misses real ability</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Projects, coursework and open-source work rarely map cleanly to CV keywords, so strong junior candidates can be filtered out while keyword-heavy CVs pass.</p>
+            </li>
+            <li class="card p-5">
+              <p class="font-semibold">Administrative pipeline work</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Moving candidates between stages and sending status updates takes time that recruiters would rather spend talking to people.</p>
+            </li>
+            <li class="card p-5">
+              <p class="font-semibold">Candidates arrive unevenly prepared</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Companies invest in interviews with candidates who had no clear idea what the role expects, which makes interviews less informative for both sides.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="mt-10 rounded-2xl bg-[var(--ink)] p-6 text-slate-200 sm:p-8" data-reveal>
+        <p class="eyebrow !text-indigo-300">Why focus on CS/CE only</p>
+        <p class="mt-3 max-w-4xl leading-relaxed">
+          Technical roles are described by relatively explicit, testable skills (languages, frameworks, tools, fundamentals),
+          which makes skill-based matching and targeted preparation more feasible than in a general market.
+          The field also spans many distinct specializations, from frontend to embedded and hardware, where a narrower focus can
+          produce much better recommendations. Finally, our own faculty is a natural first community to learn from.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SOLUTION & VALUE PROPOSITION — M1 requirement 4
+    ====================================================================== -->
+    <section id="solution" class="border-y border-black/5 bg-white" aria-labelledby="solution-title">
+      <div class="mx-auto max-w-6xl px-4 py-20">
+        <p class="eyebrow">04 — Our solution &amp; value proposition</p>
+        <h2 id="solution-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Match on skills, explain every match, prepare for the real thing</h2>
+
+        <blockquote class="mt-8 rounded-2xl border-l-4 border-[var(--brand)] bg-indigo-50/60 p-6 text-lg leading-relaxed text-slate-800" data-reveal>
+          For <strong>CS/CE candidates</strong> tired of applying into silence, and <strong>tech recruiters</strong> overwhelmed by poorly matching applications,
+          Matchify is a specialized recruitment platform that matches both sides on explicit technical skills, explains why each match was suggested,
+          and helps candidates prepare properly once a company is genuinely interested.
+        </blockquote>
+
+        <div class="mt-10 grid gap-5 lg:grid-cols-2">
+          <article class="card p-6 sm:p-8" data-reveal>
+            <h3 class="font-display text-xl font-bold">Value for candidates</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-relaxed text-slate-700">
+              <li class="flex gap-3"><span class="text-[var(--ok)]" aria-hidden="true">✔</span><span><strong>Less noise:</strong> only CS/CE roles, ranked by fit with a profile built from their own CV and confirmed by them.</span></li>
+              <li class="flex gap-3"><span class="text-[var(--ok)]" aria-hidden="true">✔</span><span><strong>Fast, low-effort discovery:</strong> review one role at a time and signal interest with a swipe instead of filling in long forms.</span></li>
+              <li class="flex gap-3"><span class="text-[var(--ok)]" aria-hidden="true">✔</span><span><strong>Transparency:</strong> every suggestion shows which skills matched and which are missing, presented as an estimate, not a verdict.</span></li>
+              <li class="flex gap-3"><span class="text-[var(--ok)]" aria-hidden="true">✔</span><span><strong>A clear next step:</strong> personalized recommendations on which skill to learn next, with private milestones to track progress.</span></li>
+              <li class="flex gap-3"><span class="text-[var(--ok)]" aria-hidden="true">✔</span><span><strong>Real preparation:</strong> after entering a hiring process, adaptive practice focused on that role, with feedback after every round.</span></li>
+            </ul>
+          </article>
+          <article class="card p-6 sm:p-8" data-reveal>
+            <h3 class="font-display text-xl font-bold">Value for recruiters &amp; companies</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-relaxed text-slate-700">
+              <li class="flex gap-3"><span class="text-[var(--match)]" aria-hidden="true">✔</span><span><strong>Requirements first:</strong> define skills, experience and role type once; the platform recommends candidates who meet them.</span></li>
+              <li class="flex gap-3"><span class="text-[var(--match)]" aria-hidden="true">✔</span><span><strong>Mutual interest:</strong> matched candidates have already said they want this kind of role, so outreach starts warmer.</span></li>
+              <li class="flex gap-3"><span class="text-[var(--match)]" aria-hidden="true">✔</span><span><strong>Lighter pipeline:</strong> shortlist, advance or close with simple actions and templated status updates. People still make every decision.</span></li>
+              <li class="flex gap-3"><span class="text-[var(--match)]" aria-hidden="true">✔</span><span><strong>Better-prepared interviews:</strong> candidates arrive knowing what the role expects.</span></li>
+              <li class="flex gap-3"><span class="text-[var(--match)]" aria-hidden="true">✔</span><span><strong>Optional partnership:</strong> companies can publish their own preparation resources and present their engineering culture to relevant candidates.</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="mt-14 font-display text-xl font-bold">Core modules</h3>
+        <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="card card-hover p-5" data-reveal><p class="font-mono text-xs text-slate-400">M-01</p><p class="mt-1 font-semibold">Smart profile</p><p class="mt-1.5 text-sm text-slate-600">CV upload, extraction of skills, experience, interests and preferences, then review and correction by the candidate.</p></div>
+          <div class="card card-hover p-5" data-reveal><p class="font-mono text-xs text-slate-400">M-02</p><p class="mt-1 font-semibold">Swipe discovery</p><p class="mt-1.5 text-sm text-slate-600">Card-based browsing across frontend, backend, full-stack, AI/ML, data, security, DevOps, cloud, embedded and hardware.</p></div>
+          <div class="card card-hover p-5" data-reveal><p class="font-mono text-xs text-slate-400">M-03</p><p class="mt-1 font-semibold">Explainable matching</p><p class="mt-1.5 text-sm text-slate-600">Compatibility estimate broken into visible components (skills, level, preferences) instead of one opaque number.</p></div>
+          <div class="card card-hover p-5" data-reveal><p class="font-mono text-xs text-slate-400">M-04</p><p class="mt-1 font-semibold">Recruiter pipeline</p><p class="mt-1.5 text-sm text-slate-600">Job requirements, candidate recommendations and stage changes with one-click actions and status templates.</p></div>
+          <div class="card card-hover p-5" data-reveal><p class="font-mono text-xs text-slate-400">M-05</p><p class="mt-1 font-semibold">Private progress</p><p class="mt-1.5 text-sm text-slate-600">Skill milestones, achievements and a personal ranking indicator that only the candidate can see. No public leaderboard.</p></div>
+          <div class="card card-hover p-5" data-reveal><p class="font-mono text-xs text-slate-400">M-06</p><p class="mt-1 font-semibold">Adaptive preparation</p><p class="mt-1.5 text-sm text-slate-600">Practice questions, assessments and mock interviews that adapt to previous answers, with feedback after each round.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         HOW IT WORKS — workflow diagram + concept demo
+    ====================================================================== -->
+    <section id="how" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="how-title">
+      <p class="eyebrow">05 — How the platform would work</p>
+      <h2 id="how-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">From profile to preparation</h2>
+      <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">The proposed flow connects both sides of the market. Candidate steps are in indigo and recruiter steps in coral; the two lanes meet at the match.</p>
+
+      <!-- Workflow diagram -->
+      <ol class="mt-10 grid gap-6 lg:grid-cols-5" aria-label="Proposed workflow">
+        <li class="flow-step" data-reveal>
+          <div class="flex h-16 items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-[var(--ink)] font-display font-bold text-white">1</span><p class="font-display text-lg font-bold">Profile</p></div>
+          <div class="mt-3 space-y-2 text-sm">
+            <p class="rounded-xl border border-indigo-200 bg-indigo-50 p-3"><strong class="text-[var(--brand-ink)]">Candidate</strong> uploads a CV; extracted skills and preferences are shown for review.</p>
+            <p class="rounded-xl border border-rose-200 bg-rose-50 p-3"><strong class="text-rose-700">Recruiter</strong> creates a role with required skills, level and type.</p>
+          </div>
+        </li>
+        <li class="flow-step" data-reveal>
+          <div class="flex h-16 items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-[var(--ink)] font-display font-bold text-white">2</span><p class="font-display text-lg font-bold">Discover</p></div>
+          <div class="mt-3 space-y-2 text-sm">
+            <p class="rounded-xl border border-indigo-200 bg-indigo-50 p-3"><strong class="text-[var(--brand-ink)]">Candidate</strong> swipes on recommended roles.</p>
+            <p class="rounded-xl border border-rose-200 bg-rose-50 p-3"><strong class="text-rose-700">Recruiter</strong> reviews recommended profiles and shortlists.</p>
+          </div>
+        </li>
+        <li class="flow-step" data-reveal>
+          <div class="flex h-16 items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-[var(--match)] font-display font-bold text-white">3</span><p class="font-display text-lg font-bold">Match</p></div>
+          <div class="mt-3 text-sm">
+            <p class="rounded-xl border border-slate-200 bg-white p-3">Mutual interest creates a match. Both sides see the <strong>explanation</strong>: matched skills, gaps, level and preferences.</p>
+          </div>
+        </li>
+        <li class="flow-step" data-reveal>
+          <div class="flex h-16 items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-[var(--ink)] font-display font-bold text-white">4</span><p class="font-display text-lg font-bold">Pipeline</p></div>
+          <div class="mt-3 space-y-2 text-sm">
+            <p class="rounded-xl border border-rose-200 bg-rose-50 p-3"><strong class="text-rose-700">Recruiter</strong> advances, schedules or closes with simple actions. Status updates reach the candidate automatically.</p>
+          </div>
+        </li>
+        <li class="flow-step" data-reveal>
+          <div class="flex h-16 items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-[var(--ok)] font-display font-bold text-white">5</span><p class="font-display text-lg font-bold">Prepare</p></div>
+          <div class="mt-3 space-y-2 text-sm">
+            <p class="rounded-xl border border-indigo-200 bg-indigo-50 p-3"><strong class="text-[var(--brand-ink)]">Candidate</strong> unlocks role-specific prep: partner materials if the company provides them, otherwise curated public resources and adaptive practice.</p>
+          </div>
+        </li>
+      </ol>
+
+      <!-- Preparation detail -->
+      <div class="mt-10 grid gap-5 md:grid-cols-2" data-reveal>
+        <div class="card p-6">
+          <p class="pill pill-ok">Partner company</p>
+          <p class="mt-3 font-semibold">Company-provided preparation</p>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Official learning resources, recommended topics and materials that the company chooses to share, combined with adaptive practice on those topics.</p>
+        </div>
+        <div class="card p-6">
+          <p class="pill pill-neutral">Non-partner company</p>
+          <p class="mt-3 font-semibold">Requirement-based preparation</p>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Public resources selected from the job's listed requirements, common industry interview topics and the candidate's own gaps. No claim of access to a company's real questions.</p>
+        </div>
+      </div>
+
+      <!-- Concept demo -->
+      <div id="demo" class="mt-16 overflow-hidden rounded-3xl border border-black/10 bg-gradient-to-br from-white to-indigo-50/60" aria-labelledby="demo-title">
+        <div class="flex flex-wrap items-center justify-between gap-3 border-b border-black/5 bg-white/70 px-6 py-4">
+          <h3 id="demo-title" class="font-display text-xl font-bold">Try the idea</h3>
+        </div>
+
+        <div class="grid gap-8 p-6 lg:grid-cols-[1fr_minmax(0,22rem)_1fr] lg:p-8">
+          <!-- Left: context -->
+          <div class="text-sm leading-relaxed text-slate-600">
+            <p>This mock-up shows how discovery and explainable matching could feel. A fixed demo profile is compared with four <strong>fictional</strong> roles using a deliberately simple, visible formula.</p>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-slate-500">Demo profile</p>
+            <p class="mt-1 font-medium text-slate-800">3rd-year CS student · Intern / Junior · prefers Backend, Data, Hybrid, Bucharest</p>
+            <div id="demo-profile" class="mt-2 flex flex-wrap gap-1.5"></div>
+            <p class="mt-5 text-xs text-slate-500">
+              Score = 60% skills coverage + 25% experience level + 15% preferences.
+              Real weights would be learned and validated. A score is an estimate to help people decide, never a decision.
+            </p>
+            <p class="mt-3 text-xs text-slate-500">Keyboard: focus a button, then use ← pass / → interested.</p>
+          </div>
+
+          <!-- Center: card stack -->
+          <div>
+            <div id="demo-stage" class="demo-stage" aria-live="off"></div>
+            <div id="demo-controls" class="mt-6 flex items-center justify-center gap-5">
+              <button id="demo-pass" type="button" class="demo-btn text-slate-500" aria-label="Pass on this role">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+              </button>
+              <button id="demo-reset" type="button" class="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-medium text-slate-600 hover:text-slate-900">Reset demo</button>
+              <button id="demo-like" type="button" class="demo-btn text-[var(--match)]" aria-label="Interested in this role">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg>
+              </button>
+            </div>
+            <p id="demo-status" class="sr-only" role="status" aria-live="polite"></p>
+          </div>
+
+          <!-- Right: what happened -->
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">What would happen next</p>
+            <ul id="demo-log" class="mt-3 space-y-2"></ul>
+            <p class="mt-3 text-xs text-slate-500">Two of the fictional recruiters have pre-shortlisted the demo profile, to show how a mutual match unlocks preparation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         CUSTOMER SEGMENTS — M1 requirement 5
+    ====================================================================== -->
+    <section id="segments" class="border-y border-black/5 bg-white" aria-labelledby="segments-title">
+      <div class="mx-auto max-w-6xl px-4 py-20">
+        <p class="eyebrow">06 — Customer segments</p>
+        <h2 id="segments-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Two-sided market: who uses it, who pays</h2>
+        <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
+          Matchify is a two-sided platform. <strong>Candidates</strong> get access through their university when it has a partnership with us
+          (the university pays), or otherwise through a subscription tier. <strong>Companies</strong> pay for access to well-matched
+          candidates and for tools that save recruiting time.
+        </p>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-2">
+          <article class="card p-6 sm:p-8" data-reveal>
+            <div class="flex items-center justify-between"><h3 class="font-display text-xl font-bold">Candidates</h3><span class="pill pill-neutral">University or subscription</span></div>
+            <ul class="mt-5 space-y-4 text-sm">
+              <li><p class="font-semibold">Students &amp; internship seekers <span class="pill pill-brand ml-1">Early adopters</span></p><p class="mt-1 text-slate-600">Undergraduate and master's students in CS/CE looking for internships and first jobs. They need guidance on what to learn as much as they need listings.</p></li>
+              <li><p class="font-semibold">Junior engineers (0–2 years)</p><p class="mt-1 text-slate-600">Looking for their first or second role and wanting clear feedback on skill gaps.</p></li>
+              <li><p class="font-semibold">Mid-level &amp; senior engineers</p><p class="mt-1 text-slate-600">Often passive candidates who value precise matches and low effort over browsing many listings.</p></li>
+              <li><p class="font-semibold">Career switchers into CS/CE</p><p class="mt-1 text-slate-600">People moving in from adjacent fields who need a structured path to job-ready skills. Later segment.</p></li>
+            </ul>
+          </article>
+
+          <article class="card p-6 sm:p-8" data-reveal>
+            <div class="flex items-center justify-between"><h3 class="font-display text-xl font-bold">Employers &amp; universities</h3><span class="pill pill-ok">Pay</span></div>
+            <ul class="mt-5 space-y-4 text-sm">
+              <li><p class="font-semibold">Tech startups &amp; scale-ups <span class="pill pill-brand ml-1">Early adopters</span></p><p class="mt-1 text-slate-600">Small teams without a dedicated recruiter, where engineers or founders screen candidates themselves.</p></li>
+              <li><p class="font-semibold">Product &amp; IT services companies</p><p class="mt-1 text-slate-600">Companies hiring at volume, especially interns and juniors, where screening time adds up quickly.</p></li>
+              <li><p class="font-semibold">In-house recruiters, talent acquisition teams and hiring managers</p><p class="mt-1 text-slate-600">The day-to-day users on the employer side; the company account is the buyer.</p></li>
+              <li><p class="font-semibold">Partner universities</p><p class="mt-1 text-slate-600">Pay so that their students get access, as part of their career support.</p></li>
+              <li><p class="font-semibold">IT recruitment agencies</p><p class="mt-1 text-slate-600">Possible later segment that would use the matching and pipeline tools for several clients.</p></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="table-wrap card mt-8" data-reveal>
+          <table class="data-table">
+            <caption class="sr-only">Users versus paying customers</caption>
+            <thead><tr><th scope="col">Segment</th><th scope="col">Main need</th><th scope="col">Uses the product</th><th scope="col">Pays</th><th scope="col">Priority</th></tr></thead>
+            <tbody>
+              <tr><th scope="row" class="font-medium">CS/CE students</th><td>First internship or job, learning direction</td><td class="mark mark-yes">Yes</td><td>University partnership or subscription</td><td>Launch</td></tr>
+              <tr><th scope="row" class="font-medium">Junior / mid / senior engineers</th><td>Better-fitting roles, less effort</td><td class="mark mark-yes">Yes</td><td>Subscription</td><td>After launch</td></tr>
+              <tr><th scope="row" class="font-medium">Partner universities</th><td>Career support for their students</td><td class="mark mark-no">No</td><td class="mark mark-yes">Yes (partnership)</td><td>Launch</td></tr>
+              <tr><th scope="row" class="font-medium">Startups &amp; scale-ups</th><td>Qualified candidates without a recruiting team</td><td class="mark mark-yes">Yes</td><td class="mark mark-yes">Yes</td><td>Launch</td></tr>
+              <tr><th scope="row" class="font-medium">Companies hiring at volume</th><td>Less screening time per hire</td><td class="mark mark-yes">Yes</td><td class="mark mark-yes">Yes</td><td>After launch</td></tr>
+              <tr><th scope="row" class="font-medium">Partner companies</th><td>Better-prepared candidates, employer brand</td><td class="mark mark-yes">Yes</td><td class="mark mark-yes">Yes (partnership)</td><td>Later</td></tr>
+              <tr><th scope="row" class="font-medium">IT recruitment agencies</th><td>Matching across several clients</td><td class="mark mark-part">Maybe</td><td class="mark mark-part">Maybe</td><td>Later</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mt-6 rounded-2xl border border-dashed border-slate-300 p-5 text-sm leading-relaxed text-slate-600" data-reveal>
+          <strong class="text-slate-900">Early-adopter hypothesis:</strong> CS/CE students in Bucharest who are looking for internships, together with
+          local tech companies that run internship or junior hiring programs. This is the first pairing we plan to interview in M2.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         COMPETITION — M1 requirement 6
+    ====================================================================== -->
+    <section id="competition" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="competition-title">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="eyebrow">07 — Market &amp; competition</p>
+          <h2 id="competition-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Who already solves parts of this</h2>
+        </div>
+      </div>
+      <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
+        Matchify competes with three groups: job boards, AI hiring tools inside large platforms, and interview-preparation services.
+        Several competitors already use AI for matching, so <strong>"AI matching" alone is not a differentiator</strong>.
+        The information below comes from the competitors' own pages and press coverage (sources at the end).
+        "Not found" means we did not find it in public documentation, <em>not</em> that the feature does not exist.
+      </p>
+
+      <!-- Group 1 -->
+      <h3 class="mt-12 font-display text-xl font-bold">Romanian job platforms</h3>
+      <div class="mt-5 grid gap-5 md:grid-cols-3">
+        <article class="card card-hover p-6" data-reveal>
+          <div class="flex items-center justify-between"><h4 class="font-semibold">Stagii pe Bune</h4><span class="pill pill-neutral">Internships · RO</span></div>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Long-running Romanian internship program, started in 2005 for ACS students. Seasonal campaigns with partner companies and IT-focused categories such as AI, software development and mobile.</p>
+          <p class="mt-3 text-xs text-slate-500"><strong>Relative to us:</strong> closest local brand for our early adopters; no matching or preparation features described on its site. Revenue model not public.</p>
+        </article>
+        <article class="card card-hover p-6" data-reveal>
+          <div class="flex items-center justify-between"><h4 class="font-semibold">eJobs.ro</h4><span class="pill pill-neutral">General · RO</span></div>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">General Romanian job board owned by Ringier, with manually verified ads and a salary calculator. Employers pay for job postings.</p>
+          <p class="mt-3 text-xs text-slate-500"><strong>Relative to us:</strong> broad reach across all sectors; skill-based matching not found in public docs.</p>
+        </article>
+        <article class="card card-hover p-6" data-reveal>
+          <div class="flex items-center justify-between"><h4 class="font-semibold">BestJobs</h4><span class="pill pill-neutral">General · RO</span></div>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">General job board and app. Employers buy credits for posting, promotion and database search. Its AI assistant "Bestie" recommends jobs to candidates and candidates and video interviews to employers.</p>
+          <p class="mt-3 text-xs text-slate-500"><strong>Relative to us:</strong> already uses AI on both sides, so our difference must be CS/CE depth, explanations and preparation.</p>
+        </article>
+      </div>
+
+      <!-- Group 2 -->
+      <h3 class="mt-12 font-display text-xl font-bold">Global platforms</h3>
+      <div class="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <article class="card card-hover p-6" data-reveal>
+          <h4 class="font-semibold">LinkedIn Jobs</h4>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Job Match compares a profile with a job's qualifications (with more detail for Premium). Recruiters get an AI Hiring Assistant, and LinkedIn Learning recommends courses.</p>
+          <p class="mt-3 text-xs text-slate-500"><strong>Pays:</strong> employers (Recruiter, job promotion) and candidates (Premium).</p>
+        </article>
+        <article class="card card-hover p-6" data-reveal>
+          <h4 class="font-semibold">Indeed</h4>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Largest general job search engine. Smart Screening gives employers an AI fit score per applicant; Smart Sourcing recommends candidates with "why a fit" summaries.</p>
+          <p class="mt-3 text-xs text-slate-500"><strong>Pays:</strong> employers, through sponsored jobs (including pay-per-started-application).</p>
+        </article>
+        <article class="card card-hover p-6" data-reveal>
+          <h4 class="font-semibold">Welcome to the Jungle <span class="font-normal text-slate-400">(ex-Otta)</span></h4>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Personalised job recommendations and detailed company profiles; recruiters can search candidates by skills. Otta joined it in 2024.</p>
+          <p class="mt-3 text-xs text-slate-500"><strong>Pays:</strong> employers.</p>
+        </article>
+        <article class="card card-hover p-6" data-reveal>
+          <h4 class="font-semibold">Wellfound <span class="font-normal text-slate-400">(ex-AngelList Talent)</span></h4>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Startup job marketplace with free job posts, paid job ads, AI sourcing seats and a managed recruiting option.</p>
+          <p class="mt-3 text-xs text-slate-500"><strong>Pays:</strong> employers (per seat, per role and placement fee).</p>
+        </article>
+      </div>
+
+      <!-- Group 3 -->
+      <h3 class="mt-12 font-display text-xl font-bold">Interview preparation &amp; assessment</h3>
+      <div class="mt-5 grid gap-5 md:grid-cols-3">
+        <article class="card card-hover p-6" data-reveal>
+          <h4 class="font-semibold">HackerRank</h4>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">On the employer side, technical screening and interview assessments. On the candidate side, prep kits with mock tests and AI mock interviews.</p>
+        </article>
+        <article class="card card-hover p-6" data-reveal>
+          <h4 class="font-semibold">LeetCode</h4>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Coding practice with company-tagged questions and timed interview simulations; paid Premium tier.</p>
+        </article>
+        <article class="card card-hover p-6" data-reveal>
+          <h4 class="font-semibold">interviewing.io</h4>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Anonymous mock interviews with experienced engineers, company-specific coaching and a free AI interviewer.</p>
+        </article>
+      </div>
+
+      <p class="mt-6 rounded-2xl border border-dashed border-slate-300 p-5 text-sm leading-relaxed text-slate-600" data-reveal>
+        <strong class="text-slate-900">Market signal:</strong> the sector is consolidating around large platforms that add AI.
+        Hired was folded into LHH Recruitment Solutions in 2024, Pramp moved to Exponent, and in 2025 Recruit Holdings announced that Glassdoor would be integrated into Indeed.
+        A new entrant should therefore compete on <em>focus and depth</em>, not on breadth.
+      </p>
+
+      <!-- Comparison matrix -->
+      <h3 class="mt-12 font-display text-xl font-bold">Feature comparison</h3>
+      <p class="mt-2 text-sm text-slate-600"><span class="mark mark-yes">●</span> documented publicly &nbsp;·&nbsp; <span class="mark mark-part">◐</span> partly / indirectly &nbsp;·&nbsp; <span class="mark mark-no">–</span> not found in public docs &nbsp;·&nbsp; Matchify column = <strong>proposed</strong>, not built.</p>
+      <div class="table-wrap card mt-4" data-reveal>
+        <table class="data-table">
+          <caption class="sr-only">Feature comparison between competitors and the proposed Matchify concept</caption>
+          <thead>
+            <tr>
+              <th scope="col">Platform</th>
+              <th scope="col" class="center">CS/CE-only focus</th>
+              <th scope="col" class="center">Fit signal for candidates</th>
+              <th scope="col" class="center">AI tools for recruiters</th>
+              <th scope="col" class="center">Skill-learning guidance</th>
+              <th scope="col" class="center">Interview prep</th>
+              <th scope="col" class="center">Prep tied to an active application</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row" class="font-medium">Stagii pe Bune</th><td class="center mark mark-part">◐</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">eJobs.ro</th><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">BestJobs</th><td class="center mark mark-no">–</td><td class="center mark mark-part">◐</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">LinkedIn Jobs</th><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">Indeed</th><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">Welcome to the Jungle</th><td class="center mark mark-no">–</td><td class="center mark mark-part">◐</td><td class="center mark mark-part">◐</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">Wellfound</th><td class="center mark mark-part">◐</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">HackerRank</th><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-part">◐</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">LeetCode</th><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">interviewing.io</th><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-part">◐</td></tr>
+            <tr class="bg-indigo-50/60"><th scope="row" class="font-semibold text-[var(--brand-ink)]">Matchify <span class="pill pill-proposed ml-1">proposed</span></th><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="milestone mt-6 card p-5">
+        <summary class="flex items-center justify-between gap-4 text-sm font-semibold">Sources (desk research, 18.10.2026)<span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+        <ul class="mt-3 grid gap-1 break-all text-xs text-slate-600 md:grid-cols-2">
+          <li><a class="hover:text-[var(--brand)]" href="https://stagiipebune.ro" target="_blank" rel="noopener">stagiipebune.ro</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://www.wall-street.ro/articol/IT-C-Tehnologie/27317/stagii-pe-bune-cariere-pentru-studentii-facultatilor-de-it-c.html" target="_blank" rel="noopener">wall-street.ro — Stagii pe Bune history</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://www.zf.ro/business-hi-tech/elvetienii-de-la-ringier-au-cumparat-ejobs-ro-9455431" target="_blank" rel="noopener">zf.ro — Ringier acquires eJobs</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://support.bestjobs.eu/en/knowledge/what-are-bestjobs-credits-1" target="_blank" rel="noopener">BestJobs — credits</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://startupcafe.ro/bestie-recrutorul-ai-care-bate-un-intreg-departament-hr-peste-5-000-de-interviuri-de-angajare-pe-luna-89924" target="_blank" rel="noopener">startupcafe.ro — BestJobs "Bestie"</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://business.linkedin.com/talent-solutions/product-update" target="_blank" rel="noopener">LinkedIn Talent Solutions — product updates</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://premium.linkedin.com/careers/get-hired-faster" target="_blank" rel="noopener">LinkedIn Premium Career</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://www.indeed.com/news/releases/introducing-indeeds-smart-fit-score" target="_blank" rel="noopener">Indeed — Smart Fit Score (Smart Screening)</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://www.indeed.com/news/releases/indeed-launches-ai-powered-smart-sourcing-to-make-hiring-faster-by-matching-and-connecting-people-with-relevant-jobs" target="_blank" rel="noopener">Indeed — Smart Sourcing</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://in.indeed.com/help/employers/articles/pay-per-started-application-ppsa-overview" target="_blank" rel="noopener">Indeed — pay per started application</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://www.welcometothejungle.com/en" target="_blank" rel="noopener">Welcome to the Jungle</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://wellfound.com/recruit/pricing" target="_blank" rel="noopener">Wellfound — recruiter pricing</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://hackerrank.com/work/pricing" target="_blank" rel="noopener">HackerRank — pricing</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://hackerrank-community-knowledge-base.help.usepylon.com/articles/1723224478-introduction-to-prep-kits" target="_blank" rel="noopener">HackerRank — prep kits</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://interviewing.io/" target="_blank" rel="noopener">interviewing.io</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://hired.com/blog/employers/company-update-hired-lhh-recruitment-solutions/" target="_blank" rel="noopener">Hired — joining LHH</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://www.tryexponent.com/blog/pramp-joining-exponent" target="_blank" rel="noopener">Exponent — Pramp joining Exponent</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://www.hrdive.com/news/layoffs-glassdoor-indeed-ai-integration/752876/" target="_blank" rel="noopener">HR Dive — Glassdoor folded into Indeed</a></li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- =====================================================================
+         COMPETITIVE ADVANTAGE — M1 requirement 7
+    ====================================================================== -->
+    <section id="advantage" class="border-y border-black/5 bg-white" aria-labelledby="advantage-title">
+      <div class="mx-auto max-w-6xl px-4 py-20">
+        <p class="eyebrow">08 — Competitive advantage</p>
+        <h2 id="advantage-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Where Matchify would be different</h2>
+        <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
+          Many of these features exist on their own somewhere in the market. Our proposed advantage is
+          <strong>combining them in one flow for one specialized market</strong>. Each point also comes with the risk we have to test.
+        </p>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <article class="card card-hover flex flex-col p-6" data-reveal>
+            <p class="font-mono text-xs text-[var(--brand)]">A1</p>
+            <h3 class="mt-1 font-display text-lg font-bold">Specialized CS/CE market</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">A taxonomy built for technical specializations (frontend to hardware) allows finer matching and recommendations than a general board.</p>
+            <p class="mt-auto pt-4 text-xs text-slate-500"><strong>Risk:</strong> a narrow market must still offer enough jobs to keep candidates engaged.</p>
+          </article>
+          <article class="card card-hover flex flex-col p-6" data-reveal>
+            <p class="font-mono text-xs text-[var(--brand)]">A2</p>
+            <h3 class="mt-1 font-display text-lg font-bold">Bidirectional matching</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Both sides express interest, and a match needs both. Recruiters start from candidates who already want this kind of role.</p>
+            <p class="mt-auto pt-4 text-xs text-slate-500"><strong>Risk:</strong> needs enough activity on both sides from day one, the classic marketplace cold-start problem.</p>
+          </article>
+          <article class="card card-hover flex flex-col p-6" data-reveal>
+            <p class="font-mono text-xs text-[var(--brand)]">A3</p>
+            <h3 class="mt-1 font-display text-lg font-bold">Simplified recruiter workflow</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Requirements defined once drive recommendations, and stage changes take one action. Automation handles admin work while people make the decisions.</p>
+            <p class="mt-auto pt-4 text-xs text-slate-500"><strong>Risk:</strong> companies already use applicant tracking systems; Matchify must integrate with them, not compete.</p>
+          </article>
+          <article class="card card-hover flex flex-col p-6" data-reveal>
+            <p class="font-mono text-xs text-[var(--brand)]">A4</p>
+            <h3 class="mt-1 font-display text-lg font-bold">Explainable skill recommendations</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Matched and missing skills are shown with every estimate, and they feed directly into "what to learn next" for the roles a candidate actually wants.</p>
+            <p class="mt-auto pt-4 text-xs text-slate-500"><strong>Risk:</strong> estimates must prove useful; a confident but wrong score would damage trust.</p>
+          </article>
+          <article class="card card-hover flex flex-col p-6" data-reveal>
+            <p class="font-mono text-xs text-[var(--brand)]">A5</p>
+            <h3 class="mt-1 font-display text-lg font-bold">Private gamification</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Milestones and a personal ranking indicator motivate progress without exposing anyone on a public leaderboard.</p>
+            <p class="mt-auto pt-4 text-xs text-slate-500"><strong>Risk:</strong> gamification can feel childish to experienced engineers; it must stay optional and subtle.</p>
+          </article>
+          <article class="card card-hover flex flex-col p-6" data-reveal>
+            <p class="font-mono text-xs text-[var(--brand)]">A6</p>
+            <h3 class="mt-1 font-display text-lg font-bold">Preparation tied to a real process</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Prep unlocks after a candidate enters a company's process and adapts to that role's requirements and to previous answers.</p>
+            <p class="mt-auto pt-4 text-xs text-slate-500"><strong>Risk:</strong> question quality depends on good content and models; this is the hardest part to build.</p>
+          </article>
+          <article class="card card-hover flex flex-col p-6 md:col-span-2 lg:col-span-3" data-reveal>
+            <p class="font-mono text-xs text-[var(--brand)]">A7</p>
+            <h3 class="mt-1 font-display text-lg font-bold">Partner-specific educational resources</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Companies can choose to publish official preparation material for their own processes. Candidates get legitimate, company-approved guidance, and companies get better-prepared interviews and a channel to present their engineering culture.</p>
+            <p class="mt-auto pt-4 text-xs text-slate-500"><strong>Risk:</strong> companies must see enough value to invest time in creating content.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         KEY METRICS — M1 requirement 8
+    ====================================================================== -->
+    <section id="metrics" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="metrics-title">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="eyebrow">09 — Key metrics</p>
+          <h2 id="metrics-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">What we would measure</h2>
+        </div>
+      </div>
+      <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
+        These are the indicators we plan to track once a prototype exists. No values are shown because there is no product
+        and there are no users yet. Targets will be set after validation.
+      </p>
+
+      <div class="mt-8 rounded-3xl bg-[var(--ink)] p-6 text-white sm:p-8" data-reveal>
+        <p class="eyebrow !text-rose-300">North Star metric (proposed)</p>
+        <p class="mt-2 font-display text-2xl font-bold sm:text-3xl">Mutual matches that reach a first interview</p>
+        <p class="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300">
+          It only grows when both sides get value: candidates found roles worth pursuing, recruiters found candidates worth interviewing,
+          and the match was good enough to act on. Swipes or sign-ups alone could grow without anyone being helped.
+        </p>
+      </div>
+
+      <div class="table-wrap card mt-8" data-reveal>
+        <table class="data-table">
+          <caption class="sr-only">Proposed key performance indicators</caption>
+          <thead><tr><th scope="col">Metric</th><th scope="col">Definition (proposed)</th><th scope="col">Why it matters</th><th scope="col">Side</th></tr></thead>
+          <tbody>
+            <tr><th scope="row" class="font-medium">Match-to-interview conversion</th><td>Mutual matches that lead to a first interview ÷ all mutual matches</td><td>Tests whether matches are actually useful</td><td>Both</td></tr>
+            <tr><th scope="row" class="font-medium">Application-to-response rate</th><td>Expressions of interest that receive any recruiter response within 7 days ÷ all expressions of interest</td><td>Directly addresses the "black hole" problem</td><td>Candidate</td></tr>
+            <tr><th scope="row" class="font-medium">Recruiter screening time</th><td>Median time from a candidate appearing in a queue to a shortlist or reject decision</td><td>Core value claim for paying customers</td><td>Recruiter</td></tr>
+            <tr><th scope="row" class="font-medium">Candidate retention</th><td>Share of candidates active again 30 days after sign-up</td><td>Shows lasting value beyond the first visit</td><td>Candidate</td></tr>
+            <tr><th scope="row" class="font-medium">Recommendation engagement</th><td>Share of recommended roles that receive an "interested" swipe; roles reviewed per active week</td><td>Measures recommendation relevance</td><td>Candidate</td></tr>
+            <tr><th scope="row" class="font-medium">Skill development progress</th><td>Share of candidates who complete at least one recommended skill milestone within 30 days</td><td>Tests the career-guidance promise</td><td>Candidate</td></tr>
+            <tr><th scope="row" class="font-medium">Prep completion rate</th><td>Unlocked preparation plans completed before the interview ÷ plans unlocked</td><td>Tests whether adaptive prep is used</td><td>Candidate</td></tr>
+            <tr><th scope="row" class="font-medium">Employer satisfaction</th><td>Short survey score after each role is closed, plus subscription renewal rate</td><td>Predicts whether companies keep paying</td><td>Recruiter</td></tr>
+            <tr><th scope="row" class="font-medium">Score calibration (guardrail)</th><td>Do higher match estimates actually correspond to more interviews and offers?</td><td>Keeps the matching honest and explainable</td><td>Both</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         COST STRUCTURE — M1 requirement 9
+    ====================================================================== -->
+    <section id="costs" class="border-y border-black/5 bg-white" aria-labelledby="costs-title">
+      <div class="mx-auto max-w-6xl px-4 py-20">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="eyebrow">10 — Cost structure</p>
+            <h2 id="costs-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Where the money would go</h2>
+          </div>
+        </div>
+        <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
+          We list cost categories and what drives them, not amounts. We will only attach figures once usage assumptions have been
+          researched (planned for M6, Market research).
+        </p>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <article class="card p-6" data-reveal>
+            <div class="flex items-center justify-between"><h3 class="font-semibold">Hosting &amp; infrastructure</h3><span class="pill pill-neutral">Variable</span></div>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Web app, API, background workers, monitoring. Grows with traffic.</p>
+            <p class="mt-3 text-xs text-slate-500"><strong>Early stage:</strong> free tiers and student programs where available.</p>
+          </article>
+          <article class="card p-6" data-reveal>
+            <div class="flex items-center justify-between"><h3 class="font-semibold">Database &amp; storage</h3><span class="pill pill-neutral">Variable</span></div>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Profiles, jobs, matches and uploaded CV files, plus backups.</p>
+            <p class="mt-3 text-xs text-slate-500"><strong>Driver:</strong> number of users and stored documents.</p>
+          </article>
+          <article class="card p-6" data-reveal>
+            <div class="flex items-center justify-between"><h3 class="font-semibold">AI inference &amp; CV processing</h3><span class="pill pill-neutral">Variable</span></div>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">CV parsing, skill extraction, match computation, question generation and feedback. Likely the largest variable cost.</p>
+            <p class="mt-3 text-xs text-slate-500"><strong>Mitigation:</strong> cache results, use smaller models where possible, process in batches.</p>
+          </article>
+          <article class="card p-6" data-reveal>
+            <div class="flex items-center justify-between"><h3 class="font-semibold">Development &amp; maintenance</h3><span class="pill pill-neutral">Fixed</span></div>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Engineering, design and QA time. Currently our team's work during the course; salaries would apply after it.</p>
+            <p class="mt-3 text-xs text-slate-500"><strong>Driver:</strong> team size and scope.</p>
+          </article>
+          <article class="card p-6" data-reveal>
+            <div class="flex items-center justify-between"><h3 class="font-semibold">Security &amp; compliance</h3><span class="pill pill-neutral">Fixed</span></div>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">CVs are personal data under GDPR, and the EU AI Act treats AI used in recruitment as high-risk. This means encryption, access control, audits and legal advice.</p>
+            <p class="mt-3 text-xs text-slate-500"><strong>Note:</strong> unavoidable for this product, not optional.</p>
+          </article>
+          <article class="card p-6" data-reveal>
+            <div class="flex items-center justify-between"><h3 class="font-semibold">Marketing &amp; acquisition</h3><span class="pill pill-neutral">Variable</span></div>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Reaching students (university communities, career fairs, content) and selling to companies (direct outreach, demos).</p>
+            <p class="mt-3 text-xs text-slate-500"><strong>Driver:</strong> cost to acquire each side of the market.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         REVENUE STREAMS — M1 requirement 10
+    ====================================================================== -->
+    <section id="revenue" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="revenue-title">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="eyebrow">11 — Revenue streams</p>
+          <h2 id="revenue-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Preliminary business model</h2>
+        </div>
+      </div>
+      <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
+        Companies pay for recruiting; candidates are covered by a university partnership or a subscription. Prices are intentionally not listed;
+        willingness to pay is one of the things we still have to validate.
+      </p>
+
+      <div class="mt-10 grid gap-5 lg:grid-cols-5">
+        <article class="card p-6 lg:col-span-2" data-reveal>
+          <span class="pill pill-neutral">Candidates</span>
+          <h3 class="mt-3 font-display text-lg font-bold">University partnerships &amp; subscriptions</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">If the candidate's university has a partnership with Matchify, the university pays and its students get access. Otherwise, access depends on the candidate's subscription tier.</p>
+        </article>
+        <article class="card p-6 lg:col-span-3" data-reveal>
+          <span class="pill pill-ok">Primary revenue</span>
+          <h3 class="mt-3 font-display text-lg font-bold">Employer subscription plans</h3>
+          <div class="mt-4 grid gap-3 sm:grid-cols-3">
+            <div class="rounded-xl border border-black/10 p-4"><p class="font-semibold">Starter</p><p class="mt-1 text-xs text-slate-600">Small teams and startups. Limited active roles, core matching and pipeline.</p></div>
+            <div class="rounded-xl border-2 border-[var(--brand)] p-4"><p class="font-semibold">Growth</p><p class="mt-1 text-xs text-slate-600">More roles and seats, pipeline automation and hiring analytics.</p></div>
+            <div class="rounded-xl border border-black/10 p-4"><p class="font-semibold">Enterprise</p><p class="mt-1 text-xs text-slate-600">Custom limits, integrations, single sign-on and dedicated support.</p></div>
+          </div>
+          <p class="mt-3 text-xs text-slate-500">Tier names and contents are illustrative. Pricing to be defined after validation.</p>
+        </article>
+        <article class="card p-6 lg:col-span-2" data-reveal>
+          <span class="pill pill-ok">Add-ons</span>
+          <h3 class="mt-3 font-display text-lg font-bold">Premium recruitment features</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Advanced candidate recommendations, bulk pipeline actions, deeper analytics and branded company pages. Any promoted listing would be clearly labelled and kept separate from the match estimate.</p>
+        </article>
+        <article class="card p-6 lg:col-span-2" data-reveal>
+          <span class="pill pill-ok">Partnerships</span>
+          <h3 class="mt-3 font-display text-lg font-bold">Company partnership programs</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Companies pay to publish official preparation resources, run internship campaigns or events, and present their engineering culture to relevant candidates.</p>
+        </article>
+        <article class="card p-6" data-reveal>
+          <span class="pill pill-neutral">Later</span>
+          <h3 class="mt-3 font-display text-lg font-bold">Enterprise integrations</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Paid connectors and API access to existing applicant tracking and HR systems.</p>
+        </article>
+      </div>
+
+      <div class="mt-8 card p-6" data-reveal>
+        <h3 class="font-semibold">Key assumptions to validate</h3>
+        <ul class="mt-3 grid gap-2 text-sm text-slate-600 md:grid-cols-2">
+          <li>• Companies will pay for fewer, better-matched candidates rather than more applicants.</li>
+          <li>• Reduced screening time is a strong enough reason to subscribe.</li>
+          <li>• Some companies will invest effort in partner preparation content.</li>
+          <li>• Universities and candidates will pay for access in a niche market.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PRODUCT VISION
+    ====================================================================== -->
+    <section id="vision" class="border-y border-black/5 bg-white" aria-labelledby="vision-title">
+      <div class="mx-auto max-w-6xl px-4 py-20">
+        <p class="eyebrow">12 — Product vision</p>
+        <h2 id="vision-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Principles we want to keep</h2>
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          <div class="card p-5" data-reveal><p class="font-semibold">Explainable by default</p><p class="mt-1.5 text-sm text-slate-600">No score without its reasons.</p></div>
+          <div class="card p-5" data-reveal><p class="font-semibold">People decide</p><p class="mt-1.5 text-sm text-slate-600">Automation suggests and saves time; humans hire.</p></div>
+          <div class="card p-5" data-reveal><p class="font-semibold">Private progress</p><p class="mt-1.5 text-sm text-slate-600">Rankings are personal, never public.</p></div>
+          <div class="card p-5" data-reveal><p class="font-semibold">Skills over keywords</p><p class="mt-1.5 text-sm text-slate-600">Projects and coursework count too.</p></div>
+          <div class="card p-5" data-reveal><p class="font-semibold">Honest preparation</p><p class="mt-1.5 text-sm text-slate-600">Build real skills; no leaked questions.</p></div>
+        </div>
+        <p class="mt-8 max-w-3xl text-sm leading-relaxed text-slate-600" data-reveal>
+          <strong class="text-slate-900">Ideas beyond the MVP</strong> (not committed): portfolio signals from public code repositories with the candidate's consent,
+          collaboration with university career services, mobile apps, and support for more languages and countries.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ROADMAP — official milestones. When a milestone is done:
+         change its pill to "Done", add the work inside its <details>,
+         and move the "open" attribute to the current milestone.
+    ====================================================================== -->
+    <section id="roadmap" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="roadmap-title">
+      <p class="eyebrow">13 — Milestones</p>
+      <h2 id="roadmap-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Project roadmap</h2>
+      <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">Official course milestones. This Fiki will be updated with our work at each one; future milestones show only what we plan to do.</p>
+
+      <div class="mt-10 space-y-3">
+        <details class="milestone card p-5">
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M0</span><span class="font-semibold">Idea registration</span><span class="text-xs text-slate-500">14.10.2026</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <p class="mt-3 text-sm text-slate-600">Project idea and team registration.</p>
+        </details>
+
+        <details class="milestone card border-[var(--brand)] p-5" open>
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-[var(--brand)]">M1</span><span class="font-semibold">Fiki &amp; Project description</span><span class="text-xs text-slate-500">19.10.2026</span><span class="pill pill-brand">Current — this page</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <p class="mt-3 text-sm text-slate-600">Project title, team and proposed roles, problem, solution and value proposition, customer segments, competition, competitive advantage, key metrics, cost structure and revenue streams.</p>
+        </details>
+
+        <details class="milestone card p-5">
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M2</span><span class="font-semibold">Validation 1 (idea)</span><span class="text-xs text-slate-500">02.11.2026</span><span class="pill pill-neutral">Planned</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <p class="mt-3 text-sm text-slate-600">Customer discovery: interview CS/CE students and people involved in tech hiring to test the problem hypotheses above first, and only then the solution. Questions, findings and evidence will be published here.</p>
+        </details>
+
+        <details class="milestone card p-5">
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M3</span><span class="font-semibold">Mockups &amp; Landing page</span><span class="text-xs text-slate-500">09.11.2026</span><span class="pill pill-neutral">Planned</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <p class="mt-3 text-sm text-slate-600">Mockups of the candidate swipe flow and the recruiter pipeline, plus a separate product landing page.</p>
+        </details>
+
+        <details class="milestone card p-5">
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M4</span><span class="font-semibold">Persona, Flow, User stories / Use cases, Architecture</span><span class="text-xs text-slate-500">16.11.2026</span><span class="pill pill-neutral">Planned</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <p class="mt-3 text-sm text-slate-600">Candidate and recruiter personas, user stories, and the system architecture for profiles, matching and preparation.</p>
+        </details>
+
+        <details class="milestone card p-5">
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M5</span><span class="font-semibold">Validation 2 (design, UX)</span><span class="text-xs text-slate-500">02.12.2026</span><span class="pill pill-neutral">Planned</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <p class="mt-3 text-sm text-slate-600">Usability testing of the mockups with candidates and recruiters.</p>
+        </details>
+
+        <details class="milestone card p-5">
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M6</span><span class="font-semibold">Market research</span><span class="text-xs text-slate-500">07.12.2026</span><span class="pill pill-neutral">Planned</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <p class="mt-3 text-sm text-slate-600">Market size, deeper competitor analysis, and first cost and pricing estimates.</p>
+        </details>
+
+        <details class="milestone card p-5">
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M7</span><span class="font-semibold">MVP</span><span class="text-xs text-slate-500">11.01.2027</span><span class="pill pill-neutral">Planned</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <p class="mt-3 text-sm text-slate-600">A minimal working version of the core flow: profile, discovery, matching and a basic recruiter view.</p>
+        </details>
+
+        <details class="milestone card p-5">
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M8</span><span class="font-semibold">First sale</span><span class="text-xs text-slate-500">11.01.2027</span><span class="pill pill-neutral">Planned</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <p class="mt-3 text-sm text-slate-600">Attempt to sign a first employer customer or pilot partner.</p>
+        </details>
+
+        <details class="milestone card p-5">
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M9</span><span class="font-semibold">Slides</span><span class="text-xs text-slate-500">11.01.2027</span><span class="pill pill-neutral">Planned</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <p class="mt-3 text-sm text-slate-600">Presentation deck for the project.</p>
+        </details>
+
+        <details class="milestone card p-5">
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M11</span><span class="font-semibold">Overall project presentation (Fiki, final version)</span><span class="text-xs text-slate-500">18.01.2027</span><span class="pill pill-neutral">Planned</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <p class="mt-3 text-sm text-slate-600">Final presentation and the completed Fiki.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       FOOTER
+  ====================================================================== -->
+  <footer class="bg-[var(--ink)] text-slate-300">
+    <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-3">
+      <div>
+        <p class="font-display text-xl font-bold text-white">Matchify</p>
+        <p class="mt-2 text-sm leading-relaxed text-slate-400">Software Engineering project Fiki · Faculty of Automatic Control and Computers, POLITEHNICA Bucharest · 2026–2027.</p>
+        <p class="mt-3 text-xs text-slate-500">This page documents a university project. Matchify is a concept, not an operating service.</p>
+      </div>
+      <div>
+        <p class="text-sm font-semibold text-white">Team</p>
+        <ul class="mt-2 space-y-1 text-sm text-slate-400">
+          <li>Mandescu Victor-Ioan</li>
+          <li>Popescu Radu Cristian</li>
+          <li>Zamfir Cosmin Marian</li>
+          <li>Ticu Bogdan Valeriu</li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-sm font-semibold text-white">Page</p>
+        <ul class="mt-2 space-y-1 text-sm">
+          <li><a class="text-slate-400 hover:text-white" href="#top">Back to top ↑</a></li>
+        </ul>
+        <p class="mt-4 font-mono text-xs text-slate-500">Last updated: M1 · 18.10.2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

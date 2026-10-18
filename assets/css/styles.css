@@ -1,0 +1,212 @@
+/*
+  Matchify Fiki — custom styles.
+  Tailwind (loaded from CDN in index.html) handles layout and spacing.
+  This file holds the few things utilities cannot express cleanly:
+  design tokens, gradients, the concept-demo card stack and small motion.
+*/
+
+:root {
+  --ink: #0f1222;
+  --ink-soft: #4a5068;
+  --paper: #fbfaf7;
+  --line: #e7e4dc;
+  --brand: #4f46e5;
+  --brand-ink: #3730a3;
+  --match: #f2545b;
+  --ok: #0f9d6e;
+  --warn: #c2410c;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  text-rendering: optimizeLegibility;
+}
+
+/* Sections leave room for the sticky nav when jumped to */
+section[id] { scroll-margin-top: 5.5rem; }
+
+/* ---------- Hero ---------- */
+.hero-bg {
+  background:
+    radial-gradient(60rem 30rem at 85% -10%, rgba(79, 70, 229, .16), transparent 60%),
+    radial-gradient(40rem 24rem at -10% 20%, rgba(242, 84, 91, .12), transparent 60%),
+    var(--paper);
+}
+.grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(15, 18, 34, .05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 18, 34, .05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse at top, #000 30%, transparent 75%);
+}
+.text-gradient {
+  background: linear-gradient(100deg, var(--brand) 10%, var(--match) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Navigation ---------- */
+.nav-link { position: relative; }
+.nav-link[aria-current="true"] { color: var(--ink); }
+.nav-link[aria-current="true"]::after {
+  content: "";
+  position: absolute;
+  left: .5rem; right: .5rem; bottom: -.15rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--brand);
+}
+
+/* ---------- Generic card ---------- */
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(79, 70, 229, .35);
+  box-shadow: 0 18px 40px -24px rgba(15, 18, 34, .35);
+}
+
+/* Section number label, e.g. "03 — Problem" */
+.eyebrow {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: .75rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+/* Small "status" pills used to separate proposals from facts */
+.pill {
+  display: inline-flex; align-items: center; gap: .35rem;
+  font-size: .72rem; font-weight: 600;
+  padding: .2rem .6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.pill-proposed { background: #fff4e5; color: #9a3412; border: 1px solid #fed7aa; }
+.pill-demo     { background: #fdecee; color: #b4232b; border: 1px solid #fbc6ca; }
+.pill-ok       { background: #e7f7f0; color: #0b6b4b; border: 1px solid #b6e8d3; }
+.pill-neutral  { background: #f1f0ec; color: #4a5068; border: 1px solid var(--line); }
+.pill-brand    { background: #eef0ff; color: var(--brand-ink); border: 1px solid #d6d9ff; }
+
+/* ---------- Team avatars ---------- */
+.avatar {
+  width: 5.5rem; height: 5.5rem;
+  border-radius: 1.4rem;
+  display: grid; place-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem; font-weight: 700;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.25);
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.avatar-1 { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+.avatar-2 { background: linear-gradient(135deg, #f2545b, #f59e0b); }
+.avatar-3 { background: linear-gradient(135deg, #0f9d6e, #0891b2); }
+.avatar-4 { background: linear-gradient(135deg, #0f1222, #4f46e5); }
+
+/* ---------- Tables ---------- */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.data-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .9rem; }
+.data-table th, .data-table td { padding: .75rem .9rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.data-table thead th { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); background: #f6f5f1; position: sticky; top: 0; }
+.data-table tbody tr:hover td { background: #fcfbf8; }
+.data-table td.center, .data-table th.center { text-align: center; }
+
+.mark { font-weight: 700; }
+.mark-yes { color: var(--ok); }
+.mark-part { color: #b45309; }
+.mark-no { color: #9aa0b4; }
+
+/* ---------- Workflow diagram ---------- */
+.flow-step { position: relative; }
+@media (min-width: 1024px) {
+  .flow-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 2.1rem; right: -1.1rem;
+    width: 1.2rem; height: 2px;
+    background: repeating-linear-gradient(90deg, var(--brand) 0 4px, transparent 4px 8px);
+  }
+}
+
+/* ---------- Concept demo: swipe stack ---------- */
+.demo-stage {
+  position: relative;
+  height: 27rem;
+  perspective: 1200px;
+}
+.job-card {
+  position: absolute; inset: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 50px -30px rgba(15, 18, 34, .45);
+  padding: 1.5rem;
+  display: flex; flex-direction: column;
+  transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .45s ease;
+  will-change: transform;
+}
+.job-card[data-depth="1"] { transform: translateY(14px) scale(.96); opacity: .7; }
+.job-card[data-depth="2"] { transform: translateY(28px) scale(.92); opacity: .4; }
+.job-card[data-depth="3"] { transform: translateY(28px) scale(.92); opacity: 0; }
+.job-card.out-left  { transform: translateX(-120%) rotate(-14deg); opacity: 0; }
+.job-card.out-right { transform: translateX(120%)  rotate(14deg);  opacity: 0; }
+
+.meter { height: .5rem; border-radius: 999px; background: #eeedf2; overflow: hidden; }
+.meter > span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--brand), var(--match)); }
+
+.skill-chip { font-size: .75rem; padding: .2rem .55rem; border-radius: .5rem; border: 1px solid var(--line); }
+.skill-have { background: #e7f7f0; border-color: #b6e8d3; color: #0b6b4b; }
+.skill-miss { background: #fff4e5; border-color: #fed7aa; color: #9a3412; }
+
+.demo-btn {
+  width: 3.75rem; height: 3.75rem;
+  border-radius: 999px;
+  display: grid; place-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 24px -16px rgba(15, 18, 34, .5);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.demo-btn:hover { transform: translateY(-2px) scale(1.04); }
+.demo-btn:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
+
+.toast {
+  transition: opacity .3s ease, transform .3s ease;
+}
+.toast[hidden] { display: block; opacity: 0; transform: translateY(8px); pointer-events: none; }
+
+/* ---------- Roadmap (native <details>) ---------- */
+.milestone summary { list-style: none; cursor: pointer; }
+.milestone summary::-webkit-details-marker { display: none; }
+.milestone .chev { transition: transform .2s ease; }
+.milestone[open] .chev { transform: rotate(180deg); }
+.milestone summary:focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; border-radius: 1rem; }
+
+/* Focus ring for everything else */
+a:focus-visible, button:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: .5rem; }
+
+/* Gentle reveal on scroll (enabled by main.js only when motion is allowed) */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Print: a clean document for graders who print the Fiki */
+@media print {
+  header nav, #demo-controls, .no-print { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  section { break-inside: avoid; }
+}
