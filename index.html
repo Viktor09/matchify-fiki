@@ -44,39 +44,25 @@
         Matchify <span class="hidden font-mono text-[0.65rem] font-medium text-slate-500 sm:inline">/ fiki</span>
       </a>
 
-      <ul class="hidden items-center gap-1 text-sm text-slate-600 xl:flex" data-nav>
-        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#overview">Overview</a></li>
-        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#team">Team</a></li>
-        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#problem">Problem</a></li>
-        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#solution">Solution</a></li>
-        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#how">How it works</a></li>
-        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#segments">Segments</a></li>
-        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#competition">Competition</a></li>
-        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#advantage">Advantage</a></li>
-        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#metrics">Metrics</a></li>
-        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#costs">Costs</a></li>
-        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#revenue">Revenue</a></li>
-        <li><a class="nav-link rounded-md px-2 py-1 hover:text-slate-900" href="#roadmap">Roadmap</a></li>
+      <ul class="hidden items-center gap-1 whitespace-nowrap text-sm text-slate-600 md:flex" data-nav>
+        <li><a class="nav-link rounded-md px-3 py-1 hover:text-slate-900" href="#overview">Overview</a></li>
+        <li><a class="nav-link rounded-md px-3 py-1 hover:text-slate-900" href="#team">Team</a></li>
+        <li><a class="nav-link rounded-md px-3 py-1 hover:text-slate-900" href="#m1">M1 · Project description</a></li>
+        <li><a class="nav-link rounded-md px-3 py-1 hover:text-slate-900" href="#m2">M2 · Validation</a></li>
+        <li><a class="nav-link rounded-md px-3 py-1 hover:text-slate-900" href="#roadmap">Roadmap</a></li>
       </ul>
 
-      <button id="menu-button" type="button" class="rounded-lg border border-black/10 bg-white px-3 py-1.5 text-sm font-medium xl:hidden" aria-expanded="false" aria-controls="mobile-menu">
+      <button id="menu-button" type="button" class="rounded-lg border border-black/10 bg-white px-3 py-1.5 text-sm font-medium md:hidden" aria-expanded="false" aria-controls="mobile-menu">
         Sections
       </button>
     </nav>
 
-    <div id="mobile-menu" class="border-t border-black/5 bg-[#fbfaf7] xl:hidden" hidden>
-      <ul class="mx-auto grid max-w-6xl grid-cols-2 gap-1 px-4 py-3 text-sm sm:grid-cols-3" data-nav>
+    <div id="mobile-menu" class="border-t border-black/5 bg-[#fbfaf7] md:hidden" hidden>
+      <ul class="mx-auto grid max-w-6xl gap-1 px-4 py-3 text-sm" data-nav>
         <li><a class="nav-link block rounded-md px-2 py-2" href="#overview">Overview</a></li>
-        <li><a class="nav-link block rounded-md px-2 py-2" href="#team">Team &amp; roles</a></li>
-        <li><a class="nav-link block rounded-md px-2 py-2" href="#problem">Problem</a></li>
-        <li><a class="nav-link block rounded-md px-2 py-2" href="#solution">Solution</a></li>
-        <li><a class="nav-link block rounded-md px-2 py-2" href="#how">How it works</a></li>
-        <li><a class="nav-link block rounded-md px-2 py-2" href="#segments">Customer segments</a></li>
-        <li><a class="nav-link block rounded-md px-2 py-2" href="#competition">Competition</a></li>
-        <li><a class="nav-link block rounded-md px-2 py-2" href="#advantage">Advantage</a></li>
-        <li><a class="nav-link block rounded-md px-2 py-2" href="#metrics">Key metrics</a></li>
-        <li><a class="nav-link block rounded-md px-2 py-2" href="#costs">Cost structure</a></li>
-        <li><a class="nav-link block rounded-md px-2 py-2" href="#revenue">Revenue streams</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#team">Team</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#m1">M1 · Project description</a></li>
+        <li><a class="nav-link block rounded-md px-2 py-2" href="#m2">M2 · Validation</a></li>
         <li><a class="nav-link block rounded-md px-2 py-2" href="#roadmap">Roadmap</a></li>
       </ul>
     </div>
@@ -103,29 +89,19 @@
 
         <aside class="mt-8 max-w-3xl rounded-2xl border border-black/10 bg-white/70 p-4 text-sm leading-relaxed text-slate-600 backdrop-blur" aria-label="About this page">
           <strong class="text-slate-900">This is our project Fiki, not a product landing page.</strong>
-          It documents the idea, decisions and progress of a university project and will grow with every milestone.
-          Matchify does not exist as a working product yet: there are no users, partners, measured results or revenue,
-          and everything described below is a proposal we still have to validate.
+          It documents the idea, the decisions and the progress of a university project, one milestone at a time.
+          Matchify does not exist as a working product yet; each milestone below shows how we are shaping and testing it.
         </aside>
 
-        <!-- M1 requirement index — helps evaluators find each item quickly -->
-        <div class="mt-10 card p-5 sm:p-6" data-reveal>
-          <div class="flex flex-wrap items-center justify-between gap-3">
-            <h2 class="font-display text-lg font-bold">M1 requirements on this page</h2>
-          </div>
-          <ol class="mt-4 grid gap-2 text-sm sm:grid-cols-2 lg:grid-cols-5">
-            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#project-title"><span class="pill pill-ok">1</span>Project title</a></li>
-            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#team"><span class="pill pill-ok">2</span>Team &amp; roles</a></li>
-            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#problem"><span class="pill pill-ok">3</span>Problem</a></li>
-            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#solution"><span class="pill pill-ok">4</span>Solution &amp; value</a></li>
-            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#segments"><span class="pill pill-ok">5</span>Customer segments</a></li>
-            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#competition"><span class="pill pill-ok">6</span>Competition</a></li>
-            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#advantage"><span class="pill pill-ok">7</span>Our advantage</a></li>
-            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#metrics"><span class="pill pill-ok">8</span>Key metrics</a></li>
-            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#costs"><span class="pill pill-ok">9</span>Cost structure</a></li>
-            <li><a class="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-slate-50" href="#revenue"><span class="pill pill-ok">10</span>Revenue streams</a></li>
-          </ol>
-        </div>
+        <!-- Milestone progress (static, no links) -->
+        <ol class="mt-10 grid grid-cols-2 gap-2 text-xs sm:grid-cols-4 lg:grid-cols-6" aria-label="Milestone progress">
+          <li class="rounded-xl border border-emerald-200 bg-emerald-50 p-3"><p class="font-mono text-emerald-700">M1 · Done</p><p class="mt-1 font-semibold text-slate-800">Fiki &amp; project description</p></li>
+          <li class="rounded-xl border-2 border-[var(--brand)] bg-white p-3"><p class="font-mono text-[var(--brand)]">M2 · Current</p><p class="mt-1 font-semibold text-slate-800">Validation 1 (idea)</p></li>
+          <li class="rounded-xl border border-black/10 bg-white/60 p-3"><p class="font-mono text-slate-400">M3</p><p class="mt-1 font-semibold text-slate-500">Mockups &amp; landing page</p></li>
+          <li class="rounded-xl border border-black/10 bg-white/60 p-3"><p class="font-mono text-slate-400">M4</p><p class="mt-1 font-semibold text-slate-500">Personas, flows, architecture</p></li>
+          <li class="rounded-xl border border-black/10 bg-white/60 p-3"><p class="font-mono text-slate-400">M5</p><p class="mt-1 font-semibold text-slate-500">Validation 2 (design, UX)</p></li>
+          <li class="rounded-xl border border-black/10 bg-white/60 p-3"><p class="font-mono text-slate-400">M6–M11</p><p class="mt-1 font-semibold text-slate-500">Market, MVP, sale, final</p></li>
+        </ol>
       </div>
     </section>
 
@@ -133,7 +109,7 @@
          OVERVIEW
     ====================================================================== -->
     <section id="overview" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="overview-title">
-      <p class="eyebrow">01 — Project overview</p>
+      <p class="eyebrow">Project overview</p>
       <h2 id="overview-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">One platform from first swipe to first interview</h2>
       <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
         Technical hiring is usually split across several disconnected places: a job board to find roles,
@@ -187,7 +163,7 @@
       <div class="mx-auto max-w-6xl px-4 py-20">
         <div class="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p class="eyebrow">02 — Team &amp; responsibilities</p>
+            <p class="eyebrow">Team &amp; responsibilities</p>
             <h2 id="team-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">The team</h2>
           </div>
           <span class="pill pill-proposed">Roles are a proposal, to be confirmed by the team</span>
@@ -290,19 +266,42 @@
     </section>
 
     <!-- =====================================================================
+         MILESTONE 1 — everything from Problem to Product vision
+    ====================================================================== -->
+    <div id="m1">
+    <div class="bg-[var(--ink)] text-white">
+      <div class="mx-auto max-w-6xl px-4 py-14">
+        <p class="font-mono text-xs uppercase tracking-[0.2em] text-indigo-300">Milestone 1 · 19.10.2026</p>
+        <h2 class="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl">Project description</h2>
+        <p class="mt-4 max-w-3xl text-slate-300">The problem we set out to solve, our proposed solution, who it is for, the market around it and a first business model.</p>
+        <ol class="mt-8 flex flex-wrap gap-2 text-xs text-slate-300">
+          <li class="rounded-full border border-white/15 px-3 py-1">1.1 Problem</li>
+          <li class="rounded-full border border-white/15 px-3 py-1">1.2 Solution</li>
+          <li class="rounded-full border border-white/15 px-3 py-1">1.3 How it works</li>
+          <li class="rounded-full border border-white/15 px-3 py-1">1.4 Customer segments</li>
+          <li class="rounded-full border border-white/15 px-3 py-1">1.5 Competition</li>
+          <li class="rounded-full border border-white/15 px-3 py-1">1.6 Advantage</li>
+          <li class="rounded-full border border-white/15 px-3 py-1">1.7 Key metrics</li>
+          <li class="rounded-full border border-white/15 px-3 py-1">1.8 Costs</li>
+          <li class="rounded-full border border-white/15 px-3 py-1">1.9 Revenue</li>
+          <li class="rounded-full border border-white/15 px-3 py-1">1.10 Vision</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- =====================================================================
          PROBLEM — M1 requirement 3
     ====================================================================== -->
     <section id="problem" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="problem-title">
       <div class="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p class="eyebrow">03 — Problem</p>
+          <p class="eyebrow">1.1 — Problem</p>
           <h2 id="problem-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Technical hiring wastes effort on both sides</h2>
         </div>
       </div>
       <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
         These are the problems we believe exist, seen from our perspective as students approaching the tech job market.
-        We present them as <strong>hypotheses</strong>: our M2 customer-discovery interviews with candidates and
-        recruiters will confirm, reshape or reject each one.
+        We present them as <strong>hypotheses</strong>; Milestone 2 below tests them with candidates and people who hire.
       </p>
 
       <div class="mt-10 grid gap-8 lg:grid-cols-2">
@@ -367,7 +366,7 @@
     ====================================================================== -->
     <section id="solution" class="border-y border-black/5 bg-white" aria-labelledby="solution-title">
       <div class="mx-auto max-w-6xl px-4 py-20">
-        <p class="eyebrow">04 — Our solution &amp; value proposition</p>
+        <p class="eyebrow">1.2 — Solution &amp; value proposition</p>
         <h2 id="solution-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Match on skills, explain every match, prepare for the real thing</h2>
 
         <blockquote class="mt-8 rounded-2xl border-l-4 border-[var(--brand)] bg-indigo-50/60 p-6 text-lg leading-relaxed text-slate-800" data-reveal>
@@ -415,7 +414,7 @@
          HOW IT WORKS — workflow diagram + concept demo
     ====================================================================== -->
     <section id="how" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="how-title">
-      <p class="eyebrow">05 — How the platform would work</p>
+      <p class="eyebrow">1.3 — How the platform would work</p>
       <h2 id="how-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">From profile to preparation</h2>
       <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">The proposed flow connects both sides of the market. Candidate steps are in indigo and recruiter steps in coral; the two lanes meet at the match.</p>
 
@@ -519,7 +518,7 @@
     ====================================================================== -->
     <section id="segments" class="border-y border-black/5 bg-white" aria-labelledby="segments-title">
       <div class="mx-auto max-w-6xl px-4 py-20">
-        <p class="eyebrow">06 — Customer segments</p>
+        <p class="eyebrow">1.4 — Customer segments</p>
         <h2 id="segments-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Two-sided market: who uses it, who pays</h2>
         <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
           Matchify is a two-sided platform. <strong>Candidates</strong> get access through their university when it has a partnership with us
@@ -579,7 +578,7 @@
     <section id="competition" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="competition-title">
       <div class="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p class="eyebrow">07 — Market &amp; competition</p>
+          <p class="eyebrow">1.5 — Market &amp; competition</p>
           <h2 id="competition-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Who already solves parts of this</h2>
         </div>
       </div>
@@ -721,7 +720,7 @@
     ====================================================================== -->
     <section id="advantage" class="border-y border-black/5 bg-white" aria-labelledby="advantage-title">
       <div class="mx-auto max-w-6xl px-4 py-20">
-        <p class="eyebrow">08 — Competitive advantage</p>
+        <p class="eyebrow">1.6 — Competitive advantage</p>
         <h2 id="advantage-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Where Matchify would be different</h2>
         <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
           Many of these features exist on their own somewhere in the market. Our proposed advantage is
@@ -781,7 +780,7 @@
     <section id="metrics" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="metrics-title">
       <div class="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p class="eyebrow">09 — Key metrics</p>
+          <p class="eyebrow">1.7 — Key metrics</p>
           <h2 id="metrics-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">What we would measure</h2>
         </div>
       </div>
@@ -825,7 +824,7 @@
       <div class="mx-auto max-w-6xl px-4 py-20">
         <div class="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p class="eyebrow">10 — Cost structure</p>
+            <p class="eyebrow">1.8 — Cost structure</p>
             <h2 id="costs-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Where the money would go</h2>
           </div>
         </div>
@@ -875,7 +874,7 @@
     <section id="revenue" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="revenue-title">
       <div class="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p class="eyebrow">11 — Revenue streams</p>
+          <p class="eyebrow">1.9 — Revenue streams</p>
           <h2 id="revenue-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Preliminary business model</h2>
         </div>
       </div>
@@ -933,7 +932,7 @@
     ====================================================================== -->
     <section id="vision" class="border-y border-black/5 bg-white" aria-labelledby="vision-title">
       <div class="mx-auto max-w-6xl px-4 py-20">
-        <p class="eyebrow">12 — Product vision</p>
+        <p class="eyebrow">1.10 — Product vision</p>
         <h2 id="vision-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Principles we want to keep</h2>
         <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           <div class="card p-5" data-reveal><p class="font-semibold">Explainable by default</p><p class="mt-1.5 text-sm text-slate-600">No score without its reasons.</p></div>
@@ -949,13 +948,396 @@
       </div>
     </section>
 
+    </div>
+    <!-- end of #m1 -->
+
+    <!-- =====================================================================
+         M2 — VALIDATION 1 (IDEA): customer discovery
+         Raw responses: assets/data/m2-*.csv
+    ====================================================================== -->
+    <section id="m2" class="border-y border-black/5 bg-white" aria-labelledby="m2-title">
+      <div class="mx-auto max-w-6xl px-4 py-20">
+        <p class="font-mono text-xs uppercase tracking-[0.2em] text-[var(--brand)]">Milestone 2 · 02.11.2026</p>
+        <h2 id="m2-title" class="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl">Validation 1: customer discovery</h2>
+        <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
+          We ran two anonymous questionnaires, one for candidates and one for people who hire for junior IT roles.
+          Both asked about <strong>what people actually did</strong> in their most recent search or hiring process,
+          not what they think of Matchify. Matchify was not mentioned in either form. This section documents the whole process,
+          every question we asked, all findings (including the ones that contradict us) and what we changed as a result.
+        </p>
+
+
+        <!-- 1 + 2 -->
+        <div id="m2-origin" class="mt-14 grid gap-5 lg:grid-cols-2" style="scroll-margin-top:5.5rem">
+          <article class="card p-6 sm:p-8" data-reveal>
+            <p class="font-mono text-xs text-[var(--brand)]">2.1</p>
+            <h3 class="mt-1 font-display text-xl font-bold">How we identified the problem</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">
+              The idea came from our own position as students about to enter the tech job market: many applications sent through
+              general job boards, little or no feedback, and interview preparation done on generic platforms unrelated to the role.
+              In M1 we wrote these down as problem hypotheses,
+              four for candidates and four for recruiters, knowing they reflected our own experience and had to be checked with
+              other people.
+            </p>
+          </article>
+          <article class="card p-6 sm:p-8" data-reveal>
+            <p class="font-mono text-xs text-[var(--brand)]">2.2</p>
+            <h3 class="mt-1 font-display text-xl font-bold">What we thought the solution was</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">
+              A recruitment platform only for CS/CE roles: profiles built from CVs, swipe-based discovery, an explainable match estimate
+              visible to both sides, a lighter recruiter pipeline, private skill progress, and adaptive interview preparation unlocked once a
+              candidate enters a company's process.
+              In M2 we deliberately set the solution aside and tested only the problem.
+            </p>
+          </article>
+        </div>
+
+        <!-- 3 Plan -->
+        <div id="m2-plan" class="mt-14" style="scroll-margin-top:5.5rem">
+          <p class="font-mono text-xs text-[var(--brand)]">2.3</p>
+          <h3 class="mt-1 font-display text-2xl font-bold">Customer discovery plan</h3>
+          <div class="mt-5 grid gap-5 md:grid-cols-3">
+            <div class="card p-6" data-reveal>
+              <p class="font-semibold">Who</p>
+              <ul class="mt-2 space-y-1.5 text-sm text-slate-600">
+                <li><strong class="text-slate-800">Candidates:</strong> students and recent graduates who looked for an IT internship or job.</li>
+                <li><strong class="text-slate-800">Hiring side:</strong> recruiters, hiring managers and engineering managers who recruited for junior IT roles or internships.</li>
+              </ul>
+            </div>
+            <div class="card p-6" data-reveal>
+              <p class="font-semibold">What we tested</p>
+              <ul class="mt-2 space-y-1.5 text-sm text-slate-600">
+                <li>• Do applications go unanswered?</li>
+                <li>• How do candidates check their fit and prepare?</li>
+                <li>• Which hiring step costs the most time?</li>
+                <li>• How are technical skills assessed, with which tools, and what is already paid for?</li>
+              </ul>
+            </div>
+            <div class="card p-6" data-reveal>
+              <p class="font-semibold">How</p>
+              <ul class="mt-2 space-y-1.5 text-sm text-slate-600">
+                <li>• Two anonymous Google Forms: Romanian for candidates, English for the hiring side.</li>
+                <li>• Questions about real, recent situations, without presenting our idea.</li>
+                <li>• Collected 31.10–02.11.2026.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h4 class="mt-10 font-semibold">Assumptions we prioritised (assumption mapping)</h4>
+          <div class="table-wrap card mt-3" data-reveal>
+            <table class="data-table">
+              <thead><tr><th scope="col">Assumption</th><th scope="col">If it is false…</th><th scope="col">Importance</th><th scope="col">Evidence before M2</th></tr></thead>
+              <tbody>
+                <tr><th scope="row" class="font-medium">Candidates often get no answer to applications</th><td>The "black hole" problem we build discovery around disappears</td><td>High</td><td>Only our own experience</td></tr>
+                <tr><th scope="row" class="font-medium">Screening CVs is the most time-consuming step for hiring teams</th><td>The recruiter value proposition, and our revenue, is weak</td><td>High</td><td>None</td></tr>
+                <tr><th scope="row" class="font-medium">Candidates struggle to judge their fit and prepare for a specific role</th><td>Skill guidance and adaptive prep are not needed</td><td>Medium</td><td>Only our own experience</td></tr>
+                <tr><th scope="row" class="font-medium">Companies already pay for recruiting tools and would switch</th><td>Nobody pays for Matchify</td><td>High</td><td>None</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 4 Process & questions -->
+        <div id="m2-process" class="mt-14" style="scroll-margin-top:5.5rem">
+          <p class="font-mono text-xs text-[var(--brand)]">2.4</p>
+          <h3 class="mt-1 font-display text-2xl font-bold">The process in detail</h3>
+
+          <div class="mt-5 grid gap-5 lg:grid-cols-3">
+            <div class="card p-6" data-reveal>
+              <p class="font-semibold">Identifying the segments</p>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">We split the market into the two sides from M1. On the candidate side we included anyone who had recently searched for an IT internship or job, from bachelor's students to recent graduates. On the hiring side we included every role involved in junior hiring, because we did not yet know who owns the problem: recruiters, hiring managers or engineering leads.</p>
+            </div>
+            <div class="card p-6" data-reveal>
+              <p class="font-semibold">Reaching them</p>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">We shared both forms on <strong>Reddit</strong> and <strong>in person</strong>. On the hiring side we approached managers directly at <strong>eMAG</strong>, <strong>Bitdefender</strong>, <strong>Keysight</strong> and a <strong>London-based hedge fund</strong>.</p>
+            </div>
+            <div class="card p-6" data-reveal>
+              <p class="font-semibold">Collecting information</p>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">Online questionnaires mixing a few multiple-choice questions (for context) with open questions asking for a concrete story. Both forms opened with a note that we wanted real experiences, not opinions about a product, and asked respondents not to share personal or confidential data.</p>
+            </div>
+          </div>
+
+          <div class="mt-8 grid gap-5 lg:grid-cols-2">
+            <details class="milestone card p-6" data-reveal>
+              <summary class="flex items-center justify-between gap-4"><span><span class="font-semibold">Candidate questionnaire</span> <span class="text-sm text-slate-500">· 12 questions · Romanian</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+              <p class="mt-3 text-xs text-slate-500">"Experiența studenților cu internshipurile și joburile în IT" · <a class="text-[var(--brand)] hover:underline" href="https://docs.google.com/forms/d/e/1FAIpQLScTUhUgyGyLGTMa5AHBQvxZ9iuI06lRE13YlRpy0VuAimQ6wg/viewform" target="_blank" rel="noopener">open the form ↗</a></p>
+              <ol class="mt-3 list-decimal space-y-2 pl-5 text-sm text-slate-700">
+                <li>În ce etapă a studiilor ești? <span class="text-slate-400">(choice)</span></li>
+                <li>Când ai căutat ultima dată un internship sau un job în IT? <span class="text-slate-400">(choice)</span></li>
+                <li>Gândește-te la ultima perioadă în care ai căutat un internship sau job IT. Unde ai găsit anunțurile la care te-ai uitat? <span class="text-slate-400">(checkboxes)</span></li>
+                <li>În acea perioadă, la câte poziții ai aplicat aproximativ? <span class="text-slate-400">(choice)</span></li>
+                <li>Povestește ultima aplicare la un internship sau job IT: unde ai găsit anunțul, ce ai verificat înainte să aplici și ce ai făcut apoi?</li>
+                <li>La ultima aplicare, ce ai făcut pentru a verifica dacă experiența sau competențele tale corespundeau cerințelor?</li>
+                <li>Ce s-a întâmplat după ultima aplicare? <span class="text-slate-400">(choice)</span></li>
+                <li>La ultima căutare, a existat vreun pas care a durat mai mult decât te așteptai sau pe care a trebuit să-l repeți? Ce s-a întâmplat concret?</li>
+                <li>Ce ai făcut efectiv pentru a rezolva sau evita acea situație?</li>
+                <li>Ai participat vreodată la un interviu sau test tehnic pentru un internship sau job IT? <span class="text-slate-400">(choice)</span></li>
+                <li>Cum te-ai pregătit pentru cel mai recent interviu sau test tehnic? Descrie ce ai făcut și ce resurse ai folosit.</li>
+                <li>La acel interviu sau test, a existat ceva pentru care pregătirea ta nu a fost suficientă? Ce ai făcut după aceea?</li>
+              </ol>
+            </details>
+            <details class="milestone card p-6" data-reveal>
+              <summary class="flex items-center justify-between gap-4"><span><span class="font-semibold">Hiring-side questionnaire</span> <span class="text-sm text-slate-500">· 13 questions · English</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+              <p class="mt-3 text-xs text-slate-500">"Recent Experiences in Recruiting for Junior IT Roles and Internships" · <a class="text-[var(--brand)] hover:underline" href="https://docs.google.com/forms/d/e/1FAIpQLSf3yW0mn38J9B4Ra0jicwqTClcgiJ8Prn5HhMLQ5fQlV7xlOQ/viewform" target="_blank" rel="noopener">open the form ↗</a></p>
+              <ol class="mt-3 list-decimal space-y-2 pl-5 text-sm text-slate-700">
+                <li>What role did you play in the recruitment processes over the past 12 months? <span class="text-slate-400">(choice)</span></li>
+                <li>In the past 12 months, have you been directly involved in recruiting for a junior IT position or an internship? <span class="text-slate-400">(choice)</span></li>
+                <li>Thinking about the most recent junior IT position or internship you recruited for, what kind of role was it, and approximately when did the recruitment take place?</li>
+                <li>Through what channels did the candidates for that role come about? <span class="text-slate-400">(checkboxes)</span></li>
+                <li>Approximately how many applications were received for that role? <span class="text-slate-400">(choice)</span></li>
+                <li>Describe how the initial selection process for that role was conducted, from the receipt of applications to the selection of candidates for interviews.</li>
+                <li>For that role, which step took the team the most time, and approximately how long did it take? If you don't have an estimate, describe the step without making up a number.</li>
+                <li>Was there ever a time when the process didn't go according to plan? What happened, and how did you handle it?</li>
+                <li>In that process, how were the candidates' technical skills assessed before the final decision was made? <span class="text-slate-400">(checkboxes)</span></li>
+                <li>What tools did you actually use to track candidates and the various stages of the recruitment process?</li>
+                <li>During that process, did you change anything compared to previous recruitments, or did you come up with a solution on the spot to overcome a challenge?</li>
+                <li>Over the past 12 months, what paid services, tools, or channels has the IT recruitment team used, to the best of your knowledge?</li>
+                <li>If a new recruitment tool was introduced in the last 12 months, what issue led to its selection, and how was the decision made?</li>
+              </ol>
+            </details>
+          </div>
+
+        </div>
+
+        <!-- Respondents -->
+        <p class="mt-14 font-mono text-xs text-[var(--brand)]">2.5</p>
+        <h3 class="mt-1 font-display text-2xl font-bold">Who answered</h3>
+        <div class="mt-5 grid gap-5 lg:grid-cols-2">
+          <article class="card p-6 sm:p-8" data-reveal>
+            <div class="flex items-center justify-between"><h3 class="font-display text-xl font-bold">Candidates</h3><span class="font-display text-3xl font-bold text-[var(--brand)]">9</span></div>
+            <p class="mt-1 text-sm text-slate-500">responses · 7 searched in the last 30 days · 7 have taken a technical interview or test</p>
+            <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">Study stage</p>
+            <div class="bars mt-2">
+              <div class="bar"><span>Bachelor's, 3rd–4th year</span><div class="meter"><span style="width:33%"></span></div><b>3</b></div>
+              <div class="bar"><span>Master's</span><div class="meter"><span style="width:22%"></span></div><b>2</b></div>
+              <div class="bar"><span>Graduated in the last 2 years</span><div class="meter"><span style="width:33%"></span></div><b>3</b></div>
+              <div class="bar"><span>Other</span><div class="meter"><span style="width:11%"></span></div><b>1</b></div>
+            </div>
+            <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">Where they found listings (multiple choice)</p>
+            <div class="bars mt-2">
+              <div class="bar"><span>LinkedIn</span><div class="meter"><span style="width:89%"></span></div><b>8</b></div>
+              <div class="bar"><span>Company websites</span><div class="meter"><span style="width:78%"></span></div><b>7</b></div>
+              <div class="bar"><span>Personal recommendations</span><div class="meter"><span style="width:67%"></span></div><b>6</b></div>
+              <div class="bar"><span>Groups, communities, colleagues</span><div class="meter"><span style="width:56%"></span></div><b>5</b></div>
+              <div class="bar"><span>Stagii pe Bune</span><div class="meter"><span style="width:33%"></span></div><b>3</b></div>
+              <div class="bar"><span>eJobs / BestJobs</span><div class="meter"><span style="width:33%"></span></div><b>3</b></div>
+              <div class="bar"><span>Career fairs</span><div class="meter"><span style="width:11%"></span></div><b>1</b></div>
+            </div>
+            <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">Positions applied to in that period</p>
+            <div class="bars mt-2">
+              <div class="bar"><span>Over 20</span><div class="meter"><span style="width:44%"></span></div><b>4</b></div>
+              <div class="bar"><span>11–20</span><div class="meter"><span style="width:22%"></span></div><b>2</b></div>
+              <div class="bar"><span>1–5</span><div class="meter"><span style="width:22%"></span></div><b>2</b></div>
+              <div class="bar"><span>0 (hired via recommendation)</span><div class="meter"><span style="width:11%"></span></div><b>1</b></div>
+            </div>
+            <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">Outcome of the last application</p>
+            <div class="bars mt-2">
+              <div class="bar"><span>No response</span><div class="meter"><span style="width:33%"></span></div><b>3</b></div>
+              <div class="bar"><span>Still in progress</span><div class="meter"><span style="width:33%"></span></div><b>3</b></div>
+              <div class="bar"><span>Rejected</span><div class="meter"><span style="width:22%"></span></div><b>2</b></div>
+              <div class="bar"><span>Offer</span><div class="meter"><span style="width:11%"></span></div><b>1</b></div>
+            </div>
+          </article>
+
+          <article class="card p-6 sm:p-8" data-reveal>
+            <div class="flex items-center justify-between"><h3 class="font-display text-xl font-bold">Hiring side</h3><span class="font-display text-3xl font-bold text-[var(--match)]">4</span></div>
+            <p class="mt-1 text-sm text-slate-500">responses · 3 directly involved in junior IT hiring in the last 12 months</p>
+            <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">Role</p>
+            <div class="bars mt-2">
+              <div class="bar"><span>Hiring Manager / Team Lead</span><div class="meter"><span style="width:50%"></span></div><b>2</b></div>
+              <div class="bar"><span>Recruiter / Talent Acquisition</span><div class="meter"><span style="width:25%"></span></div><b>1</b></div>
+              <div class="bar"><span>Engineering Manager / CTO</span><div class="meter"><span style="width:25%"></span></div><b>1</b></div>
+            </div>
+            <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">Applications for the most recent role</p>
+            <div class="bars mt-2">
+              <div class="bar"><span>21–50</span><div class="meter"><span style="width:50%"></span></div><b>2</b></div>
+              <div class="bar"><span>51–100</span><div class="meter"><span style="width:50%"></span></div><b>2</b></div>
+            </div>
+            <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">How technical skills were assessed (multiple choice)</p>
+            <div class="bars mt-2">
+              <div class="bar"><span>Resume / previous experience</span><div class="meter"><span style="width:100%"></span></div><b>4</b></div>
+              <div class="bar"><span>Technical interview</span><div class="meter"><span style="width:75%"></span></div><b>3</b></div>
+              <div class="bar"><span>Projects / portfolio / GitHub</span><div class="meter"><span style="width:50%"></span></div><b>2</b></div>
+              <div class="bar"><span>Technical test</span><div class="meter"><span style="width:50%"></span></div><b>2</b></div>
+            </div>
+            <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">Step that took the most time</p>
+            <div class="bars mt-2">
+              <div class="bar"><span>Screening CVs</span><div class="meter"><span style="width:50%"></span></div><b>2</b></div>
+              <div class="bar"><span>Technical interviews</span><div class="meter"><span style="width:25%"></span></div><b>1</b></div>
+              <div class="bar"><span>Scheduling interviews (~2 weeks)</span><div class="meter"><span style="width:25%"></span></div><b>1</b></div>
+            </div>
+            <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500">New recruiting tool introduced in the last 12 months</p>
+            <div class="bars mt-2">
+              <div class="bar"><span>None</span><div class="meter"><span style="width:75%"></span></div><b>3</b></div>
+              <div class="bar"><span>Unclear answer</span><div class="meter"><span style="width:25%"></span></div><b>1</b></div>
+            </div>
+          </article>
+        </div>
+
+
+        <!-- 5 Findings -->
+        <div id="m2-findings" class="mt-14" style="scroll-margin-top:5.5rem">
+          <p class="font-mono text-xs text-[var(--brand)]">2.6</p>
+          <h3 class="mt-1 font-display text-2xl font-bold">Findings</h3>
+
+          <div class="mt-6 grid gap-5 lg:grid-cols-2">
+            <article class="card p-6" data-reveal>
+              <p class="pill pill-ok">Supported</p>
+              <h4 class="mt-3 font-semibold">Applications go unanswered, and candidates just wait</h4>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">3 of 9 never heard back after their last application and 3 more were still in progress. When asked what they did about it, the answers were "Nothing" (three times) and:</p>
+              <blockquote class="mt-3 border-l-2 border-[var(--brand)] pl-3 text-sm text-slate-700"><span class="text-xs text-slate-400">Step that took longest:</span> "applying itself took long, and so did getting an answer from the company afterwards (big tech moves extremely slowly)"<br><span class="text-xs text-slate-400">What they did about it:</span> "there wasn't much I could do, I waited"<span class="mt-1 block text-xs text-slate-400">Candidate, 4th-year bachelor's (translated)</span></blockquote>
+              <p class="mt-3 text-xs text-slate-500"><strong>But:</strong> nobody tried to work around it, which can also mean the pain is tolerated rather than urgent.</p>
+            </article>
+
+            <article class="card p-6" data-reveal>
+              <p class="pill pill-brand">New, not in our hypotheses</p>
+              <h4 class="mt-3 font-semibold">Retyping the CV into every application form</h4>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">Without being asked about it, 2 of the 6 candidates who answered the open questions described the same friction:</p>
+              <blockquote class="mt-3 border-l-2 border-[var(--brand)] pl-3 text-sm text-slate-700">"it took forever because I had to type in all the information by hand, even though it was already in my CV"<span class="mt-1 block text-xs text-slate-400">Candidate, 4th-year bachelor's (translated)</span></blockquote>
+              <blockquote class="mt-3 border-l-2 border-[var(--brand)] pl-3 text-sm text-slate-700">"Annoying to fill in the data after I had already uploaded my CV. Also, the education section did not list my programme, so I had to pick something similar."<span class="mt-1 block text-xs text-slate-400">Candidate, master's (translated)</span></blockquote>
+            </article>
+
+            <article class="card p-6" data-reveal>
+              <p class="pill pill-proposed">Partly supported</p>
+              <h4 class="mt-3 font-semibold">Candidates already tailor preparation themselves, with free tools</h4>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">Of those who described their preparation: LeetCode (two, one with 150–200 problems), mock interviews with a colleague, ChatGPT (two), university courses, YouTube for system design, and forums and former candidates. One used ChatGPT exactly for what we planned to build:</p>
+              <blockquote class="mt-3 border-l-2 border-[var(--brand)] pl-3 text-sm text-slate-700">"ChatGPT to summarise and tell me what to focus on, depending on how much time I had"<span class="mt-1 block text-xs text-slate-400">Candidate, 4th-year bachelor's (translated)</span></blockquote>
+              <p class="mt-3 text-xs text-slate-500"><strong>But:</strong> nobody said their preparation was insufficient. The need exists, yet it is already covered by free tools, which are our real competition here.</p>
+            </article>
+
+            <article class="card p-6" data-reveal>
+              <p class="pill pill-neutral">Not supported yet</p>
+              <h4 class="mt-3 font-semibold">"Candidates don't know which skills they lack"</h4>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">To check their fit, candidates read the job description, checked minimum requirements, rewrote their CV to match or thought about which projects fit. Nobody said they did not know what to learn next. The check is manual, but nobody described it as a problem.</p>
+            </article>
+
+            <article class="card p-6" data-reveal>
+              <p class="pill pill-ok">Supported (weakly)</p>
+              <h4 class="mt-3 font-semibold">Screening CVs costs hiring teams the most time</h4>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">Roles received 21–100 applications. Two of four named CV screening as the most time-consuming step; the other two named technical interviews and interview scheduling.</p>
+              <blockquote class="mt-3 border-l-2 border-[var(--match)] pl-3 text-sm text-slate-700">"Studying CVs and filtering for the best fit for the intended project."<span class="mt-1 block text-xs text-slate-400">Hiring manager, summer 2025 internship</span></blockquote>
+              <blockquote class="mt-3 border-l-2 border-[var(--match)] pl-3 text-sm text-slate-700"><span class="text-xs text-slate-400">Slowest step:</span> "Screening"<br><span class="text-xs text-slate-400">What went off-plan:</span> "it took much longer than anticipated. Just went with the flow."<span class="mt-1 block text-xs text-slate-400">Hiring manager, analyst role</span></blockquote>
+            </article>
+
+            <article class="card p-6" data-reveal>
+              <p class="pill pill-proposed">Partly supported</p>
+              <h4 class="mt-3 font-semibold">Skills beyond keywords: projects already matter</h4>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">Two of four already look at projects, portfolio or GitHub. One described focusing on "projects done via University tasks, but also independent ones". This is done manually today, so explanations based on projects could fit how they already work.</p>
+            </article>
+
+            <article class="card p-6" data-reveal>
+              <p class="pill pill-neutral">Challenges our model</p>
+              <h4 class="mt-3 font-semibold">No appetite for new tools, and hiring managers don't control budgets</h4>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">Three of four said no new recruiting tool was introduced in the last 12 months (the fourth answer was unclear), and three of four changed nothing in their process. Three of four did not know what the team pays for ("I don't know", "Not sure"). Tracking happens in email, spreadsheets, internal tools or an ATS. One respondent named the paid tools their team uses: LinkedIn Recruiter, Indeed and a coding-assessment platform.</p>
+            </article>
+
+            <article class="card p-6" data-reveal>
+              <p class="pill pill-neutral">Not tested</p>
+              <h4 class="mt-3 font-semibold">Gaps in what we learned</h4>
+              <ul class="mt-2 space-y-1.5 text-sm text-slate-600">
+                <li>• Whether listings for different specialisations are hard to tell apart ("titles hide very different jobs").</li>
+                <li>• Whether candidates arrive unevenly prepared, from the company's point of view.</li>
+                <li>• Universities as payers: we did not talk to any career service.</li>
+                <li>• Whether candidates already pay for job-search or preparation services.</li>
+              </ul>
+            </article>
+          </div>
+
+          <h4 class="mt-10 font-semibold">Hypothesis scorecard</h4>
+          <div class="table-wrap card mt-3" data-reveal>
+            <table class="data-table">
+              <thead><tr><th scope="col">M1 problem hypothesis</th><th scope="col">Result</th><th scope="col">Evidence</th></tr></thead>
+              <tbody>
+                <tr><th scope="row" class="font-medium">Applications disappear into a black hole</th><td class="mark mark-yes">Supported</td><td>3/9 got no response, 3/9 still in progress; those who answered did nothing about it</td></tr>
+                <tr><th scope="row" class="font-medium">Titles hide very different jobs</th><td class="mark mark-no">Not tested</td><td>No question targeted it; nobody raised it</td></tr>
+                <tr><th scope="row" class="font-medium">No actionable career guidance</th><td class="mark mark-no">Not supported</td><td>Fit checked by reading descriptions; nobody reported not knowing what to learn</td></tr>
+                <tr><th scope="row" class="font-medium">Preparation disconnected from the process</th><td class="mark mark-part">Partly</td><td>Candidates tailor prep themselves with LeetCode and ChatGPT; nobody felt underprepared</td></tr>
+                <tr><th scope="row" class="font-medium">Screening overload</th><td class="mark mark-yes">Supported (weakly)</td><td>21–100 applications per role; screening is the slowest step for 2/4</td></tr>
+                <tr><th scope="row" class="font-medium">Keyword screening misses real ability</th><td class="mark mark-part">Partly</td><td>2/4 already check projects and GitHub manually</td></tr>
+                <tr><th scope="row" class="font-medium">Administrative pipeline work</th><td class="mark mark-part">Weak</td><td>One team spent about 2 weeks scheduling technical interviews</td></tr>
+                <tr><th scope="row" class="font-medium">Candidates arrive unevenly prepared</th><td class="mark mark-no">Not tested</td><td>—</td></tr>
+                <tr><th scope="row" class="font-medium text-[var(--brand-ink)]">New: retyping the CV into application forms</th><td class="mark mark-yes">Emerging</td><td>2 unprompted mentions</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 6 Impact -->
+        <div id="m2-impact" class="mt-14" style="scroll-margin-top:5.5rem">
+          <p class="font-mono text-xs text-[var(--brand)]">2.7</p>
+          <h3 class="mt-1 font-display text-2xl font-bold">How the insights changed the product</h3>
+          <div class="table-wrap card mt-5" data-reveal>
+            <table class="data-table">
+              <thead><tr><th scope="col">Before M2</th><th scope="col">After M2</th><th scope="col">Because</th></tr></thead>
+              <tbody>
+                <tr><td>Smart profile was a convenience feature</td><td><strong>"One profile, every application":</strong> the CV becomes a structured profile that is reused, so nothing is typed twice. Moved into the MVP core.</td><td>Unprompted complaints about retyping CVs</td></tr>
+                <tr><td>Status updates were a recruiter shortcut</td><td><strong>Every expression of interest gets a visible status and an expected response time</strong>, and closes with a message instead of silence.</td><td>3/9 never got a response and 3/9 were still in progress; candidates could only wait</td></tr>
+                <tr><td>Full recruiter pipeline to replace existing tools</td><td><strong>Narrower recruiter MVP:</strong> an explained shortlist from CVs and projects, plus interview-scheduling help, working alongside email, spreadsheets and existing ATSs.</td><td>Screening is the slowest step; teams don't adopt new tools; projects already matter</td></tr>
+                <tr><td>Own adaptive question bank for preparation</td><td><strong>A per-role study plan</strong> that prioritises topics from the job's requirements and points to resources candidates already use, sized to the time left before the interview.</td><td>Candidates already prepare with free tools; one used ChatGPT for exactly this</td></tr>
+                <tr><td>Skill guidance and gamification in the MVP</td><td><strong>Moved after the MVP</strong> until we find evidence of the need.</td><td>Nobody reported not knowing what to learn</td></tr>
+                <tr><td>Selling to "recruiters"</td><td><strong>Buyer = talent acquisition / HR</strong>; hiring managers are users and influencers.</td><td>3/4 hiring-side respondents did not know what the team pays for</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 7 Ready? -->
+        <div id="m2-ready" class="mt-14 rounded-3xl bg-[var(--ink)] p-6 text-slate-200 sm:p-8" style="scroll-margin-top:5.5rem" data-reveal>
+          <p class="font-mono text-xs text-indigo-300">2.8</p>
+          <h3 class="mt-1 font-display text-2xl font-bold text-white">Are we ready for Customer Validation? <span class="text-rose-300">Not yet.</span></h3>
+          <div class="mt-5 grid gap-6 md:grid-cols-2 text-sm leading-relaxed">
+            <div>
+              <p class="font-semibold text-white">Why not</p>
+              <ul class="mt-2 space-y-2">
+                <li>• Only one problem is clearly supported on each side (unanswered applications; screening time). The others are partial, untested or not supported.</li>
+                <li>• 13 responses give clear direction but not yet depth; the next round should be one-to-one interviews with follow-up questions.</li>
+                <li>• No evidence anyone pays to solve these problems today: hiring managers don't know the budget, three of four teams reported no new tool, and candidates did "nothing" about waiting.</li>
+                <li>• Our revenue model relies on universities and candidate subscriptions, and neither was tested.</li>
+                <li>• Nobody was asked for a commitment (a call, a pilot, an intro).</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-semibold text-white">Next steps before testing selling</p>
+              <ul class="mt-2 space-y-2">
+                <li>1. One-to-one interviews with at least 5 talent-acquisition people at Romanian tech companies, about the last junior role and what it cost.</li>
+                <li>2. Interviews with 2 university career services about how they support students today and what they fund.</li>
+                <li>3. Follow-up calls with candidates who got no response, plus questions about what they already pay for.</li>
+                <li>4. Ask for a small commitment: screen one real internship role with a manual "concierge" shortlist.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 Evidence -->
+        <div id="m2-evidence" class="mt-14" style="scroll-margin-top:5.5rem">
+          <p class="font-mono text-xs text-[var(--brand)]">2.9</p>
+          <h3 class="mt-1 font-display text-2xl font-bold">Evidence</h3>
+          <p class="mt-2 max-w-3xl text-sm text-slate-600">Raw, unedited exports of all responses (anonymous; timestamps only), and the live forms with every question and answer option.</p>
+          <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <a class="card card-hover block p-5" href="assets/data/m2-student-responses.csv" download>
+              <p class="text-xs text-slate-500">CSV · 9 responses</p><p class="mt-1 font-semibold">Candidate responses ↓</p>
+            </a>
+            <a class="card card-hover block p-5" href="assets/data/m2-recruiter-responses.csv" download>
+              <p class="text-xs text-slate-500">CSV · 4 responses</p><p class="mt-1 font-semibold">Hiring-side responses ↓</p>
+            </a>
+            <a class="card card-hover block p-5" href="https://docs.google.com/forms/d/e/1FAIpQLScTUhUgyGyLGTMa5AHBQvxZ9iuI06lRE13YlRpy0VuAimQ6wg/viewform" target="_blank" rel="noopener">
+              <p class="text-xs text-slate-500">Google Form · Romanian</p><p class="mt-1 font-semibold">Candidate form ↗</p>
+            </a>
+            <a class="card card-hover block p-5" href="https://docs.google.com/forms/d/e/1FAIpQLSf3yW0mn38J9B4Ra0jicwqTClcgiJ8Prn5HhMLQ5fQlV7xlOQ/viewform" target="_blank" rel="noopener">
+              <p class="text-xs text-slate-500">Google Form · English</p><p class="mt-1 font-semibold">Hiring-side form ↗</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- =====================================================================
          ROADMAP — official milestones. When a milestone is done:
          change its pill to "Done", add the work inside its <details>,
          and move the "open" attribute to the current milestone.
     ====================================================================== -->
     <section id="roadmap" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="roadmap-title">
-      <p class="eyebrow">13 — Milestones</p>
+      <p class="eyebrow">Milestones</p>
       <h2 id="roadmap-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Project roadmap</h2>
       <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">Official course milestones. This Fiki will be updated with our work at each one; future milestones show only what we plan to do.</p>
 
@@ -965,14 +1347,14 @@
           <p class="mt-3 text-sm text-slate-600">Project idea and team registration.</p>
         </details>
 
-        <details class="milestone card border-[var(--brand)] p-5" open>
-          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-[var(--brand)]">M1</span><span class="font-semibold">Fiki &amp; Project description</span><span class="text-xs text-slate-500">19.10.2026</span><span class="pill pill-brand">Current — this page</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+        <details class="milestone card p-5">
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M1</span><span class="font-semibold">Fiki &amp; Project description</span><span class="text-xs text-slate-500">19.10.2026</span><span class="pill pill-ok">Done</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
           <p class="mt-3 text-sm text-slate-600">Project title, team and proposed roles, problem, solution and value proposition, customer segments, competition, competitive advantage, key metrics, cost structure and revenue streams.</p>
         </details>
 
-        <details class="milestone card p-5">
-          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M2</span><span class="font-semibold">Validation 1 (idea)</span><span class="text-xs text-slate-500">02.11.2026</span><span class="pill pill-neutral">Planned</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
-          <p class="mt-3 text-sm text-slate-600">Customer discovery: interview CS/CE students and people involved in tech hiring to test the problem hypotheses above first, and only then the solution. Questions, findings and evidence will be published here.</p>
+        <details class="milestone card border-[var(--brand)] p-5" open>
+          <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-[var(--brand)]">M2</span><span class="font-semibold">Validation 1 (idea)</span><span class="text-xs text-slate-500">02.11.2026</span><span class="pill pill-brand">Current</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <p class="mt-3 text-sm text-slate-600">Customer discovery with two questionnaires (9 candidates, 4 people on the hiring side): problem hypotheses scored, a new problem found, product scope adjusted, and a "not yet" on Customer Validation.</p>
         </details>
 
         <details class="milestone card p-5">
@@ -1042,7 +1424,7 @@
         <ul class="mt-2 space-y-1 text-sm">
           <li><a class="text-slate-400 hover:text-white" href="#top">Back to top ↑</a></li>
         </ul>
-        <p class="mt-4 font-mono text-xs text-slate-500">Last updated: M1 · 18.10.2026</p>
+        <p class="mt-4 font-mono text-xs text-slate-500">Last updated: M2 · 02.11.2026</p>
       </div>
     </div>
   </footer>

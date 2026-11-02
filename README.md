@@ -68,6 +68,21 @@ If that ever matters, replace it with the Tailwind CLI build.
 
 The hero also contains a clickable index of these ten requirements.
 
+## M2 requirement checklist
+
+| Official M2 requirement | Where on the page |
+|---|---|
+| How you identified the problem | `#m2-origin` (card 1) |
+| What you thought the solution was | `#m2-origin` (card 2) |
+| Plan for customer discovery | `#m2-plan`: segments, what we tested, method, assumption map |
+| Process in detail: segments, how they were reached, how data was collected | `#m2-process` |
+| The questions asked | `#m2-process`: both questionnaires in full |
+| All findings | Respondent charts, `#m2-findings` and the hypothesis scorecard |
+| How the insights affected the product | `#m2-impact` |
+| Ready for Customer Validation? With arguments | `#m2-ready` |
+| Proof / evidence | `#m2-evidence`: raw CSVs in `assets/data/` and links to the forms |
+| Names of everyone in the team | `#team` and footer |
+
 ## Still to complete manually
 
 - [x] **Team photos**: added in `assets/img/team/`.

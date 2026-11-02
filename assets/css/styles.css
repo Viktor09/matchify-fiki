@@ -30,7 +30,7 @@ body {
 }
 
 /* Sections leave room for the sticky nav when jumped to */
-section[id] { scroll-margin-top: 5.5rem; }
+section[id], #m1 { scroll-margin-top: 4rem; }
 
 /* ---------- Hero ---------- */
 .hero-bg {
@@ -210,3 +210,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--brand); outline
   .reveal { opacity: 1 !important; transform: none !important; }
   section { break-inside: avoid; }
 }
+
+/* ---------- M2: small bar charts and to-do markers ---------- */
+.bars { display: grid; gap: .45rem; }
+.bar { display: grid; grid-template-columns: minmax(0, 11rem) 1fr 1.5rem; align-items: center; gap: .75rem; font-size: .8rem; color: var(--ink-soft); }
+.bar b { text-align: right; color: var(--ink); }
+.todo { background: #fef3c7; color: #92400e; border-radius: .35rem; padding: .05rem .3rem; font-weight: 600; }
