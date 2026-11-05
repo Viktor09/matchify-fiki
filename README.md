@@ -77,10 +77,10 @@ The hero also contains a clickable index of these ten requirements.
 | Plan for customer discovery | `#m2-plan`: segments, what we tested, method, assumption map |
 | Process in detail: segments, how they were reached, how data was collected | `#m2-process` |
 | The questions asked | `#m2-process`: both questionnaires in full |
-| All findings | Respondent charts, `#m2-findings` and the hypothesis scorecard |
+| All findings | Respondent charts, interview (`#m2-interview`), `#m2-findings`, hypothesis scorecard, and problem → Matchify mapping (`#m2-answers`) |
 | How the insights affected the product | `#m2-impact` |
 | Ready for Customer Validation? With arguments | `#m2-ready` |
-| Proof / evidence | `#m2-evidence`: raw CSVs in `assets/data/` and links to the forms |
+| Proof / evidence | `#m2-evidence`: raw CSVs and the interview transcript in `assets/data/`, links to the forms |
 | Names of everyone in the team | `#team` and footer |
 
 ## Still to complete manually

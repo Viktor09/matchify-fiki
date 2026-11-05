@@ -1,0 +1,36 @@
+Interviu – Technical Hiring Manager
+1. Îmi puteți povesti despre ultima recrutare pentru un rol tehnic de junior sau internship în care ați fost implicat direct?
+
+Am fost implicat pe partea tehnică. Practic, am primit rolul pentru care trebuia să recrutăm, am pregătit subiectele și am ținut interviurile cu candidații.
+
+2. (Follow-up) Aproximativ câți candidați au aplicat și câți au ajuns la interviu?
+
+Nu mai știu exact câți au aplicat în total, dar aș zice că undeva la 5–10% dintre ei au ajuns la interviul tehnic.
+
+3. Cum a decurs procesul de selecție, de la primirea aplicațiilor până la alegerea candidatului?
+
+Depinde de poziție. Pentru internship aveam un singur interviu tehnic, iar pentru junior procesul era puțin mai lung, cu două interviuri tehnice și o temă de făcut acasă. Eu mă ocupam de partea tehnică, nu de tot procesul de recrutare.
+
+4. Care etapă a necesitat cel mai mult timp din partea echipei?
+
+Din partea noastră, cel mai mult timp mergea pe interviurile tehnice și pe verificarea temelor, mai ales la juniori.
+
+5. (Follow-up) Cam cât timp a durat și ce activități au ocupat acel timp?
+
+La internship, interviul dura cam o oră. La junior aveam două interviuri, unul de o oră și altul de o oră și jumătate. Pe lângă asta, mai petreceam vreo 2–3 ore uitându-ne pe teme.
+
+6. Cum ați evaluat competențele tehnice ale candidaților în acea recrutare?
+
+În general, puneam întrebări teoretice din lucrurile cu care lucrăm noi zi de zi. La juniori aveam și partea practică, unde discutam pe baza temei pe care o făcuseră.
+
+7. Vă amintiți o situație recentă în care a fost dificil să decideți dacă un candidat era potrivit pentru rol?
+
+Da, am avut un candidat care fusese olimpic internațional la informatică. Clar avea potențial și un background foarte bun, dar la interviu nu s-a descurcat prea bine și până la urmă am decis să nu-l luăm.
+
+8. (Follow-up) Ce informații v-au lipsit și cum ați procedat atunci?
+
+Nu știu dacă ne lipseau neapărat informații. Mai degrabă era diferența dintre ce ne așteptam să știe, având în vedere rezultatele lui, și cum s-a descurcat efectiv la interviu. Până la urmă, am mers pe ce am văzut în evaluarea tehnică.
+
+9. Ce instrumente sau metode ați folosit pentru a gestiona recrutarea respectivă?
+
+Teams, în principal, pentru interviuri. În rest, pe partea mea, lucram cu subiectele pregătite și cu temele candidaților.
