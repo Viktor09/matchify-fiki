@@ -7,7 +7,8 @@ It is a single page that documents the project at each milestone. It is **not** 
 
 ```
 matchify-fiki/
-├── index.html              ← all page content, one <section> per topic
+├── index.html              ← all Fiki content, one <section> per topic
+├── landing.html            ← Matchify product landing page wireframe (M3)
 ├── assets/
 │   ├── css/styles.css      ← design tokens, cards, demo, roadmap styles
 │   ├── js/main.js          ← mobile menu, scroll-spy, reveal, concept demo
@@ -18,6 +19,8 @@ matchify-fiki/
 
 Stack: plain HTML5 + CSS3 + JavaScript, with Tailwind CSS loaded from a CDN (the same setup as Lab 01).
 There is no build step, no backend and no dependencies to install.
+
+The product landing page wireframe is available at `landing.html`; the Fiki remains at `index.html`.
 
 ## Run locally
 
