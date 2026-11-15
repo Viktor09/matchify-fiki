@@ -1,0 +1,90 @@
+```1\. Can you tell me about the last recruitment for a junior or internship technical role that you were directly involved in?
+
+The most recent recruitment I was involved in was for a Junior Software Engineer position. I participated directly in the hiring process alongside another senior developer. We were responsible for reviewing candidates, assessing their technical skills and helping make the final hiring decision.
+
+2\. Roughly how many candidates applied, and how many made it to the interview?
+
+We received over 50 submissions. 
+
+3\. How did the selection process go, from receiving the applications to choosing the candidate?
+
+Initially, we shared the job specification with multiple recruitment agencies, which sourced candidates for us. We also considered internal recommendations.
+
+The two senior developers reviewed the CVs and initial assessments to shortlist candidates. The first step was a Coderbyte test with MCQs and a couple of Leetcode style questions. The second step was a 30 min live interview with one Leetcode style question and questions about the candidates' previous experience. We also allowed some time for the candidate to ask questions about our company and the role. The third step was a 4 hr take home exercise where the candidate gets the chance to run some analysis on a dataset. This is very close to a real life work assignment. Once the assignment is done we organise 30 mins with the candidate to present their submission. 
+
+We discovered that candidates were already using AI tools for their take-home assignments, so we decided to formalise this by giving everyone access to the same LLM tools through shared API keys.
+
+We also asked candidates to share their LLM conversations so we could better understand how they approached problems. During the final technical interview, we challenged them on their submitted solutions to establish how well they understood their own work.
+
+This helped us compare candidates more consistently and make a more informed final decision.
+
+4\. Which stage took the most time from the team?
+
+Scoping out the take home exercise and reviewing the submissions. 
+
+5\. Roughly how long did it take, and what activities filled that time?
+
+It took around 30 mins per candidate. We improved the time by using AI on our side more and over indexing on how much the candidates could defend their submission in the follow up presentation. 
+
+6\. How did you assess the candidates' technical skills in that recruitment?
+
+We primarily used technical take-home assignments and live technical interviews. We were not interested in past experience. What we appreciated more good were good first principles and well thought answers and submissions. 
+
+Another important part of our process was allowing candidates to use LLMs while completing their assignments. We provided equal access to these tools and asked them to share their interactions with the AI. 
+
+Again, this allowed us to assess their problem solving approach and how they used AI throughout the process.
+
+During the final interview, we asked challenging questions about their submissions to test their understanding and distinguish between candidates who genuinely understood their solutions and those who relied heavily on AI-generated answers.
+
+7\. Do you remember a recent situation when it was hard to decide whether a candidate was a good fit for the role?
+
+One challenge was assessing candidates fairly when we realised they were all using AI tools for take-home assignments.
+
+It became harder to judge technical ability based on the final submission alone, because a polished solution didn't necessarily demonstrate that the candidate understood the underlying code. Hence why we provided the same access to AI to everyone. 
+
+8\. What information was missing, and how did you proceed?
+
+What we were missing was visibility into the candidates' actual problem-solving processes and how much of their submitted work they understood.
+
+To address this, we standardised access to LLMs and requested their AI conversation histories. We also introduced more challenging follow-up questions during the technical interviews, based specifically on their submitted solutions.
+
+This gave us more insight into their reasoning and made it easier to benchmark candidates fairly.
+
+9\. What tools or methods did you use to manage that recruitment?
+
+We used custom Notion databases to track candidates and their progress through the recruitment process.
+
+We initially worked with recruitment agencies, but subsequently introduced Juicebox AI as an alternative for sourcing candidates.
+
+For technical evaluation, we used AI-based scoring to help review large numbers of take-home submissions, alongside manual technical assessments and interviews.
+
+Other tools used in our recruitment activities included LinkedIn and Coderbyte```
+
+Intrebari interviu studenti
+
+ Cum a arătat ultima ta căutare de internship sau job în IT? 
+ (Follow-up) Când a fost și pe ce ramură?
+ Unde ai căutat anunțurile și cum ai ales la care să aplici?
+ Descrie-mi ultima aplicare, pas cu pas: de la momentul în care ai găsit anunțul până ai trimis aplicația.
+(Follow-up) Cum ai verificat dacă ce știi se potrivește cu cerințele?
+ Ce s-a întâmplat după ce ai aplicat?
+ A existat vreun pas care a durat mai mult decât te așteptai sau pe care a trebuit să-l repeți?
+ Cum te-ai pregătit pentru cel mai recent interviu sau test tehnic?
+ (Follow-up)Ai plătit vreodată pentru ceva care să te ajute la căutare sau la pregătire, de exemplu un curs, un abonament sau un review de CV?
+
+What did your last search for an IT internship or job look like?
+(Follow-up) When was it, and in which field?
+Where did you look for listings, and how did you choose which ones to apply to?
+Walk me through your last application, step by step, from finding the listing to submitting it.
+(Follow-up) How did you check whether your skills matched the requirements?
+What happened after you applied?
+Was there a step that took longer than you expected or that you had to repeat?
+How did you prepare for your most recent technical interview or test?
+(Follow-up) Have you ever paid for anything to help with your search or preparation, such as a course, a subscription or a CV review?
+
+1. Basically am luat o lista de companii care oferă internship-uri în EMEA și am verificat ce joburi aveau din sapt în sapt. Pe internship SWE/SRE.
+2. Basically am găsit pe site-ul companiei postul, m am uitat peste minimum requirements + ce s-ar face la job, și am decis dacă ma potrivesc. După mi-am băgat un CV cu toate proiectele în Claude sa mi-l adapteze la job description. Dacă am făcut serios la un laborator,am făcut un proiect/lucrat la munca cu tehnologia/procesul din JD, atunci am zis ca ma potrivesc.
+3. Am primit OA peste o sapt.
+4. N-a fost vreun pas pe care sa îl repet, dar a durat mult de la OA pana la interviul tehnic propriu zis.
+5. Leetcode - lista generata pe baza Neetcode 150 + Claude
+6. Doar Claude Pro subscription, sa fac mock interviews + review la algoritimica

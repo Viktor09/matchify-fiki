@@ -124,6 +124,7 @@ section[id], #m1 { scroll-margin-top: 4rem; }
 .data-table th, .data-table td { padding: .75rem .9rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
 .data-table thead th { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); background: #f6f5f1; position: sticky; top: 0; }
 .data-table tbody tr:hover td { background: #fcfbf8; }
+.data-table.no-row-hover tbody tr:hover td { background: transparent; }
 .data-table td.center, .data-table th.center { text-align: center; }
 
 .mark { font-weight: 700; }
