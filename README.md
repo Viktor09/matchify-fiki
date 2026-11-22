@@ -86,6 +86,18 @@ The hero also contains a clickable index of these ten requirements.
 | Proof / evidence | `#m2-evidence`: raw CSVs and the interview transcript in `assets/data/`, links to the forms |
 | Names of everyone in the team | `#team` and footer |
 
+## M5 requirement checklist
+
+| Official M5 requirement | Where |
+|---|---|
+| Lead collection section on the landing page (email, newsletter) | `landing.html`: every "Join" button opens the waitlist form, posted to Formspree (`assets/js/landing.js`) |
+| Analytics on the landing page: web analytics, conversion funnel, session replay | PostHog snippet in the `<head>` of `landing.html` (published site only); events listed in `#m5-analytics` |
+| Bring people to the landing page | Six channels with one UTM link each: `docs/m5-campaign-kit.md` |
+| Document the campaign: screenshots and permalinks of the posts | `#m5-campaign` in `index.html`, images in `assets/img/m5/` |
+| Compare the lead channels, highlight the best one | `#m5-results` (channel comparison and best channel) |
+
+Campaign values marked `FILL` in `index.html` are completed with the real data at the end of the campaign.
+
 ## Still to complete manually
 
 - [x] **Team photos**: added in `assets/img/team/`.
