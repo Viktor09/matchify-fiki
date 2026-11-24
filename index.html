@@ -2917,10 +2917,47 @@
             </tbody>
           </table>
         </div>
-        <ul class="mt-5 grid gap-3 text-sm text-slate-700 md:grid-cols-3">
-          <li class="card p-4"><strong>The hero decides.</strong> 7 of 8 signups used the first button; the lower sections were rarely reached on mobile.</li>
-          <li class="card p-4"><strong>The form is not the blocker.</strong> Once open, half of the forms were sent, in 12 seconds on average.</li>
-          <li class="card p-4"><strong>Reddit visitors skim.</strong> Short, click-free visits match the sceptical comments on the post (5.6).</li>
+        <div class="mt-8 grid gap-5 lg:grid-cols-2">
+          <div class="card p-6">
+            <h4 class="font-semibold">What people clicked</h4>
+            <p class="mt-1 text-xs text-slate-500">Distinct visitors who clicked each element (PostHog autocapture; includes a few of our own test visits).</p>
+            <div class="table-wrap mt-3">
+              <table class="data-table">
+                <thead><tr><th scope="col">Element</th><th scope="col">Visitors</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row" class="font-medium">"Find your next role" (hero button)</th><td>7</td></tr>
+                  <tr><th scope="row" class="font-medium">"Join as a candidate" (last section)</th><td>7</td></tr>
+                  <tr><th scope="row" class="font-medium">"Menu" (mobile navigation)</th><td>6</td></tr>
+                  <tr><th scope="row" class="font-medium">"See how it works"</th><td>6</td></tr>
+                  <tr><th scope="row" class="font-medium">Menu → "For teams" / "How it works" / "Why Matchify"</th><td>5 / 5 / 3</td></tr>
+                  <tr><th scope="row" class="font-medium">Tab "I'm hiring tech talent" / "I'm looking for a role"</th><td>4 / 3</td></tr>
+                  <tr><th scope="row" class="font-medium">"Join as a hiring team" / "Talk to the Matchify team"</th><td>2 / 2</td></tr>
+                  <tr><th scope="row" class="font-medium">"Read the project Fiki"</th><td>2</td></tr>
+                  <tr><th scope="row" class="font-medium">Closed the signup form (×)</th><td>13</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card p-6">
+            <h4 class="font-semibold">How far people scrolled</h4>
+            <p class="mt-1 text-xs text-slate-500">Deepest point reached on the page, per visit with scroll data (33 visits).</p>
+            <div class="mt-4 space-y-3 text-sm">
+              <div><div class="flex justify-between"><span>Only the top quarter (hero)</span><strong>9</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:27%"></div></div></div>
+              <div><div class="flex justify-between"><span>25–50%</span><strong>5</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:15%"></div></div></div>
+              <div><div class="flex justify-between"><span>50–75%</span><strong>2</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:6%"></div></div></div>
+              <div><div class="flex justify-between"><span>75–95%</span><strong>2</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:6%"></div></div></div>
+              <div><div class="flex justify-between"><span>The whole page</span><strong>15</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:45%"></div></div></div>
+            </div>
+            <p class="mt-4 text-xs text-slate-500">PostHog also flagged 2 rage clicks, both on phones: on the "Menu" button and on the email field.</p>
+          </div>
+        </div>
+
+        <ul class="mt-6 grid gap-3 text-sm text-slate-700 md:grid-cols-2">
+          <li class="card p-4"><strong>Visitors either leave at the hero or read everything.</strong> 9 of 33 never scrolled past the first quarter, 15 reached the bottom; few stopped in between. The hero has to do the convincing.</li>
+          <li class="card p-4"><strong>The two buttons that convert are at the top and the bottom.</strong> "Find your next role" and "Join as a candidate" were each used by 7 visitors; the links in the middle sections were barely used.</li>
+          <li class="card p-4"><strong>Candidates are curious about the hiring side.</strong> More visitors opened the "I'm hiring tech talent" tab (4) than the candidate tab (3), and 5 opened "For teams" from the menu, yet only 2 clicked a hiring-side join button.</li>
+          <li class="card p-4"><strong>Mobile navigation needs work.</strong> 6 visitors used the "Menu" button, one rage-clicked it, and another rage-clicked the email field: on phones, the menu and the form must respond faster and be easier to tap.</li>
+          <li class="card p-4 md:col-span-2"><strong>Closing the form is common.</strong> 13 visitors closed the form with ×, some after joining, others without sending. Together with the funnel (half of the opened forms were sent), the next test is a one-field form with the consent text shortened.</li>
         </ul>
       </div>
 
