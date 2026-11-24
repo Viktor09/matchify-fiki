@@ -536,14 +536,14 @@
         <p class="eyebrow">1.4 — Customer segments</p>
         <h2 id="segments-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Two-sided market: who uses it, who pays</h2>
         <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
-          Matchify is a two-sided platform. <strong>Candidates</strong> get access through their university when it has a partnership with us
-          (the university pays), or otherwise through a subscription tier. <strong>Companies</strong> pay for access to well-matched
-          candidates and for tools that save recruiting time.
+          Matchify is a two-sided platform. <strong>Candidates</strong> use the core product for free and can buy a small, optional
+          preparation plan for a specific role. <strong>Companies</strong> pay for access to well-matched candidates and for tools that save
+          recruiting time, and <strong>universities</strong> can pay for a career-support partnership. <span class="pill pill-brand ml-1">Updated in M5</span>
         </p>
 
         <div class="mt-10 grid gap-6 lg:grid-cols-2">
           <article class="card p-6 sm:p-8" data-reveal>
-            <div class="flex items-center justify-between"><h3 class="font-display text-xl font-bold">Candidates</h3><span class="pill pill-neutral">University or subscription</span></div>
+            <div class="flex items-center justify-between"><h3 class="font-display text-xl font-bold">Candidates</h3><span class="pill pill-neutral">Free · optional prep plan</span></div>
             <ul class="mt-5 space-y-4 text-sm">
               <li><p class="font-semibold">Students &amp; internship seekers <span class="pill pill-brand ml-1">Early adopters</span></p><p class="mt-1 text-slate-600">Undergraduate and master's students in CS/CE looking for internships and first jobs. They need guidance on what to learn as much as they need listings.</p></li>
               <li><p class="font-semibold">Junior engineers (0–2 years)</p><p class="mt-1 text-slate-600">Looking for their first or second role and wanting clear feedback on skill gaps.</p></li>
@@ -569,8 +569,8 @@
             <caption class="sr-only">Users versus paying customers</caption>
             <thead><tr><th scope="col">Segment</th><th scope="col">Main need</th><th scope="col">Uses the product</th><th scope="col">Pays</th><th scope="col">Priority</th></tr></thead>
             <tbody>
-              <tr><th scope="row" class="font-medium">CS/CE students</th><td>First internship or job, learning direction</td><td class="mark mark-yes">Yes</td><td>University partnership or subscription</td><td>Launch</td></tr>
-              <tr><th scope="row" class="font-medium">Junior / mid / senior engineers</th><td>Better-fitting roles, less effort</td><td class="mark mark-yes">Yes</td><td>Subscription</td><td>After launch</td></tr>
+              <tr><th scope="row" class="font-medium">CS/CE students</th><td>First internship or job, learning direction</td><td class="mark mark-yes">Yes</td><td>Free; optional paid prep plan</td><td>Launch</td></tr>
+              <tr><th scope="row" class="font-medium">Junior / mid / senior engineers</th><td>Better-fitting roles, less effort</td><td class="mark mark-yes">Yes</td><td>Free; optional paid prep plan</td><td>After launch</td></tr>
               <tr><th scope="row" class="font-medium">Partner universities</th><td>Career support for their students</td><td class="mark mark-no">No</td><td class="mark mark-yes">Yes (partnership)</td><td>Launch</td></tr>
               <tr><th scope="row" class="font-medium">Startups &amp; scale-ups</th><td>Qualified candidates without a recruiting team</td><td class="mark mark-yes">Yes</td><td class="mark mark-yes">Yes</td><td>Launch</td></tr>
               <tr><th scope="row" class="font-medium">Companies hiring at volume</th><td>Less screening time per hire</td><td class="mark mark-yes">Yes</td><td class="mark mark-yes">Yes</td><td>After launch</td></tr>
@@ -907,15 +907,16 @@
         </div>
       </div>
       <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
-        Companies pay for recruiting; candidates are covered by a university partnership or a subscription. Prices are intentionally not listed;
+        Companies pay for recruiting; candidates use the core product for free and can buy an optional prep plan. Prices are intentionally not listed;
         willingness to pay is one of the things we still have to validate.
       </p>
 
       <div class="mt-10 grid gap-5 lg:grid-cols-5">
         <article class="card p-6 lg:col-span-2" data-reveal>
           <span class="pill pill-neutral">Candidates</span>
-          <h3 class="mt-3 font-display text-lg font-bold">University partnerships &amp; subscriptions</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">If the candidate's university has a partnership with Matchify, the university pays and its students get access. Otherwise, access depends on the candidate's subscription tier.</p>
+          <h3 class="mt-3 font-display text-lg font-bold">Free core, optional prep plan <span class="pill pill-brand ml-1">Updated in M5</span></h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-600">Profile, explained matching and application status are free for every candidate. A candidate who enters a company's process can buy a small, one-off preparation plan for that role. Partner universities can pay for career-support dashboards for their students.</p>
+          <p class="mt-2 text-xs leading-relaxed text-slate-500"><strong>Why we changed it:</strong> earlier we planned a candidate subscription when the university is not a partner. In M4 the only thing a candidate paid for was an AI tool for interview prep (Claude Pro), never a job-search service, so we charge only for prep, only when it is needed.</p>
         </article>
         <article class="card p-6 lg:col-span-3" data-reveal>
           <span class="pill pill-ok">Primary revenue</span>
@@ -950,7 +951,7 @@
           <li>• Companies will pay for fewer, better-matched candidates rather than more applicants.</li>
           <li>• Reduced screening time is a strong enough reason to subscribe.</li>
           <li>• Some companies will invest effort in partner preparation content.</li>
-          <li>• Universities and candidates will pay for access in a niche market.</li>
+          <li>• Universities will pay for career support, and some candidates will pay a small fee for role-specific prep.</li>
         </ul>
       </div>
     </section>
