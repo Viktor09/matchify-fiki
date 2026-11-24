@@ -2849,28 +2849,116 @@
     <!-- 5.3 Analytics -->
     <section id="m5-analytics" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="m5-analytics-title" style="scroll-margin-top:4rem">
       <p class="eyebrow">5.3 — Analytics</p>
-      <h2 id="m5-analytics-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Measuring every step with PostHog</h2>
+      <h2 id="m5-analytics-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">What PostHog measured</h2>
       <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
         The landing page loads PostHog only on the published site, so our own local testing does not count as traffic.
-        We use the three PostHog tools the milestone asks for:
+        Below are the results of the three PostHog tools the milestone asks for, from 22 to 24.11.2026.
       </p>
 
-      <div class="mt-10 grid gap-5 md:grid-cols-3">
-        <div class="card card-hover p-6" data-reveal>
-          <p class="font-mono text-xs text-slate-400">Web analytics</p>
-          <h3 class="mt-2 font-semibold">Who visits, from where</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">Visitors, page views, referrers and UTM sources per day, for the whole campaign.</p>
+      <!-- 5.3a Web analytics -->
+      <div class="mt-10" data-reveal>
+        <p class="font-mono text-xs text-[var(--brand)]">5.3a · Web analytics</p>
+        <h3 class="mt-1 font-display text-2xl font-bold">Who visited, and from where</h3>
+        <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div class="card p-5"><p class="font-mono text-xs text-slate-400">Unique visitors</p><p class="mt-1 font-display text-2xl font-bold">42</p></div>
+          <div class="card p-5"><p class="font-mono text-xs text-slate-400">Page views</p><p class="mt-1 font-display text-2xl font-bold">55</p></div>
+          <div class="card p-5"><p class="font-mono text-xs text-slate-400">Avg. session</p><p class="mt-1 font-display text-2xl font-bold">1m 8s</p></div>
+          <div class="card p-5"><p class="font-mono text-xs text-slate-400">Bounce rate</p><p class="mt-1 font-display text-2xl font-bold">23%</p></div>
+          <div class="card p-5"><p class="font-mono text-xs text-slate-400">From the posts</p><p class="mt-1 font-display text-2xl font-bold">39 / 42</p></div>
         </div>
-        <div class="card card-hover p-6" data-reveal>
-          <p class="font-mono text-xs text-slate-400">Product analytics</p>
-          <h3 class="mt-2 font-semibold">Conversion funnel</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">Page view → form opened → signup, broken down by channel, to see where people drop off.</p>
+        <p class="mt-4 max-w-3xl text-sm text-slate-600">Traffic started with the first posts on Sunday 22.11 and peaked that evening. 31 of 42 visitors (74%) used a phone, and every visitor was located in Romania.</p>
+        <div class="mt-6 grid gap-5 lg:grid-cols-3">
+          <figure class="card p-5" data-reveal>
+            <a href="assets/img/m5/posthog-web-analytics.webp" target="_blank" rel="noopener"><img src="assets/img/m5/posthog-web-analytics.webp" alt="PostHog web analytics: 42 visitors, 55 page views, 1m 8s average session, 23% bounce rate" loading="lazy" class="rounded-lg border border-black/10" /></a>
+            <figcaption class="mt-3 text-xs text-slate-500">Web analytics: traffic started with the first posts on 22.11.</figcaption>
+          </figure>
+          <figure class="card p-5" data-reveal>
+            <a href="assets/img/m5/posthog-channels-devices.webp" target="_blank" rel="noopener"><img src="assets/img/m5/posthog-channels-devices.webp" alt="PostHog: 39 visitors from organic social, 4 direct; 31 on mobile, 11 on desktop" loading="lazy" class="rounded-lg border border-black/10" /></a>
+            <figcaption class="mt-3 text-xs text-slate-500">39 of 42 visitors came from the posts; 31 used a phone.</figcaption>
+          </figure>
+          <figure class="card p-5" data-reveal>
+            <a href="assets/img/m5/posthog-active-hours.webp" target="_blank" rel="noopener"><img src="assets/img/m5/posthog-active-hours.webp" alt="PostHog active hours heatmap with a peak on Sunday evening" loading="lazy" class="rounded-lg border border-black/10" /></a>
+            <figcaption class="mt-3 text-xs text-slate-500">Visits peaked on Sunday evening, right after the first posts (UTC).</figcaption>
+          </figure>
         </div>
-        <div class="card card-hover p-6" data-reveal>
-          <p class="font-mono text-xs text-slate-400">Session replay</p>
-          <h3 class="mt-2 font-semibold">How people behave</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">Recordings of real visits, with every input masked: how far people scroll and where they hesitate.</p>
+      </div>
+
+      <!-- 5.3b Product analytics: funnel by channel -->
+      <div class="mt-16" data-reveal>
+        <p class="font-mono text-xs text-[var(--brand)]">5.3b · Product analytics</p>
+        <h3 class="mt-1 font-display text-2xl font-bold">Conversion funnel, split by channel</h3>
+        <p class="mt-2 max-w-3xl text-sm text-slate-600">Saved in PostHog as <strong>"M5 waitlist funnel (by channel)"</strong>: <code>$pageview</code> on the landing page → <code>waitlist_opened</code> → <code>waitlist_submitted</code>, within one day, broken down by <code>utm_content</code>.</p>
+        <div class="table-wrap mt-4 card">
+          <table class="data-table">
+            <thead><tr><th scope="col">Channel (utm_content)</th><th scope="col">Visited</th><th scope="col">Opened form</th><th scope="col">Visit → open</th><th scope="col">Signed up</th><th scope="col">Open → signup</th><th scope="col">Visit → signup</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">fb-students (Facebook)</th><td>19</td><td>6</td><td>32%</td><td>3</td><td>50%</td><td>16%</td></tr>
+              <tr><th scope="row">r-programare (Reddit)</th><td>13</td><td>5</td><td>38%</td><td>1</td><td>20%</td><td>8%</td></tr>
+              <tr><th scope="row">chat-groups (WhatsApp)</th><td>7</td><td>5</td><td>71%</td><td>4*</td><td>80%</td><td>57%</td></tr>
+              <tr><th scope="row">(no campaign link)</th><td>3</td><td>0</td><td>0%</td><td>0</td><td>—</td><td>—</td></tr>
+              <tr class="font-semibold"><th scope="row">Total</th><td>42</td><td>16</td><td>38%</td><td>8*</td><td>50%</td><td>19%</td></tr>
+            </tbody>
+          </table>
         </div>
+        <p class="mt-3 text-xs text-slate-500">* PostHog counts our own test signup under WhatsApp; without it WhatsApp has 3 signups (43%). One more signup reached Formspree but not PostHog (the visitor most likely blocked analytics), so Formspree shows 8 real candidate signups in total.</p>
+      </div>
+
+      <!-- 5.3c Session replay -->
+      <div class="mt-16" data-reveal>
+        <p class="font-mono text-xs text-[var(--brand)]">5.3c · Session replay</p>
+        <h3 class="mt-1 font-display text-2xl font-bold">What 40 recorded visits showed</h3>
+        <p class="mt-2 max-w-3xl text-sm text-slate-600">PostHog recorded 48 sessions from 22 to 24.11 (every input masked). We removed 4 of our own test sessions and 4 empty sessions opened in the same second by Facebook's link-preview crawler, and analysed the remaining 40 by length, clicks, scroll depth and the events they triggered.</p>
+        <div class="table-wrap mt-4 card">
+          <table class="data-table">
+            <thead><tr><th scope="col">Visits</th><th scope="col">Recordings</th><th scope="col">Median length</th><th scope="col">Median clicks</th><th scope="col">What we saw</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Ended in a signup</th><td>7</td><td>55 s</td><td>19</td><td>6 of 7 joined from the first button in the hero, within about a minute of arriving; the seventh, on desktop, scrolled to the bottom and joined from the last section.</td></tr>
+              <tr><th scope="row">Left without signing up</th><td>33</td><td>15 s</td><td>2</td><td>About half left within 15 seconds with no clicks. Many of the short visits came from Reddit. Half of the people who opened the form closed it without sending.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-8 grid gap-5 lg:grid-cols-2">
+          <div class="card p-6">
+            <h4 class="font-semibold">What people clicked</h4>
+            <p class="mt-1 text-xs text-slate-500">Distinct visitors who clicked each element (PostHog autocapture; includes a few of our own test visits).</p>
+            <div class="table-wrap mt-3">
+              <table class="data-table">
+                <thead><tr><th scope="col">Element</th><th scope="col">Visitors</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row" class="font-medium">"Find your next role" (hero button)</th><td>7</td></tr>
+                  <tr><th scope="row" class="font-medium">"Join as a candidate" (last section)</th><td>7</td></tr>
+                  <tr><th scope="row" class="font-medium">"Menu" (mobile navigation)</th><td>6</td></tr>
+                  <tr><th scope="row" class="font-medium">"See how it works"</th><td>6</td></tr>
+                  <tr><th scope="row" class="font-medium">Menu → "For teams" / "How it works" / "Why Matchify"</th><td>5 / 5 / 3</td></tr>
+                  <tr><th scope="row" class="font-medium">Tab "I'm hiring tech talent" / "I'm looking for a role"</th><td>4 / 3</td></tr>
+                  <tr><th scope="row" class="font-medium">"Join as a hiring team" / "Talk to the Matchify team"</th><td>2 / 2</td></tr>
+                  <tr><th scope="row" class="font-medium">"Read the project Fiki"</th><td>2</td></tr>
+                  <tr><th scope="row" class="font-medium">Closed the signup form (×)</th><td>13</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card p-6">
+            <h4 class="font-semibold">How far people scrolled</h4>
+            <p class="mt-1 text-xs text-slate-500">Deepest point reached on the page, per visit with scroll data (33 visits).</p>
+            <div class="mt-4 space-y-3 text-sm">
+              <div><div class="flex justify-between"><span>Only the top quarter (hero)</span><strong>9</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:27%"></div></div></div>
+              <div><div class="flex justify-between"><span>25–50%</span><strong>5</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:15%"></div></div></div>
+              <div><div class="flex justify-between"><span>50–75%</span><strong>2</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:6%"></div></div></div>
+              <div><div class="flex justify-between"><span>75–95%</span><strong>2</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:6%"></div></div></div>
+              <div><div class="flex justify-between"><span>The whole page</span><strong>15</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:45%"></div></div></div>
+            </div>
+            <p class="mt-4 text-xs text-slate-500">PostHog also flagged 2 rage clicks, both on phones: on the "Menu" button and on the email field.</p>
+          </div>
+        </div>
+
+        <ul class="mt-6 grid gap-3 text-sm text-slate-700 md:grid-cols-2">
+          <li class="card p-4"><strong>Visitors either leave at the hero or read everything.</strong> 9 of 33 never scrolled past the first quarter, 15 reached the bottom; few stopped in between. The hero has to do the convincing.</li>
+          <li class="card p-4"><strong>The two buttons that convert are at the top and the bottom.</strong> "Find your next role" and "Join as a candidate" were each used by 7 visitors; the links in the middle sections were barely used.</li>
+          <li class="card p-4"><strong>Candidates are curious about the hiring side.</strong> More visitors opened the "I'm hiring tech talent" tab (4) than the candidate tab (3), and 5 opened "For teams" from the menu, yet only 2 clicked a hiring-side join button.</li>
+          <li class="card p-4"><strong>Mobile navigation needs work.</strong> 6 visitors used the "Menu" button, one rage-clicked it, and another rage-clicked the email field: on phones, the menu and the form must respond faster and be easier to tap.</li>
+          <li class="card p-4 md:col-span-2"><strong>Closing the form is common.</strong> 13 visitors closed the form with ×, some after joining, others without sending. Together with the funnel (half of the opened forms were sent), the next test is a one-field form with the consent text shortened.</li>
+        </ul>
       </div>
 
       <div class="mt-10" data-reveal>
@@ -2955,20 +3043,6 @@
         <div class="card p-6" data-reveal><p class="font-mono text-xs text-slate-400">Visitor → signup</p><p class="mt-2 font-display text-3xl font-bold">19%</p><p class="mt-1 text-xs text-slate-500">posts only: 8 signups / 42 visitors</p></div>
       </div>
 
-      <div class="mt-8 grid gap-5 lg:grid-cols-3">
-        <figure class="card p-5" data-reveal>
-          <a href="assets/img/m5/posthog-web-analytics.webp" target="_blank" rel="noopener"><img src="assets/img/m5/posthog-web-analytics.webp" alt="PostHog web analytics: 42 visitors, 55 page views, 1m 8s average session, 23% bounce rate" loading="lazy" class="rounded-lg border border-black/10" /></a>
-          <figcaption class="mt-3 text-xs text-slate-500">Web analytics: traffic started with the first posts on 22.11.</figcaption>
-        </figure>
-        <figure class="card p-5" data-reveal>
-          <a href="assets/img/m5/posthog-channels-devices.webp" target="_blank" rel="noopener"><img src="assets/img/m5/posthog-channels-devices.webp" alt="PostHog: 39 visitors from organic social, 4 direct; 31 on mobile, 11 on desktop" loading="lazy" class="rounded-lg border border-black/10" /></a>
-          <figcaption class="mt-3 text-xs text-slate-500">39 of 42 visitors came from the posts; 31 used a phone.</figcaption>
-        </figure>
-        <figure class="card p-5" data-reveal>
-          <a href="assets/img/m5/posthog-active-hours.webp" target="_blank" rel="noopener"><img src="assets/img/m5/posthog-active-hours.webp" alt="PostHog active hours heatmap with a peak on Sunday evening" loading="lazy" class="rounded-lg border border-black/10" /></a>
-          <figcaption class="mt-3 text-xs text-slate-500">Visits peaked on Sunday evening, right after the first posts (UTC).</figcaption>
-        </figure>
-      </div>
 
       <div class="mt-12" data-reveal>
         <h3 class="font-display text-xl font-bold">Conversion funnel</h3>
