@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Matchify — SE Project Fiki</title>
-  <meta name="description" content="Fiki of Matchify, a Software Engineering project at POLITEHNICA Bucharest (ACS): a proposed recruitment and career-development platform for Computer Science and Engineering roles." />
+  <meta name="description" content="Fiki of Matchify, a Startup Engineering project at POLITEHNICA Bucharest (ACS): a proposed recruitment and career-development platform for Computer Science and Engineering roles." />
   <meta name="theme-color" content="#4f46e5" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234f46e5'/%3E%3Cpath d='M18 44V20l14 14 14-14v24' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 
@@ -330,6 +330,10 @@
               <p class="font-semibold">Preparation is disconnected from the actual process</p>
               <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Interview practice is usually generic and separate from the role a candidate is actually being considered for, even though that role's requirements are known.</p>
             </li>
+            <li class="card p-5">
+              <p class="font-semibold">Ghost jobs waste applications <span class="pill pill-brand ml-1">Added in M5</span></p>
+              <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Some postings stay online for roles nobody is filling. Greenhouse found that 18–22% of jobs advertised on its platform in 2024 were "ghost jobs", and job boards rank them like any other posting, so candidates cannot tell a live role from a dead one. Our M5 campaign surfaced the same complaint in the Romanian developer community (<a class="text-[var(--brand)] hover:underline" href="#m5-learned">5.6</a>).</p>
+            </li>
           </ol>
         </div>
 
@@ -351,6 +355,10 @@
             <li class="card p-5">
               <p class="font-semibold">Candidates arrive unevenly prepared</p>
               <p class="mt-1.5 text-sm leading-relaxed text-slate-600">Companies invest in interviews with candidates who had no clear idea what the role expects, which makes interviews less informative for both sides.</p>
+            </li>
+            <li class="card p-5">
+              <p class="font-semibold">Responsive employers get no credit <span class="pill pill-brand ml-1">Added in M5</span></p>
+              <p class="mt-1.5 text-sm leading-relaxed text-slate-600">A company that keeps its postings current and answers every applicant looks the same in search results as one that never replies. On general boards, visibility is bought with promotion credits, not earned with good hiring behaviour.</p>
             </li>
           </ol>
         </div>
@@ -412,6 +420,7 @@
           <div class="card card-hover p-5" data-reveal><p class="font-mono text-xs text-slate-400">M-04</p><p class="mt-1 font-semibold">Recruiter pipeline</p><p class="mt-1.5 text-sm text-slate-600">Job requirements, candidate recommendations and stage changes with one-click actions and status templates.</p></div>
           <div class="card card-hover p-5" data-reveal><p class="font-mono text-xs text-slate-400">M-05</p><p class="mt-1 font-semibold">Private progress</p><p class="mt-1.5 text-sm text-slate-600">Skill milestones, achievements and a personal ranking indicator that only the candidate can see. No public leaderboard.</p></div>
           <div class="card card-hover p-5" data-reveal><p class="font-mono text-xs text-slate-400">M-06</p><p class="mt-1 font-semibold">Adaptive preparation</p><p class="mt-1.5 text-sm text-slate-600">Practice questions, assessments and mock interviews that adapt to previous answers, with feedback after each round.</p></div>
+          <div class="card card-hover p-5" data-reveal><p class="font-mono text-xs text-slate-400">M-07 <span class="pill pill-brand ml-1">Added in M5</span></p><p class="mt-1 font-semibold">Transparent ranking</p><p class="mt-1.5 text-sm text-slate-600">The job feed is ordered by published rules that are the same for every company: match with the profile, whether the role is confirmed open, how recent the posting is and how fast the company replies. Candidates see neutral facts ("updated 3 days ago", "usually replies in 5 days"), never a "ghost job" label.</p></div>
         </div>
       </div>
     </section>
@@ -665,7 +674,8 @@
 
       <!-- Comparison matrix -->
       <h3 class="mt-12 font-display text-xl font-bold">Feature comparison</h3>
-      <p class="mt-2 text-sm text-slate-600"><span class="mark mark-yes">●</span> documented publicly &nbsp;·&nbsp; <span class="mark mark-part">◐</span> partly / indirectly &nbsp;·&nbsp; <span class="mark mark-no">–</span> not found in public docs &nbsp;·&nbsp; Matchify column = <strong>proposed</strong>, not built.</p>
+      <p class="mt-2 text-sm text-slate-600"><span class="mark mark-yes">●</span> documented publicly &nbsp;·&nbsp; <span class="mark mark-part">◐</span> partly / indirectly &nbsp;·&nbsp; <span class="mark mark-no">–</span> not found in public docs &nbsp;·&nbsp; Matchify column = <strong>proposed</strong>, not built.
+        The last column was added in M5 (24.11.2026): LinkedIn shows an "Actively reviewing applicants" label but does not reorder the feed by it; Indeed removes stale postings but does not show candidates why a job ranks where it does.</p>
       <div class="table-wrap card mt-4" data-reveal>
         <table class="data-table">
           <caption class="sr-only">Feature comparison between competitors and the proposed Matchify concept</caption>
@@ -678,20 +688,21 @@
               <th scope="col" class="center">Skill-learning guidance</th>
               <th scope="col" class="center">Interview prep</th>
               <th scope="col" class="center">Prep tied to an active application</th>
+              <th scope="col" class="center">Transparent ranking with trust signals <span class="pill pill-brand ml-1">Added in M5</span></th>
             </tr>
           </thead>
           <tbody>
-            <tr><th scope="row" class="font-medium">Stagii pe Bune</th><td class="center mark mark-part">◐</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
-            <tr><th scope="row" class="font-medium">eJobs.ro</th><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
-            <tr><th scope="row" class="font-medium">BestJobs</th><td class="center mark mark-no">–</td><td class="center mark mark-part">◐</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
-            <tr><th scope="row" class="font-medium">LinkedIn Jobs</th><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
-            <tr><th scope="row" class="font-medium">Indeed</th><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
-            <tr><th scope="row" class="font-medium">Welcome to the Jungle</th><td class="center mark mark-no">–</td><td class="center mark mark-part">◐</td><td class="center mark mark-part">◐</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
-            <tr><th scope="row" class="font-medium">Wellfound</th><td class="center mark mark-part">◐</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
-            <tr><th scope="row" class="font-medium">HackerRank</th><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-part">◐</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td></tr>
-            <tr><th scope="row" class="font-medium">LeetCode</th><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td></tr>
-            <tr><th scope="row" class="font-medium">interviewing.io</th><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-part">◐</td></tr>
-            <tr class="bg-indigo-50/60"><th scope="row" class="font-semibold text-[var(--brand-ink)]">Matchify <span class="pill pill-proposed ml-1">proposed</span></th><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td></tr>
+            <tr><th scope="row" class="font-medium">Stagii pe Bune</th><td class="center mark mark-part">◐</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">eJobs.ro</th><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">BestJobs</th><td class="center mark mark-no">–</td><td class="center mark mark-part">◐</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">LinkedIn Jobs</th><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-part">◐</td></tr>
+            <tr><th scope="row" class="font-medium">Indeed</th><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-part">◐</td></tr>
+            <tr><th scope="row" class="font-medium">Welcome to the Jungle</th><td class="center mark mark-no">–</td><td class="center mark mark-part">◐</td><td class="center mark mark-part">◐</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">Wellfound</th><td class="center mark mark-part">◐</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">HackerRank</th><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-part">◐</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">LeetCode</th><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td></tr>
+            <tr><th scope="row" class="font-medium">interviewing.io</th><td class="center mark mark-yes">●</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-no">–</td><td class="center mark mark-yes">●</td><td class="center mark mark-part">◐</td><td class="center mark mark-no">–</td></tr>
+            <tr class="bg-indigo-50/60"><th scope="row" class="font-semibold text-[var(--brand-ink)]">Matchify <span class="pill pill-proposed ml-1">proposed</span></th><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td><td class="center mark mark-yes">●</td></tr>
           </tbody>
         </table>
       </div>
@@ -717,6 +728,9 @@
           <li><a class="hover:text-[var(--brand)]" href="https://hired.com/blog/employers/company-update-hired-lhh-recruitment-solutions/" target="_blank" rel="noopener">Hired — joining LHH</a></li>
           <li><a class="hover:text-[var(--brand)]" href="https://www.tryexponent.com/blog/pramp-joining-exponent" target="_blank" rel="noopener">Exponent — Pramp joining Exponent</a></li>
           <li><a class="hover:text-[var(--brand)]" href="https://www.hrdive.com/news/layoffs-glassdoor-indeed-ai-integration/752876/" target="_blank" rel="noopener">HR Dive — Glassdoor folded into Indeed</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://www.linkedin.com/help/learning/answer/a1655396" target="_blank" rel="noopener">LinkedIn — hirer responsiveness insights (added in M5)</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://www.kickresume.com/en/press/ghost-jobs-study/" target="_blank" rel="noopener">Kickresume — stale postings on Indeed (added in M5)</a></li>
+          <li><a class="hover:text-[var(--brand)]" href="https://www.fox5ny.com/news/ghost-jobs-greenhouse-analysis" target="_blank" rel="noopener">Greenhouse — 18–22% ghost jobs in 2024 (added in M5)</a></li>
         </ul>
       </details>
     </section>
@@ -776,6 +790,12 @@
             <p class="mt-2 text-sm leading-relaxed text-slate-600">Companies can choose to publish official preparation material for their own processes. Candidates get legitimate, company-approved guidance, and companies get better-prepared interviews and a channel to present their engineering culture.</p>
             <p class="mt-auto pt-4 text-xs text-slate-500"><strong>Risk:</strong> companies must see enough value to invest time in creating content.</p>
           </article>
+          <article class="card card-hover flex flex-col p-6 md:col-span-2 lg:col-span-3" data-reveal>
+            <p class="font-mono text-xs text-[var(--brand)]">A8 <span class="pill pill-brand ml-1">Added in M5</span></p>
+            <h3 class="mt-1 font-display text-lg font-bold">Transparent ranking: same public rules for every company</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Ghost and stale postings sink on their own, because the feed rewards roles that are confirmed open and companies that reply. The rules are published, every company sees its own signals and how to improve them, and position cannot be bought. Responsive employers are promoted for free, so the system rewards good behaviour instead of accusing anyone. This also matches the direction of EU law: the Digital Services Act (Art. 27) asks online platforms to explain the main parameters of their recommendations.</p>
+            <p class="mt-auto pt-4 text-xs text-slate-500"><strong>Risk:</strong> companies could game the "confirmed open" signal; response time to real applicants must weigh more than a single click.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -817,6 +837,8 @@
             <tr><th scope="row" class="font-medium">Skill development progress</th><td>Share of candidates who complete at least one recommended skill milestone within 30 days</td><td>Tests the career-guidance promise</td><td>Candidate</td></tr>
             <tr><th scope="row" class="font-medium">Prep completion rate</th><td>Unlocked preparation plans completed before the interview ÷ plans unlocked</td><td>Tests whether adaptive prep is used</td><td>Candidate</td></tr>
             <tr><th scope="row" class="font-medium">Employer satisfaction</th><td>Short survey score after each role is closed, plus subscription renewal rate</td><td>Predicts whether companies keep paying</td><td>Recruiter</td></tr>
+            <tr><th scope="row" class="font-medium">Employer response time <span class="pill pill-brand ml-1">Added in M5</span></th><td>Median days from an application to the company's first reply, per company</td><td>Trust signal in the transparent ranking; rewards responsive employers</td><td>Recruiter</td></tr>
+            <tr><th scope="row" class="font-medium">Live postings share <span class="pill pill-brand ml-1">Added in M5</span></th><td>Postings confirmed open in the last 14 days ÷ all active postings</td><td>Keeps ghost jobs out of the feed</td><td>Both</td></tr>
             <tr><th scope="row" class="font-medium">Score calibration (guardrail)</th><td>Do higher match estimates actually correspond to more interviews and offers?</td><td>Keeps the matching honest and explainable</td><td>Both</td></tr>
           </tbody>
         </table>
@@ -2373,6 +2395,7 @@
               <tr><th scope="row" class="font-mono text-xs text-slate-400">C-05</th><td><strong>As Gabriel</strong>, I want to upload my CV once and have my skills extracted automatically, so that I never retype the same information into application forms.</td><td>M2: CV re-entry friction (3 unprompted mentions)</td><td><span class="pill pill-ok">MVP</span></td></tr>
               <tr><th scope="row" class="font-mono text-xs text-slate-400">C-06</th><td><strong>As Gabriel</strong>, I want to always know where my applications stand — including after online assessments — so that I am not left guessing whether I am still in the running.</td><td>M2 + I-2: application black hole persists past initial filters</td><td><span class="pill pill-ok">MVP</span></td></tr>
               <tr><th scope="row" class="font-mono text-xs text-slate-400">C-07</th><td><strong>As Gabriel</strong>, I want to connect with people working in roles I am targeting, so that I can learn what the work actually looks like before I commit to a path.</td><td>Gabriel motivator: actively seeks people with sought-after careers</td><td><span class="pill pill-neutral">Post-MVP</span></td></tr>
+              <tr><th scope="row" class="font-mono text-xs text-slate-400">C-08 <span class="pill pill-brand ml-1">Added in M5</span></th><td><strong>As Gabriel</strong>, I want to see whether a role is confirmed open and how fast the company usually replies, so that I stop spending applications on ghost jobs.</td><td>M5: ghost-jobs thread on r/programare (96 upvotes); Greenhouse: 18–22% ghost postings</td><td><span class="pill pill-ok">MVP</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -2389,6 +2412,7 @@
               <tr><th scope="row" class="font-mono text-xs text-slate-400">R-05</th><td><strong>As Andreea</strong>, I want every closed application to send a message to the candidate, so that no one is left in silence regardless of the outcome.</td><td>Andreea is empathetic — she cares about how people feel; bilateral ghosting hurts trust</td><td><span class="pill pill-ok">MVP</span></td></tr>
               <tr><th scope="row" class="font-mono text-xs text-slate-400">R-06</th><td><strong>As Andreea</strong>, I want to export my pipeline to our existing ATS so that Matchify fits alongside the tools we already use without replacing them.</td><td>M2 + I-1: companies don't replace their ATS — any new tool must integrate with it</td><td><span class="pill pill-ok">MVP</span></td></tr>
               <tr><th scope="row" class="font-mono text-xs text-slate-400">R-07</th><td><strong>As Andreea</strong>, I want to publish our team culture and preparation resources on the platform, so that candidates arrive already understanding who we are — not just what skills we need.</td><td>Andreea wants to break the corporate mould and attract candidates who share the company's values</td><td><span class="pill pill-neutral">Post-MVP</span></td></tr>
+              <tr><th scope="row" class="font-mono text-xs text-slate-400">R-08 <span class="pill pill-brand ml-1">Added in M5</span></th><td><strong>As Andreea</strong>, I want to confirm that our roles are still open and see how our response time compares, so that our real openings rank higher without paying for promotion.</td><td>Andreea is empathetic and data-driven; M5: transparent ranking rewards responsive employers</td><td><span class="pill pill-ok">MVP</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -2753,7 +2777,7 @@
     <!-- =====================================================================
          M5 — VALIDATION 2: LEAD GENERATION AND COLLECTION
          Campaign: 22–25.11.2026. Internal kit (links, post texts, checklist): docs/m5-campaign-kit.md
-         Every value marked "FILL" is completed with the real campaign data on 25.11.
+         Campaign data: PostHog (visitors, funnel, recordings) and Formspree (signups), 22–24.11.2026.
     ====================================================================== -->
 
     <!-- M5 header band -->
@@ -2762,9 +2786,9 @@
         <div class="mx-auto max-w-6xl px-4 py-14">
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-indigo-300">Milestone 5 · 26.11.2026</p>
           <h2 class="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl">Validation 2: lead generation</h2>
-          <p class="mt-4 max-w-3xl text-slate-300">We turned the M3 landing page into a working waitlist, measured every visit with PostHog, and shared it on six channels, each with its own tracked link, to see who signs up and which channel brings them.</p>
+          <p class="mt-4 max-w-3xl text-slate-300">We turned the M3 landing page into a working waitlist, measured every visit with PostHog, and shared it on five channels (WhatsApp, Facebook and three subreddits), each with its own tracked link, to see who signs up and which channel brings them.</p>
           <ol class="mt-8 flex flex-wrap gap-2 text-xs text-slate-400">
-            <li><a class="block rounded-full border border-white/15 px-3 py-1 hover:text-white" href="#m5-goal">5.1 Goal &amp; targets</a></li>
+            <li><a class="block rounded-full border border-white/15 px-3 py-1 hover:text-white" href="#m5-goal">5.1 Goal</a></li>
             <li><a class="block rounded-full border border-white/15 px-3 py-1 hover:text-white" href="#m5-collection">5.2 Lead collection</a></li>
             <li><a class="block rounded-full border border-white/15 px-3 py-1 hover:text-white" href="#m5-analytics">5.3 Analytics</a></li>
             <li><a class="block rounded-full border border-white/15 px-3 py-1 hover:text-white" href="#m5-campaign">5.4 Campaign</a></li>
@@ -2775,33 +2799,16 @@
       </div>
     </div>
 
-    <!-- 5.1 Goal & targets -->
+    <!-- 5.1 Goal -->
     <section id="m5-goal" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="m5-goal-title" style="scroll-margin-top:4rem">
       <p class="eyebrow">5.1 — Goal</p>
       <h2 id="m5-goal-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Will people we never met leave their email?</h2>
       <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
         M2 and M4 asked people we reached personally whether the problem is real. M5 asks strangers to act on it: a signup costs
-        the visitor something (an email and a consent), so it is a stronger signal than an answer in a questionnaire. We wrote the
-        targets below on 22.11, before the first post, so the results cannot move them.
+        the visitor something (an email and a consent), so it is a stronger signal than an answer in a questionnaire. We wanted to learn
+        three things: how many people a few days of free posts can bring, how many of them leave their email, and which channel works best.
       </p>
 
-      <div class="mt-10 grid gap-5 md:grid-cols-3">
-        <div class="card p-6" data-reveal>
-          <p class="font-mono text-xs text-slate-400">H1 · Reach</p>
-          <p class="mt-2 font-display text-3xl font-bold">≥ 150</p>
-          <p class="mt-1 text-sm text-slate-600">unique visitors on the landing page during the campaign.</p>
-        </div>
-        <div class="card p-6" data-reveal>
-          <p class="font-mono text-xs text-slate-400">H2 · Interest</p>
-          <p class="mt-2 font-display text-3xl font-bold">≥ 10%</p>
-          <p class="mt-1 text-sm text-slate-600">of visitors join the waitlist (visitor → signup conversion).</p>
-        </div>
-        <div class="card p-6" data-reveal>
-          <p class="font-mono text-xs text-slate-400">H3 · Two-sided</p>
-          <p class="mt-2 font-display text-3xl font-bold">≥ 3</p>
-          <p class="mt-1 text-sm text-slate-600">signups from the hiring side, not only candidates: the paying side has to show up too.</p>
-        </div>
-      </div>
     </section>
 
     <!-- 5.2 Lead collection -->
@@ -2836,13 +2843,6 @@
           </div>
         </div>
 
-        <!-- FILL: screenshot of the open signup form → assets/img/m5/landing-form.png -->
-        <figure class="mt-8 card p-5" data-reveal>
-          <div class="grid min-h-40 place-items-center rounded-lg border border-dashed border-slate-300 bg-slate-50 p-6 text-center text-sm text-slate-500">
-            Screenshot of the signup form · <span class="pill pill-neutral">Added on 25.11</span>
-          </div>
-          <figcaption class="mt-3 text-xs text-slate-500">The signup form on the landing page, opened from "Join as a candidate".</figcaption>
-        </figure>
       </div>
     </section>
 
@@ -2895,34 +2895,47 @@
     <section id="m5-campaign" class="border-y border-black/5 bg-white" aria-labelledby="m5-campaign-title" style="scroll-margin-top:4rem">
       <div class="mx-auto max-w-6xl px-4 py-20">
         <p class="eyebrow">5.4 — Campaign</p>
-        <h2 id="m5-campaign-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Six channels, one tracked link each</h2>
+        <h2 id="m5-campaign-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Five channels, one tracked link each</h2>
         <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
-          We picked channels where our two segments already are: students and juniors in Romanian student and IT-jobs communities,
-          and engineers and recruiters on LinkedIn. Each channel got its own link (same page, different <code>utm_content</code>),
-          and the posts were written for the channel: Romanian for local groups, English for international ones, and always presented
-          honestly as a student project looking for feedback. No paid ads.
+          We posted where our candidate segment already is: our own WhatsApp groups, the IT Jobs Romania Facebook group, the Romanian developer
+          subreddit, and two international subreddits for early-stage projects. Each channel got its own link (same page, different
+          <code>utm_content</code>). Posts were short, written for the channel (Romanian for local communities, English for international ones)
+          and always presented as a student project. No paid ads. The campaign ran from 22 to 24.11.2026.
         </p>
 
-        <!-- FILL: date, permalink and screenshot for every post (see docs/m5-campaign-kit.md, section 3) -->
         <div class="table-wrap mt-8 card" data-reveal>
           <table class="data-table">
-            <thead><tr><th scope="col">Channel</th><th scope="col">Where</th><th scope="col">Lang.</th><th scope="col">Posted</th><th scope="col">Post</th><th scope="col">Status</th></tr></thead>
+            <thead><tr><th scope="col">Channel</th><th scope="col">Where</th><th scope="col">Lang.</th><th scope="col">Posted</th><th scope="col">Reactions</th><th scope="col">Outcome</th><th scope="col">Post</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Facebook · students</th><td>ACS / UPB student groups</td><td>RO</td><td>—</td><td>—</td><td><span class="pill pill-neutral">Pending</span></td></tr>
-              <tr><th scope="row">Facebook · IT jobs</th><td>Romanian IT jobs and internships groups</td><td>RO</td><td>—</td><td>—</td><td><span class="pill pill-neutral">Pending</span></td></tr>
-              <tr><th scope="row">Reddit · r/programare</th><td>Romanian programming community</td><td>RO</td><td>—</td><td>—</td><td><span class="pill pill-neutral">Pending</span></td></tr>
-              <tr><th scope="row">Reddit · r/SideProject</th><td>International side-project community</td><td>EN</td><td>—</td><td>—</td><td><span class="pill pill-neutral">Pending</span></td></tr>
-              <tr><th scope="row">LinkedIn</th><td>Posts from the team members' profiles</td><td>EN</td><td>—</td><td>—</td><td><span class="pill pill-neutral">Pending</span></td></tr>
-              <tr><th scope="row">Chat groups</th><td>WhatsApp / Discord groups of our year</td><td>RO</td><td>—</td><td>—</td><td><span class="pill pill-neutral">Pending</span></td></tr>
+              <tr><th scope="row">WhatsApp</th><td>Many groups of our year and series</td><td>RO</td><td>22.11</td><td>Private chats</td><td><span class="pill pill-ok">Live</span></td><td>Private group (screenshot below)</td></tr>
+              <tr><th scope="row">Facebook</th><td>IT Jobs Romania group</td><td>RO</td><td>23.11</td><td>1 like</td><td><span class="pill pill-ok">Live</span></td><td><a class="text-[var(--brand)] hover:underline" href="https://www.facebook.com/groups/ItJobsRomania/permalink/4732773086953967/" target="_blank" rel="noopener">Open post ↗</a></td></tr>
+              <tr><th scope="row">Reddit · r/programare</th><td>Romanian programming community</td><td>RO</td><td>22.11</td><td>0 points · 4 comments</td><td><span class="pill pill-proposed">Removed by Reddit's filters</span></td><td><a class="text-[var(--brand)] hover:underline" href="https://www.reddit.com/r/programare/comments/1y2xfln/proiect_de_master_platform%C4%83_de_joburi_pentru/" target="_blank" rel="noopener">Open post ↗</a></td></tr>
+              <tr><th scope="row">Reddit · r/SideProject</th><td>International side-project community</td><td>EN</td><td>23.11</td><td>—</td><td><span class="pill pill-neutral">No visits recorded</span></td><td><a class="text-[var(--brand)] hover:underline" href="https://www.reddit.com/r/SideProject/comments/1y2xgry/job_matching_for_junior_devs_that_tells_you_why_a/" target="_blank" rel="noopener">Open post ↗</a></td></tr>
+              <tr><th scope="row">Reddit · r/alphaandbetausers</th><td>International community for finding early users</td><td>EN</td><td>22.11</td><td>1 point · 1 comment</td><td><span class="pill pill-proposed">Removed by Reddit's filters</span></td><td><a class="text-[var(--brand)] hover:underline" href="https://www.reddit.com/r/alphaandbetausers/comments/1y2xiqa/waitlist_job_matching_for_junior_devs_that_tells/" target="_blank" rel="noopener">Open post ↗</a></td></tr>
             </tbody>
           </table>
         </div>
+        <p class="mt-3 max-w-3xl text-xs text-slate-500">
+          Reddit's automatic filters removed two posts, most likely because of the free <code>github.io</code> link and a new account;
+          r/roastmystartup's rules ban free subdomains outright, so we did not post a link there. The posts still collected comments before removal.
+        </p>
 
-        <!-- FILL: one figure per post → assets/img/m5/<channel>-post.png -->
-        <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           <figure class="card p-5" data-reveal>
-            <div class="grid min-h-32 place-items-center rounded-lg border border-dashed border-slate-300 bg-slate-50 p-6 text-center text-sm text-slate-500">Screenshots of the posts · <span class="pill pill-neutral">Added on 25.11</span></div>
-            <figcaption class="mt-3 text-xs text-slate-500">Each post, with its reactions and comments at the end of the campaign.</figcaption>
+            <a href="assets/img/m5/whatsapp-post.png" target="_blank" rel="noopener"><img src="assets/img/m5/whatsapp-post.png" alt="WhatsApp message forwarded to student groups with the tracked waitlist link" loading="lazy" class="rounded-lg border border-black/10" /></a>
+            <figcaption class="mt-3 text-xs text-slate-500">WhatsApp: the message forwarded to our year's groups (group and member names cropped out).</figcaption>
+          </figure>
+          <figure class="card p-5" data-reveal>
+            <a href="assets/img/m5/facebook-post.png" target="_blank" rel="noopener"><img src="assets/img/m5/facebook-post.png" alt="Facebook post presenting Matchify with the tracked waitlist link" loading="lazy" class="rounded-lg border border-black/10" /></a>
+            <figcaption class="mt-3 text-xs text-slate-500">Facebook, IT Jobs Romania group: the post that brought the most visitors.</figcaption>
+          </figure>
+          <figure class="card p-5" data-reveal>
+            <a href="assets/img/m5/reddit-programare-post.png" target="_blank" rel="noopener"><img src="assets/img/m5/reddit-programare-post.png" alt="r/programare post with four sceptical comments, removed by Reddit's filters" loading="lazy" class="rounded-lg border border-black/10" /></a>
+            <figcaption class="mt-3 text-xs text-slate-500">r/programare: sceptical comments, then removed by Reddit's filters.</figcaption>
+          </figure>
+          <figure class="card p-5" data-reveal>
+            <a href="assets/img/m5/reddit-alphaandbetausers-post.png" target="_blank" rel="noopener"><img src="assets/img/m5/reddit-alphaandbetausers-post.png" alt="r/alphaandbetausers post with one positive comment, removed by Reddit's filters" loading="lazy" class="rounded-lg border border-black/10" /></a>
+            <figcaption class="mt-3 text-xs text-slate-500">r/alphaandbetausers: one positive comment before removal.</figcaption>
           </figure>
         </div>
       </div>
@@ -2932,57 +2945,72 @@
     <section id="m5-results" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="m5-results-title" style="scroll-margin-top:4rem">
       <p class="eyebrow">5.5 — Results</p>
       <h2 id="m5-results-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">What the campaign brought in</h2>
-      <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">Numbers from PostHog and Formspree for 22–25.11.2026. Our own test signups are excluded.</p>
+      <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">Numbers from PostHog and Formspree for 22–24.11.2026. Our own test signup is excluded.</p>
 
-      <!-- FILL: the four totals -->
+      <!-- Totals. Signups: Formspree (source of truth); one signup was not seen by PostHog, likely an ad blocker. -->
       <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="card p-6" data-reveal><p class="font-mono text-xs text-slate-400">Unique visitors</p><p class="mt-2 font-display text-3xl font-bold">—</p><p class="mt-1 text-xs text-slate-500">target ≥ 150</p></div>
-        <div class="card p-6" data-reveal><p class="font-mono text-xs text-slate-400">Opened the form</p><p class="mt-2 font-display text-3xl font-bold">—</p><p class="mt-1 text-xs text-slate-500">waitlist_opened</p></div>
-        <div class="card p-6" data-reveal><p class="font-mono text-xs text-slate-400">Signups (leads)</p><p class="mt-2 font-display text-3xl font-bold">—</p><p class="mt-1 text-xs text-slate-500">candidates — · hiring side —</p></div>
-        <div class="card p-6" data-reveal><p class="font-mono text-xs text-slate-400">Visitor → signup</p><p class="mt-2 font-display text-3xl font-bold">—</p><p class="mt-1 text-xs text-slate-500">target ≥ 10%</p></div>
+        <div class="card p-6" data-reveal><p class="font-mono text-xs text-slate-400">Unique visitors</p><p class="mt-2 font-display text-3xl font-bold">42</p><p class="mt-1 text-xs text-slate-500">55 page views · 74% on mobile</p></div>
+        <div class="card p-6" data-reveal><p class="font-mono text-xs text-slate-400">Opened the form</p><p class="mt-2 font-display text-3xl font-bold">16</p><p class="mt-1 text-xs text-slate-500">38% of visitors</p></div>
+        <div class="card p-6" data-reveal><p class="font-mono text-xs text-slate-400">Signups (leads)</p><p class="mt-2 font-display text-3xl font-bold">8</p><p class="mt-1 text-xs text-slate-500">candidates 8 · hiring side 0</p></div>
+        <div class="card p-6" data-reveal><p class="font-mono text-xs text-slate-400">Visitor → signup</p><p class="mt-2 font-display text-3xl font-bold">19%</p><p class="mt-1 text-xs text-slate-500">8 signups / 42 visitors</p></div>
       </div>
 
-      <!-- FILL: PostHog screenshots → assets/img/m5/web-analytics.png, funnel.png, session-replay.png -->
       <div class="mt-8 grid gap-5 lg:grid-cols-3">
         <figure class="card p-5" data-reveal>
-          <div class="grid min-h-32 place-items-center rounded-lg border border-dashed border-slate-300 bg-slate-50 p-6 text-center text-sm text-slate-500">Web analytics · <span class="pill pill-neutral">Added on 25.11</span></div>
-          <figcaption class="mt-3 text-xs text-slate-500">Visitors per day and per UTM source.</figcaption>
+          <a href="assets/img/m5/posthog-web-analytics.webp" target="_blank" rel="noopener"><img src="assets/img/m5/posthog-web-analytics.webp" alt="PostHog web analytics: 42 visitors, 55 page views, 1m 8s average session, 23% bounce rate" loading="lazy" class="rounded-lg border border-black/10" /></a>
+          <figcaption class="mt-3 text-xs text-slate-500">Web analytics: traffic started with the first posts on 22.11.</figcaption>
         </figure>
         <figure class="card p-5" data-reveal>
-          <div class="grid min-h-32 place-items-center rounded-lg border border-dashed border-slate-300 bg-slate-50 p-6 text-center text-sm text-slate-500">Conversion funnel · <span class="pill pill-neutral">Added on 25.11</span></div>
-          <figcaption class="mt-3 text-xs text-slate-500">Page view → form opened → signup, by channel.</figcaption>
+          <a href="assets/img/m5/posthog-channels-devices.webp" target="_blank" rel="noopener"><img src="assets/img/m5/posthog-channels-devices.webp" alt="PostHog: 39 visitors from organic social, 4 direct; 31 on mobile, 11 on desktop" loading="lazy" class="rounded-lg border border-black/10" /></a>
+          <figcaption class="mt-3 text-xs text-slate-500">39 of 42 visitors came from the posts; 31 used a phone.</figcaption>
         </figure>
         <figure class="card p-5" data-reveal>
-          <div class="grid min-h-32 place-items-center rounded-lg border border-dashed border-slate-300 bg-slate-50 p-6 text-center text-sm text-slate-500">Session replay · <span class="pill pill-neutral">Added on 25.11</span></div>
-          <figcaption class="mt-3 text-xs text-slate-500">A typical visit, with inputs masked.</figcaption>
+          <a href="assets/img/m5/posthog-active-hours.webp" target="_blank" rel="noopener"><img src="assets/img/m5/posthog-active-hours.webp" alt="PostHog active hours heatmap with a peak on Sunday evening" loading="lazy" class="rounded-lg border border-black/10" /></a>
+          <figcaption class="mt-3 text-xs text-slate-500">Visits peaked on Sunday evening, right after the first posts (UTC).</figcaption>
         </figure>
       </div>
 
-      <!-- FILL: one row per channel; conversion = signups / visitors -->
       <div class="mt-12" data-reveal>
-        <h3 class="font-display text-xl font-bold">Channel comparison</h3>
-        <p class="mt-2 max-w-3xl text-sm text-slate-600">Effort is the time the team spent on the channel (finding groups, waiting for approval, answering comments).</p>
-        <div class="table-wrap mt-4 card">
-          <table class="data-table">
-            <thead><tr><th scope="col">Channel</th><th scope="col">Visitors</th><th scope="col">Signups</th><th scope="col">Conversion</th><th scope="col">Hiring side</th><th scope="col">Effort</th><th scope="col">Verdict</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">Facebook · students</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-              <tr><th scope="row">Facebook · IT jobs</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-              <tr><th scope="row">Reddit · r/programare</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-              <tr><th scope="row">Reddit · r/SideProject</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-              <tr><th scope="row">LinkedIn</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-              <tr><th scope="row">Chat groups</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-              <tr><th scope="row">Direct / other</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Visits without a campaign link</td></tr>
-            </tbody>
-          </table>
+        <h3 class="font-display text-xl font-bold">Conversion funnel</h3>
+        <p class="mt-2 max-w-3xl text-sm text-slate-600">PostHog funnel "M5 waitlist funnel (by channel)": page view → form opened → signup, within one day.</p>
+        <div class="mt-4 card p-6">
+          <div class="space-y-3 text-sm">
+            <div><div class="flex justify-between"><span>Visited the landing page</span><strong>42 · 100%</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:100%"></div></div></div>
+            <div><div class="flex justify-between"><span>Opened the signup form</span><strong>16 · 38%</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:38%"></div></div></div>
+            <div><div class="flex justify-between"><span>Joined the waitlist</span><strong>8 · 19%</strong></div><div class="mt-1 h-3 rounded-full bg-slate-100"><div class="h-3 rounded-full bg-[var(--brand)]" style="width:19%"></div></div></div>
+          </div>
+          <p class="mt-4 text-xs text-slate-500">Half of the people who opened the form submitted it; the larger drop is before the form. Average time from opening the form to signing up: 12 seconds.</p>
         </div>
       </div>
 
-      <!-- FILL: the winning channel and why -->
+      <div class="mt-12" data-reveal>
+        <h3 class="font-display text-xl font-bold">Channel comparison</h3>
+        <p class="mt-2 max-w-3xl text-sm text-slate-600">Visitors and form opens from PostHog, signups from Formspree. Effort is the time the team spent on the channel.</p>
+        <div class="table-wrap mt-4 card">
+          <table class="data-table">
+            <thead><tr><th scope="col">Channel</th><th scope="col">Visitors</th><th scope="col">Opened form</th><th scope="col">Signups</th><th scope="col">Conversion</th><th scope="col">Effort</th><th scope="col">Verdict</th></tr></thead>
+            <tbody>
+              <tr class="bg-emerald-50/60"><th scope="row">WhatsApp</th><td>7</td><td>5</td><td>3</td><td><strong>43%</strong></td><td>Low</td><td>Best conversion: people who know us trust the link</td></tr>
+              <tr><th scope="row">Facebook</th><td>19*</td><td>6</td><td>3</td><td>16%</td><td>Low</td><td>Most reach from a single post</td></tr>
+              <tr><th scope="row">Reddit · r/programare</th><td>13</td><td>5</td><td>1</td><td>8%</td><td>Medium</td><td>Most feedback, least trust; post removed</td></tr>
+              <tr><th scope="row">Reddit · r/SideProject</th><td>0</td><td>0</td><td>0</td><td>—</td><td>Low</td><td>No traffic recorded</td></tr>
+              <tr><th scope="row">Reddit · r/alphaandbetausers</th><td>0</td><td>0</td><td>0</td><td>—</td><td>Low</td><td>Removed before anyone clicked</td></tr>
+              <tr><th scope="row">Direct / other</th><td>3</td><td>0</td><td>1**</td><td>—</td><td>—</td><td>Visits without a campaign link</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-3 text-xs text-slate-500">* Includes about 4 visits from Facebook's link-preview crawler (four sessions in the same second, no activity). ** Recorded by Formspree only; the visitor most likely blocked PostHog.</p>
+      </div>
+
       <div class="mt-10 rounded-3xl bg-[var(--ink)] p-6 text-slate-200 sm:p-8" data-reveal>
         <p class="font-mono text-xs text-indigo-300">Best channel</p>
-        <h3 class="mt-1 font-display text-2xl font-bold text-white">— <span class="ml-2 align-middle pill pill-neutral">Decided on 25.11</span></h3>
-        <p class="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300">Chosen by signups first and conversion second: a channel that sends many visitors who do not sign up is reach, not interest.</p>
+        <h3 class="mt-1 font-display text-2xl font-bold text-white">WhatsApp groups</h3>
+        <p class="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300">
+          WhatsApp and Facebook brought the same number of signups (3 each), so conversion decides: 43% of WhatsApp visitors joined,
+          against 16% on Facebook and 8% on Reddit. A link from a colleague in a group you already trust converts far better than a post
+          seen by strangers. Facebook is the best channel for <em>reach</em>; Reddit was the best channel for <em>honest feedback</em>, but its
+          filters removed posts with our free-subdomain link.
+        </p>
       </div>
     </section>
 
@@ -2990,32 +3018,55 @@
     <section id="m5-learned" class="border-y border-black/5 bg-white" aria-labelledby="m5-learned-title" style="scroll-margin-top:4rem">
       <div class="mx-auto max-w-6xl px-4 py-20">
         <p class="eyebrow">5.6 — What we learned</p>
-        <h2 id="m5-learned-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Targets, findings and next steps</h2>
+        <h2 id="m5-learned-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Findings and next steps</h2>
 
-        <!-- FILL: Met / Not met for each target, with the number -->
-        <div class="table-wrap mt-8 card" data-reveal>
-          <table class="data-table">
-            <thead><tr><th scope="col">Target</th><th scope="col">Result</th><th scope="col">Status</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">H1 · ≥ 150 unique visitors</th><td>—</td><td><span class="pill pill-neutral">Pending</span></td></tr>
-              <tr><th scope="row">H2 · ≥ 10% visitor → signup</th><td>—</td><td><span class="pill pill-neutral">Pending</span></td></tr>
-              <tr><th scope="row">H3 · ≥ 3 hiring-side signups</th><td>—</td><td><span class="pill pill-neutral">Pending</span></td></tr>
-            </tbody>
-          </table>
+        <div class="mt-8 card p-6" data-reveal>
+          <p class="font-mono text-xs text-[var(--brand)]">Finding · new idea</p>
+          <h3 class="mt-1 font-display text-xl font-bold">Even our critics confirm the problem: ghost jobs</h3>
+          <p class="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+            On r/programare our post was met with scepticism ("why not solve a real problem?"). Yet one of the critics had just written a thread
+            with <strong>96 upvotes and 59 comments</strong> about the same pains Matchify targets: rejection without an interview, postings for roles
+            that are not really open, and retyping a CV into application forms. Industry data agrees: Greenhouse found 18–22% of postings on its
+            platform in 2024 were ghost jobs, and 61% of job seekers it surveyed had been ghosted after an interview.
+          </p>
+          <p class="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">
+            <strong>What it changes:</strong> a new module, <a class="text-[var(--brand)] hover:underline" href="#solution">transparent ranking (M-07)</a>.
+            The feed follows published rules that are the same for every company, rewards roles confirmed open and employers that reply,
+            and shows candidates neutral facts instead of labels. We added it to the problem, solution, competition, advantage and metrics
+            sections of M1 and to the M4 user stories, each marked <span class="pill pill-brand">Added in M5</span>.
+          </p>
         </div>
 
-        <!-- FILL: 3–5 findings from the funnel, the session replays and the comments on the posts -->
-        <p class="mt-8 rounded-2xl border border-dashed border-slate-300 p-5 text-sm leading-relaxed text-slate-600" data-reveal>
-          Findings from the funnel, the session recordings and the comments on our posts, and what they change for the MVP (M7),
-          are added at the end of the campaign.
-        </p>
+
+        <div class="mt-8 grid gap-5 md:grid-cols-2">
+          <div class="card p-6" data-reveal>
+            <p class="font-mono text-xs text-slate-400">Finding 1</p>
+            <h3 class="mt-1 font-semibold">People decide in seconds, on a phone</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">74% visited on mobile, the median time on the page was 15 seconds and visitors scrolled 63% of it on average. 7 of 8 signups came from the first button in the hero. <strong>Next:</strong> the value proposition and the call to action must work above the fold on a phone.</p>
+          </div>
+          <div class="card p-6" data-reveal>
+            <p class="font-mono text-xs text-slate-400">Finding 2</p>
+            <h3 class="mt-1 font-semibold">The form is not the problem; the first click is</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Half of the people who opened the form joined, in 12 seconds on average. 62% of visitors never opened it. <strong>Next:</strong> test a clearer hero message rather than a shorter form.</p>
+          </div>
+          <div class="card p-6" data-reveal>
+            <p class="font-mono text-xs text-slate-400">Finding 3</p>
+            <h3 class="mt-1 font-semibold">Explained gaps resonate; "AI score" triggers distrust</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">On r/alphaandbetausers a junior liked that Matchify shows "what's missing, not just a match score". On r/programare the same idea was read as "an intermediary asking an AI for a 1–10 grade" on a "vibe-coded" app. <strong>Next:</strong> show <em>how</em> the explanation is built (skills, projects, requirements) instead of leading with a score.</p>
+          </div>
+          <div class="card p-6" data-reveal>
+            <p class="font-mono text-xs text-slate-400">Finding 4</p>
+            <h3 class="mt-1 font-semibold">No hiring-side signups from social posts</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">All 8 leads are candidates. Our channels reach students, not recruiters, and one comment noted that the real issue is too few junior jobs for too many applicants. <strong>Next:</strong> the paying side needs direct outreach to recruiters, not posts.</p>
+          </div>
+        </div>
 
         <div class="mt-10" data-reveal>
           <h3 class="font-display text-xl font-bold">Evidence</h3>
           <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <a class="card card-hover block p-5" href="landing.html"><p class="font-mono text-xs text-slate-400">Live</p><p class="mt-1 font-semibold">Landing page with the waitlist →</p></a>
             <a class="card card-hover block p-5" href="docs/m5-campaign-kit.md"><p class="font-mono text-xs text-slate-400">Plan</p><p class="mt-1 font-semibold">Campaign kit: tracked links and post texts →</p></a>
-            <a class="card card-hover block p-5" href="#m5-campaign"><p class="font-mono text-xs text-slate-400">Posts</p><p class="mt-1 font-semibold">Permalinks of every post (5.4) →</p></a>
+            <a class="card card-hover block p-5" href="#m5-campaign"><p class="font-mono text-xs text-slate-400">Posts</p><p class="mt-1 font-semibold">Permalinks and screenshots of every post (5.4) →</p></a>
           </div>
         </div>
       </div>
@@ -3060,7 +3111,7 @@
 
         <details class="milestone card border-2 border-[var(--brand)] p-5" open>
           <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-[var(--brand)]">M5</span><span class="font-semibold">Validation 2: lead generation and collection</span><span class="text-xs text-slate-500">26.11.2026</span><span class="pill pill-brand">Current</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
-          <p class="mt-3 text-sm text-slate-600">Waitlist and newsletter form on the landing page (Formspree), PostHog web analytics, a conversion funnel and session replay, and a campaign on Facebook, Reddit, LinkedIn and chat groups with one tracked link per channel, compared channel by channel. <a class="text-[var(--brand)] hover:underline" href="#m5">Read the full section →</a></p>
+          <p class="mt-3 text-sm text-slate-600">Waitlist and newsletter form on the landing page (Formspree), PostHog web analytics, a conversion funnel and session replay, and a campaign on WhatsApp, Facebook and Reddit with one tracked link per channel: 42 visitors, 8 signups, WhatsApp converted best. <a class="text-[var(--brand)] hover:underline" href="#m5">Read the full section →</a></p>
         </details>
 
         <details class="milestone card p-5">
@@ -3098,7 +3149,7 @@
     <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-3">
       <div>
         <p class="font-display text-xl font-bold text-white">Matchify</p>
-        <p class="mt-2 text-sm leading-relaxed text-slate-400">Software Engineering project Fiki · Faculty of Automatic Control and Computers, POLITEHNICA Bucharest · 2026–2027.</p>
+        <p class="mt-2 text-sm leading-relaxed text-slate-400">Startup Engineering project Fiki · Faculty of Automatic Control and Computers, POLITEHNICA Bucharest · 2026–2027.</p>
         <p class="mt-3 text-xs text-slate-500">This page documents a university project. Matchify is a concept, not an operating service.</p>
       </div>
       <div>
