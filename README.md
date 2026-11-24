@@ -1,6 +1,6 @@
-# Matchify — Software Engineering Fiki
+# Matchify — Startup Engineering Fiki
 
-The Fiki (fancy wiki) for **Matchify**, our Software Engineering project at POLITEHNICA Bucharest (ACS), 2026–2027.
+The Fiki (fancy wiki) for **Matchify**, our Startup Engineering project at POLITEHNICA Bucharest (ACS), 2026–2027.
 It is a single page that documents the project at each milestone. It is **not** the product's landing page.
 
 ## Structure

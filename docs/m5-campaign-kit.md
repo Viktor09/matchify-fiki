@@ -55,7 +55,7 @@ Notes:
 
 Title: **Am făcut un landing page pentru un proiect de facultate: matching explicabil student ↔ rol tehnic. Feedback?**
 
-> Salut! Suntem studenți la ACS și, pentru un proiect de Software Engineering, validăm ideea **Matchify**: o platformă
+> Salut! Suntem studenți la ACS și, pentru proiectul de la Startup Engineering, validăm ideea **Matchify**: o platformă
 > unde studenții și juniorii își fac un profil din skill-uri și proiecte, iar fiecare potrivire cu un rol vine cu o
 > explicație (ce se potrivește, ce lipsește, ce să înveți). De partea firmelor, un shortlist explicabil în loc de
 > sute de CV-uri.
@@ -70,7 +70,7 @@ Title: **Am făcut un landing page pentru un proiect de facultate: matching expl
 
 Title: **Student project: explainable job matching for early-career tech talent. Would you use it?**
 
-> We're four CS students in Bucharest building **Matchify** for our Software Engineering course. The idea: candidates
+> We're four CS students in Bucharest building **Matchify** for our Startup Engineering course. The idea: candidates
 > build one profile from their skills and projects, and every role suggestion comes with a reason (what matches, what's
 > missing, what to learn next). Hiring teams get an explainable shortlist instead of a pile of keyword-matched CVs.
 >
