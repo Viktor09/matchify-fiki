@@ -44,7 +44,7 @@
         Matchify <span class="hidden font-mono text-[0.65rem] font-medium text-slate-500 sm:inline">/ fiki</span>
       </a>
 
-      <ul class="hidden items-center gap-1 whitespace-nowrap text-sm text-slate-600 md:flex" data-nav>
+      <ul class="hidden items-center gap-1 whitespace-nowrap text-sm text-slate-600 xl:flex" data-nav>
         <li><a class="nav-link rounded-md px-3 py-1 hover:text-slate-900" href="#overview">Overview</a></li>
         <li><a class="nav-link rounded-md px-3 py-1 hover:text-slate-900" href="#team">Team</a></li>
         <li><a class="nav-link rounded-md px-3 py-1 hover:text-slate-900" href="#m1">M1 · Project description</a></li>
@@ -55,12 +55,12 @@
         <li><a class="nav-link rounded-md px-3 py-1 hover:text-slate-900" href="#roadmap">Roadmap</a></li>
       </ul>
 
-      <button id="menu-button" type="button" class="rounded-lg border border-black/10 bg-white px-3 py-1.5 text-sm font-medium md:hidden" aria-expanded="false" aria-controls="mobile-menu">
+      <button id="menu-button" type="button" class="rounded-lg border border-black/10 bg-white px-3 py-1.5 text-sm font-medium xl:hidden" aria-expanded="false" aria-controls="mobile-menu">
         Sections
       </button>
     </nav>
 
-    <div id="mobile-menu" class="border-t border-black/5 bg-[#fbfaf7] md:hidden" hidden>
+    <div id="mobile-menu" class="border-t border-black/5 bg-[#fbfaf7] xl:hidden" hidden>
       <ul class="mx-auto grid max-w-6xl gap-1 px-4 py-3 text-sm" data-nav>
         <li><a class="nav-link block rounded-md px-2 py-2" href="#overview">Overview</a></li>
         <li><a class="nav-link block rounded-md px-2 py-2" href="#team">Team</a></li>
@@ -1968,17 +1968,19 @@
     <!-- 4.1 Interviews -->
     <section id="m4-interviews" class="mx-auto max-w-6xl px-4 py-20" aria-labelledby="m4-interviews-title" style="scroll-margin-top:4rem">
       <p class="eyebrow">4.1 — Interviews</p>
-      <h2 id="m4-interviews-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Two face-to-face interviews</h2>
+      <h2 id="m4-interviews-title" class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">Three interviews, both sides of the market</h2>
       <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">
-        Both interviews were conducted in person. We did not describe Matchify beforehand. Each interview started with a concrete recent story and followed up with probing questions. The hiring manager interview was conducted in English; the student interview in Romanian (translated below).
+        We did not describe Matchify beforehand. Each interview started with a concrete recent story and followed up with probing questions.
+        I-1 and I-2 were run in M4; in M5 we replaced the I-1 notes with the transcript of its recording, and added I-3, a tech lead at a big-tech company.
+        I-1 and I-3 were conducted in English, I-2 in Romanian (translated below). Names of people and companies are withheld.
       </p>
 
-      <div class="mt-10 grid gap-5 md:grid-cols-2">
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
         <div class="card p-6" data-reveal>
-          <p class="font-mono text-xs text-[var(--brand)]">I-1</p>
-          <p class="mt-1 text-xs text-slate-500">Senior Software Engineer / Hiring Lead · fintech startup, London</p>
+          <p class="font-mono text-xs text-[var(--brand)]">I-1 <span class="pill pill-brand ml-1">Updated in M5</span></p>
+          <p class="mt-1 text-xs text-slate-500">Senior developer, hiring lead · hedge fund, London · recorded</p>
           <h3 class="mt-2 font-display text-lg font-bold">Hiring Manager</h3>
-          <p class="mt-2 text-sm text-slate-600">Led the most recent junior hire at a 25-person fintech. No dedicated recruiter — two senior developers run the whole process alongside their normal work. Received 50+ submissions; ran a three-stage process including a 4-hour take-home exercise.</p>
+          <p class="mt-2 text-sm text-slate-600">Ran the technical side of a junior software engineer hire with one other senior developer. 50+ submissions sourced by recruitment agencies and referrals; take-home exercise, live interviews and a defence of the submission.</p>
         </div>
         <div class="card p-6" data-reveal>
           <p class="font-mono text-xs text-[var(--brand)]">I-2</p>
@@ -1986,100 +1988,114 @@
           <h3 class="mt-2 font-display text-lg font-bold">Student — SWE/SRE intern applicant</h3>
           <p class="mt-2 text-sm text-slate-600">Actively applying to SWE/SRE internships at large tech companies in EMEA. Built a weekly company-list routine, used Claude to tailor CVs, and prepared with LeetCode + Claude Pro mock interviews. Paid for Claude Pro — the only paid tool in his search.</p>
         </div>
+        <div class="card p-6" data-reveal>
+          <p class="font-mono text-xs text-[var(--brand)]">I-3 <span class="pill pill-brand ml-1">Added in M5</span></p>
+          <p class="mt-1 text-xs text-slate-500">Tech lead · big-tech company · recorded · 25.11.2026</p>
+          <h3 class="mt-2 font-display text-lg font-bold">Interviewer — software engineer hiring</h3>
+          <p class="mt-2 text-sm text-slate-600">Runs coding interviews in a large tech company's hiring pipeline. Recruiters filter CVs; each candidate then takes four one-hour interviews plus written feedback, about eight hours of engineers' time.</p>
+        </div>
       </div>
 
-      <!-- Interview I-1: Hiring Manager -->
+      <!-- Interview I-1: Hiring Manager (recorded; transcript replaced in M5) -->
       <div id="m4-interview-1" class="mt-14" style="scroll-margin-top:5.5rem">
         <div class="flex flex-wrap items-center gap-3">
           <p class="font-mono text-xs text-[var(--brand)]">I-1</p>
           <h3 class="font-display text-2xl font-bold">Hiring Manager — Junior Software Engineer hire</h3>
+          <span class="pill pill-brand">Updated in M5: transcript from the recording</span>
         </div>
         <p class="mt-2 max-w-3xl text-sm text-slate-600">
-          Fintech startup, London. No dedicated recruiter; two senior developers ran the full process alongside their regular engineering work. Conducted in English.
+          Hedge fund, London. Two senior developers ran the technical side of the process; candidates were sourced by recruitment agencies and internal referrals. Recorded, conducted in English; the transcript below is lightly edited for readability.
         </p>
 
         <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" data-reveal>
-          <div class="card p-5"><p class="font-display text-3xl font-bold text-[var(--match)]">50+</p><p class="mt-1 text-sm text-slate-600">submissions received for the Junior Software Engineer role</p></div>
-          <div class="card p-5"><p class="font-display text-3xl font-bold text-[var(--match)]">3</p><p class="mt-1 text-sm text-slate-600">stage process: Coderbyte MCQ/LeetCode → 30-min live interview → 4-hour take-home exercise</p></div>
-          <div class="card p-5"><p class="font-display text-3xl font-bold text-[var(--match)]">30 min</p><p class="mt-1 text-sm text-slate-600">per candidate to review and score the take-home submission</p></div>
-          <div class="card p-5"><p class="font-display text-3xl font-bold text-[var(--match)]">AI</p><p class="mt-1 text-sm text-slate-600">shared LLM access given to all candidates; conversations collected and reviewed</p></div>
+          <div class="card p-5"><p class="font-display text-3xl font-bold text-[var(--match)]">50+</p><p class="mt-1 text-sm text-slate-600">submissions for one junior software engineer role</p></div>
+          <div class="card p-5"><p class="font-display text-3xl font-bold text-[var(--match)]">&lt; ½</p><p class="mt-1 text-sm text-slate-600">of them reached the interview stage</p></div>
+          <div class="card p-5"><p class="font-display text-3xl font-bold text-[var(--match)]">30 min</p><p class="mt-1 text-sm text-slate-600">per candidate to review the take-home submission, the slowest stage</p></div>
+          <div class="card p-5"><p class="font-display text-3xl font-bold text-[var(--match)]">4 paid</p><p class="mt-1 text-sm text-slate-600">sourcing and assessment channels: agencies, Juicebox AI, LinkedIn, Coderbyte</p></div>
         </div>
 
         <div class="mt-6 grid gap-5 lg:grid-cols-2">
           <blockquote class="card p-6 text-slate-800" data-reveal>
-            <p class="font-display text-lg leading-snug">"We discovered that candidates were already using AI tools for their take-home assignments, so we decided to formalise this by giving everyone access to the same LLM tools through shared API keys."</p>
-            <footer class="mt-3 text-xs text-slate-500">Hiring Manager · Q3</footer>
+            <p class="font-display text-lg leading-snug">"A polished solution didn't necessarily mean that the candidate understood the underlying code."</p>
+            <footer class="mt-3 text-xs text-slate-500">Hiring Manager · Q8</footer>
           </blockquote>
           <blockquote class="card p-6 text-slate-800" data-reveal>
-            <p class="font-display text-lg leading-snug">"What we were missing was visibility into the candidates' actual problem-solving processes and how much of their submitted work they understood."</p>
-            <footer class="mt-3 text-xs text-slate-500">Hiring Manager · Q8</footer>
+            <p class="font-display text-lg leading-snug">"We were not interested in past experience that much. What was most important for us was good first principles, thoughtful answers and good submissions."</p>
+            <footer class="mt-3 text-xs text-slate-500">Hiring Manager · Q7</footer>
           </blockquote>
         </div>
 
         <details class="milestone card mt-6 p-6" data-reveal>
-          <summary class="flex items-center justify-between gap-4"><span><span class="font-semibold">Full transcript — Hiring Manager (I-1)</span> <span class="text-sm text-slate-500">· 9 questions · English</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <summary class="flex items-center justify-between gap-4"><span><span class="font-semibold">Full transcript — Hiring Manager (I-1)</span> <span class="text-sm text-slate-500">· 10 questions · English · recorded</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
           <ol class="mt-5 space-y-5 text-sm leading-relaxed">
             <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
               <span class="font-mono text-xs text-slate-400">Q1</span>
               <div>
                 <p class="font-semibold text-slate-900">Can you tell me about the last recruitment for a junior or internship technical role that you were directly involved in?</p>
-                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">The most recent recruitment I was involved in was for a Junior Software Engineer position. I participated directly in the hiring process alongside another senior developer. We were responsible for reviewing candidates, assessing their technical skills and helping make the final hiring decision.</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">The most recent one was for a junior software engineer position. I participated directly in the hiring process alongside another senior developer. The two of us were responsible for reviewing candidates, assessing their technical skills and helping to make the final hiring decision.</p>
               </div>
             </li>
             <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
               <span class="font-mono text-xs text-slate-400">Q2</span>
               <div>
                 <p class="font-semibold text-slate-900">Roughly how many candidates applied, and how many made it to the interview?</p>
-                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">We received over 50 submissions.</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">We received over 50 submissions, and less than half made it to the interview stage.</p>
               </div>
             </li>
             <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
               <span class="font-mono text-xs text-slate-400">Q3</span>
               <div>
                 <p class="font-semibold text-slate-900">How did the selection process go, from receiving the applications to choosing the candidate?</p>
-                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">Initially, we shared the job specification with multiple recruitment agencies, which sourced candidates for us. We also considered internal recommendations. The two senior developers reviewed the CVs and initial assessments to shortlist candidates. The first step was a Coderbyte test with MCQs and a couple of LeetCode-style questions. The second step was a 30-minute live interview with one LeetCode-style question and questions about the candidates' previous experience. We also allowed some time for the candidate to ask questions about our company and the role. The third step was a 4-hour take-home exercise where the candidate gets the chance to run some analysis on a dataset — very close to a real-life work assignment. Once the assignment is done we organise 30 minutes with the candidate to present their submission.<br><br>We discovered that candidates were already using AI tools for their take-home assignments, so we decided to formalise this by giving everyone access to the same LLM tools through shared API keys. We also asked candidates to share their LLM conversations so we could better understand how they approached problems. During the final technical interview, we challenged them on their submitted solutions to establish how well they understood their own work. This helped us compare candidates more consistently and make a more informed final decision.</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">First, we shared the job specification with multiple recruitment agencies, and they sourced candidates for us. We also considered internal recommendations. Then the two of us reviewed the CVs.</p>
               </div>
             </li>
             <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
               <span class="font-mono text-xs text-slate-400">Q4</span>
               <div>
-                <p class="font-semibold text-slate-900">Which stage took the most time from the team?</p>
-                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">Scoping out the take-home exercise and reviewing the submissions.</p>
+                <p class="font-semibold text-slate-900">So you reviewed the CVs manually, without a tool? <span class="pill pill-neutral ml-1">follow-up</span></p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">Yes, but they were CVs already shortlisted by the recruitment agency, so they already matched what we were looking for.</p>
               </div>
             </li>
             <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
               <span class="font-mono text-xs text-slate-400">Q5</span>
               <div>
-                <p class="font-semibold text-slate-900">Roughly how long did it take, and what activities filled that time? <span class="pill pill-neutral ml-1">follow-up</span></p>
-                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">It took around 30 minutes per candidate. We improved the time by using AI on our side more and by over-indexing on how much the candidates could defend their submission in the follow-up presentation.</p>
+                <p class="font-semibold text-slate-900">Which stage took the most time for the team?</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">Scoping out the take-home exercise and reviewing the submissions took the longest.</p>
               </div>
             </li>
             <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
               <span class="font-mono text-xs text-slate-400">Q6</span>
               <div>
-                <p class="font-semibold text-slate-900">How did you assess the candidates' technical skills in that recruitment?</p>
-                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">We primarily used technical take-home assignments and live technical interviews. We were not interested in past experience. What we appreciated more were good first principles and well-thought-out answers and submissions.<br><br>Another important part of our process was allowing candidates to use LLMs while completing their assignments. We provided equal access to these tools and asked them to share their interactions with the AI. This allowed us to assess their problem-solving approach and how they used AI throughout the process. During the final interview, we asked challenging questions about their submissions to test their understanding and distinguish between candidates who genuinely understood their solutions and those who relied heavily on AI-generated answers.</p>
+                <p class="font-semibold text-slate-900">How much time, roughly? <span class="pill pill-neutral ml-1">follow-up</span></p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">On average about 30 minutes per candidate. Because it took so long, we tried to improve it by using AI on our side, and by over-indexing on how well candidates could defend their submission in the follow-up presentation and interviews, where we asked them questions about their code.</p>
               </div>
             </li>
             <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
               <span class="font-mono text-xs text-slate-400">Q7</span>
               <div>
-                <p class="font-semibold text-slate-900">Do you remember a recent situation when it was hard to decide whether a candidate was a good fit for the role?</p>
-                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">One challenge was assessing candidates fairly when we realised they were all using AI tools for their take-home assignments. It became harder to judge technical ability based on the final submission alone, because a polished solution didn't necessarily demonstrate that the candidate understood the underlying code. Hence why we provided the same access to AI to everyone.</p>
+                <p class="font-semibold text-slate-900">How did you assess the candidates' technical skills in that recruitment?</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">There were multiple steps: first a technical take-home assignment, then live technical interviews. We were not interested in past experience that much. What was most important for us was good first principles, thoughtful answers and good submissions.<br><br>Another important part was allowing candidates to use LLMs for some steps of the assignment, because we wanted everyone to have equal access to these tools. We asked them to share their interactions with the AI, to assess their problem-solving approach, and in the final interview stages we asked challenging questions about their submissions to test whether they understood what they had built with AI.</p>
               </div>
             </li>
             <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
               <span class="font-mono text-xs text-slate-400">Q8</span>
               <div>
-                <p class="font-semibold text-slate-900">What information was missing, and how did you proceed? <span class="pill pill-neutral ml-1">follow-up</span></p>
-                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">What we were missing was visibility into the candidates' actual problem-solving processes and how much of their submitted work they understood. To address this, we standardised access to LLMs and requested their AI conversation histories. We also introduced more challenging follow-up questions during the technical interviews, based specifically on their submitted solutions. This gave us more insight into their reasoning and made it easier to benchmark candidates fairly.</p>
+                <p class="font-semibold text-slate-900">Do you remember a recent situation when it was hard to decide whether a candidate was a good fit for the role?</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">Exactly what I just described. Some candidates used AI for their submissions and some did not, so it was very hard to level the playing field and judge technical ability from the code alone. A polished solution didn't necessarily mean that the candidate understood the underlying code, or that it was their contribution. That is why we gave everyone the same access to AI.</p>
               </div>
             </li>
             <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
               <span class="font-mono text-xs text-slate-400">Q9</span>
               <div>
+                <p class="font-semibold text-slate-900">What information was missing, and how did you proceed? <span class="pill pill-neutral ml-1">follow-up</span></p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">Because it was a take-home exercise, we had no visibility into their approach while they were working. So we standardised access to LLMs: we gave everyone API keys, Cursor access and so on, and at the end we asked them to share their conversation history with the agents. That let us prepare challenging follow-up questions for the next interviews, gave us insight into their reasoning, and let us benchmark them fairly against each other.</p>
+              </div>
+            </li>
+            <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
+              <span class="font-mono text-xs text-slate-400">Q10</span>
+              <div>
                 <p class="font-semibold text-slate-900">What tools or methods did you use to manage that recruitment?</p>
-                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">We used custom Notion databases to track candidates and their progress through the recruitment process. We initially worked with recruitment agencies, but subsequently introduced Juicebox AI as an alternative for sourcing candidates. For technical evaluation, we used AI-based scoring to help review large numbers of take-home submissions, alongside manual technical assessments and interviews. Other tools used in our recruitment activities included LinkedIn and Coderbyte.</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">To keep track of candidates through the stages we used a custom Notion database. We initially worked with the recruitment agency; later we introduced Juicebox AI as an alternative for sourcing candidates with LLMs. For the technical evaluation we used AI-based scoring to help review a larger number of fairly heavy take-home submissions, alongside the manual assessments and live interviews. Other tools were LinkedIn for recruiting and Coderbyte for LeetCode-style coding questions and take-home exercises.</p>
               </div>
             </li>
           </ol>
@@ -2162,6 +2178,110 @@
           </ol>
         </details>
       </div>
+
+      <!-- Interview I-3: Big-tech tech lead (added in M5) -->
+      <div id="m4-interview-3" class="mt-14" style="scroll-margin-top:5.5rem">
+        <div class="flex flex-wrap items-center gap-3">
+          <p class="font-mono text-xs text-[var(--brand)]">I-3</p>
+          <h3 class="font-display text-2xl font-bold">Tech Lead — software engineer interview pipeline</h3>
+          <span class="pill pill-brand">Added in M5</span>
+        </div>
+        <p class="mt-2 max-w-3xl text-sm text-slate-600">
+          Big-tech company. Takes the coding interviews in the hiring pipeline for software engineers, from junior to senior. Recorded on 25.11.2026, conducted in English; lightly edited for readability.
+        </p>
+
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" data-reveal>
+          <div class="card p-5"><p class="font-display text-3xl font-bold text-[var(--match)]">~5%</p><p class="mt-1 text-sm text-slate-600">of applicants end up with an offer (his estimate)</p></div>
+          <div class="card p-5"><p class="font-display text-3xl font-bold text-[var(--match)]">4 × 1 h</p><p class="mt-1 text-sm text-slate-600">interviews per candidate: 2 coding, 1 system design, 1 behavioural</p></div>
+          <div class="card p-5"><p class="font-display text-3xl font-bold text-[var(--match)]">~8 h</p><p class="mt-1 text-sm text-slate-600">of engineers' time per candidate, including written feedback</p></div>
+          <div class="card p-5"><p class="font-display text-3xl font-bold text-[var(--match)]">&lt; 1 week</p><p class="mt-1 text-sm text-slate-600">from CV to interview, depending on the candidate's schedule</p></div>
+        </div>
+
+        <div class="mt-6 grid gap-5 lg:grid-cols-2">
+          <blockquote class="card p-6 text-slate-800" data-reveal>
+            <p class="font-display text-lg leading-snug">"If we are not 100% sure about the candidate, then in our case that means a no."</p>
+            <footer class="mt-3 text-xs text-slate-500">Tech Lead · Q7</footer>
+          </blockquote>
+          <blockquote class="card p-6 text-slate-800" data-reveal>
+            <p class="font-display text-lg leading-snug">"Is the candidate able to approach a problem, use critical thinking and not get blocked, and communicate their thought process?"</p>
+            <footer class="mt-3 text-xs text-slate-500">Tech Lead · Q6, what the coding interview looks for</footer>
+          </blockquote>
+        </div>
+
+        <div class="mt-6 rounded-2xl border border-dashed border-slate-300 p-5 text-sm leading-relaxed text-slate-600" data-reveal>
+          <strong>What it means for Matchify:</strong> the expensive part is the interview pipeline, about eight engineer-hours for every candidate who enters it, so each poorly matched candidate costs a working day.
+          Large companies already have recruiters and internal tools, which confirms startups and scale-ups as our first customers. What interviewers look for (reasoning and communication, not polished output) supports the per-candidate project-defence questions we propose.
+        </div>
+
+        <details class="milestone card mt-6 p-6" data-reveal>
+          <summary class="flex items-center justify-between gap-4"><span><span class="font-semibold">Full transcript — Tech Lead (I-3)</span> <span class="text-sm text-slate-500">· 9 questions · English · recorded</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
+          <ol class="mt-5 space-y-5 text-sm leading-relaxed">
+            <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
+              <span class="font-mono text-xs text-slate-400">Q1</span>
+              <div>
+                <p class="font-semibold text-slate-900">Can you tell me about the last recruitment for a junior or internship technical role that you were directly involved in?</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">Probably one or two years ago, when we were hiring heavily. It was not specifically a junior position but the software engineer role: some people end up at junior level, some at a more senior level. I was part of the interview pipeline and took the coding interviews, sometimes as the coding screen and sometimes as part of the full pipeline.</p>
+              </div>
+            </li>
+            <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
+              <span class="font-mono text-xs text-slate-400">Q2</span>
+              <div>
+                <p class="font-semibold text-slate-900">Roughly how many candidates applied, and how many made it to the interview?</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">I don't know how many applied; recruiters handle the CVs. Of everyone in that big number, maybe around 5% end up getting the job, as a guess. After recruiters pick candidates from the CVs there is a screening interview, which is usually quite relaxed, so many candidates pass it and enter the interview pipeline.</p>
+              </div>
+            </li>
+            <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
+              <span class="font-mono text-xs text-slate-400">Q3</span>
+              <div>
+                <p class="font-semibold text-slate-900">How did the selection process go, from receiving the application to choosing the candidate?</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">People either apply through our jobs portal, or recruiters actively look for them, on LinkedIn and other places where they can find CVs, and invite them to apply. Once their CV is checked they get the screening interview, and if they pass it they go through the full interview pipeline.</p>
+              </div>
+            </li>
+            <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
+              <span class="font-mono text-xs text-slate-400">Q4</span>
+              <div>
+                <p class="font-semibold text-slate-900">Which stage took the most time for the team?</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">For sure the main interview pipeline, about four or five interviews.</p>
+              </div>
+            </li>
+            <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
+              <span class="font-mono text-xs text-slate-400">Q5</span>
+              <div>
+                <p class="font-semibold text-slate-900">How many hours for each round? <span class="pill pill-neutral ml-1">follow-up</span></p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">Each interview is one hour. The full pipeline has two coding interviews, one system design and one behavioural, so already four interviews, and sometimes a follow-up coding interview if the decision isn't clear. Each interviewer also has to write detailed feedback about the candidate, which can take another hour. So roughly two hours per interview, around eight hours of people's time per candidate. From receiving the CV to the interview it usually happens within a week, depending on the candidate's schedule.</p>
+              </div>
+            </li>
+            <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
+              <span class="font-mono text-xs text-slate-400">Q6</span>
+              <div>
+                <p class="font-semibold text-slate-900">How did you assess the candidates' technical skills in that recruitment?</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">Each interview has its own challenges, and the point is to gather as much evidence about the candidate as possible. It doesn't always map one-to-one to the role, but it gives useful signals. In the coding interview we look at whether the candidate can approach a problem, use critical thinking and not get blocked, and whether they can communicate their thought process clearly to the interviewer.</p>
+              </div>
+            </li>
+            <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
+              <span class="font-mono text-xs text-slate-400">Q7</span>
+              <div>
+                <p class="font-semibold text-slate-900">Do you remember a recent situation when it was hard to decide whether a candidate was a good fit for the role?</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">Probably not, because if we are not 100% sure about a candidate, in our case that means a no; the bar is quite high. Several interviewers are involved, so at the end we look at each one's feedback and decision. If someone confidently rejects the candidate, the candidate is rejected; if everyone is happy but one person is unsure, we discuss or offer another follow-up interview.</p>
+              </div>
+            </li>
+            <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
+              <span class="font-mono text-xs text-slate-400">Q8</span>
+              <div>
+                <p class="font-semibold text-slate-900">What if two strong candidates reach the final stage for the same role? <span class="pill pill-neutral ml-1">follow-up</span></p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">I don't think that happens, because there are usually enough positions; candidates are not competing for the same one. We don't calibrate against other candidates: we look at one candidate's pipeline at a time.</p>
+              </div>
+            </li>
+            <li class="grid gap-2 sm:grid-cols-[2rem_1fr]">
+              <span class="font-mono text-xs text-slate-400">Q9</span>
+              <div>
+                <p class="font-semibold text-slate-900">What tools or methods did you use to manage that recruitment?</p>
+                <p class="mt-1.5 rounded-xl bg-slate-50 p-3 text-slate-700">An internal tool where you can see all the interviews a candidate went through, the feedback and the decision of each interviewer, plus a chat where people align at the end on whether the candidate is a good fit.</p>
+              </div>
+            </li>
+          </ol>
+        </details>
+      </div>
     </section>
 
     <!-- 4.2 Findings -->
@@ -2179,8 +2299,8 @@
             <p class="pill pill-ok">Confirmed</p>
             <h4 class="mt-3 font-semibold">Screening overload is real, and engineers bear the cost</h4>
             <p class="mt-2 text-sm leading-relaxed text-slate-600">
-              50+ submissions for one Junior SWE role, reviewed by two senior engineers with no dedicated recruiter.
-              The most time-consuming step was designing and reviewing the take-home exercise — 30 minutes per candidate after shortlisting.
+              50+ submissions for one Junior SWE role, reviewed by two senior engineers after recruitment agencies had pre-filtered the CVs.
+              The most time-consuming step was scoping and reviewing the take-home exercise — 30 minutes per candidate. At a big-tech company (I-3, added in M5) the interview pipeline alone costs about eight engineer-hours per candidate.
               This is engineer time, not HR time, which makes the cost invisible in a headcount sense but very real in throughput.
             </p>
           </article>
@@ -3114,6 +3234,22 @@
         </div>
 
 
+        <div class="mt-8 card p-6" data-reveal>
+          <p class="font-mono text-xs text-[var(--brand)]">Finding · interviews recorded in M5</p>
+          <h3 class="mt-1 font-display text-xl font-bold">Companies already pay to find and filter candidates</h3>
+          <p class="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+            The recording of <a class="text-[var(--brand)] hover:underline" href="#m4-interview-1">I-1</a> added what our notes had missed: the hedge fund pays
+            recruitment agencies to pre-filter CVs, and later added Juicebox AI for sourcing, AI scoring for take-homes, LinkedIn and Coderbyte.
+            A small team does adopt new tools when they save engineers' time, which refines the M2 finding that teams rarely change tools.
+            The new <a class="text-[var(--brand)] hover:underline" href="#m4-interview-3">I-3</a> interview, with a big-tech tech lead, put a number on the expensive stage:
+            about eight engineer-hours per candidate in the interview pipeline, with roughly 5% of applicants getting an offer.
+          </p>
+          <p class="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">
+            <strong>What it changes:</strong> the price question now has a reference point: what a company spends today on agencies and sourcing tools
+            for one junior hire. Big tech, with its own recruiters and tools, is not a first customer; small and mid-size teams that pay agencies are.
+          </p>
+        </div>
+
         <div class="mt-8 grid gap-5 md:grid-cols-2">
           <div class="card p-6" data-reveal>
             <p class="font-mono text-xs text-slate-400">Finding 1</p>
@@ -3182,7 +3318,7 @@
 
         <details class="milestone card p-5">
           <summary class="flex items-center justify-between gap-4"><span class="flex flex-wrap items-center gap-3"><span class="font-mono text-sm text-slate-400">M4</span><span class="font-semibold">Persona, Flow, User stories / Use cases, Architecture</span><span class="text-xs text-slate-500">16.11.2026</span><span class="pill pill-ok">Done</span></span><span class="chev text-slate-400" aria-hidden="true">▾</span></summary>
-          <p class="mt-3 text-sm text-slate-600">Two face-to-face interviews: a hiring manager at a fintech startup (London) and a CS student actively searching for SWE/SRE internships. Main candidate persona, user stories for both sides, two core use cases (candidate flow + recruiter flow), and wireframe updates from M4 findings. <a class="text-[var(--brand)] hover:underline" href="#m4">Read the full section →</a></p>
+          <p class="mt-3 text-sm text-slate-600">Interviews with a hiring manager at a London hedge fund and a CS student actively searching for SWE/SRE internships (a third, with a big-tech tech lead, was added in M5). Main candidate persona, user stories for both sides, two core use cases (candidate flow + recruiter flow), and wireframe updates from M4 findings. <a class="text-[var(--brand)] hover:underline" href="#m4">Read the full section →</a></p>
         </details>
 
         <details class="milestone card border-2 border-[var(--brand)] p-5" open>
